@@ -22,9 +22,15 @@ jobs:
       
     - name: Production
       run: npm run prod
-    
-    
       
+    - name: CNAME
+      run: echo "laravel-news.it" > ./build_production/CNAME
+
+    - name: gh-pages
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      with:
+        branch: gh-pages
+        folder: build_production
 
       
   
