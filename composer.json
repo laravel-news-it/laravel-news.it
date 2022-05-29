@@ -1,4 +1,22 @@
 {
+    "name": "laravel-news-it/laravel-news.it",
+    "description": "Laravel News Italy",
+    "keywords": [
+        "laravel",
+        "news"
+    ],
+    "homepage": "https://laravel-news.it",
+    "support": {
+        "issues": "https://github.com/laravel-news-it/laravel-news.it//issues",
+        "source": "https://github.com/laravel-news-it/laravel-news.it/"
+    },
+    "authors": [
+        {
+            "name": "Alessandro Cappellozza",
+            "email": "alessandro.cappellozza@gmail.com"
+        }
+    ],    
+    "license": "MIT",
     "require": {
         "tightenco/jigsaw": "^1.3",
         "samdark/sitemap": "^2.2.1"
