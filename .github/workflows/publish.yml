@@ -2,6 +2,11 @@ name: Publish
 
 on:
   push:
+    branches:
+      - main
+
+permissions: 
+  contents: write
 
 jobs:
   build:
