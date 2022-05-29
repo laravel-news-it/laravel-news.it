@@ -1,0 +1,5 @@
+cache
+vendor
+node_modules
+build_local
+build_production
