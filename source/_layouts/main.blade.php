@@ -11,6 +11,10 @@
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
 
+        @if ($post->cover_image)
+        <meta property="og:image" content="{{ $post->cover_image }}" />
+        @endif
+
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
@@ -24,7 +28,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">       
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-DirtyWhite text-gray-800 leading-normal font-sans">
