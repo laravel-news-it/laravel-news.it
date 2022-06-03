@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-06-03T09:16:58+00:00</updated>
+    <updated>2022-06-03T09:22:43+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
@@ -41,7 +41,7 @@ title: Creare un nuovo articolo
 date: 2022-06-03
 description: Creare un nuovo artcolo per il blog di laravel news italia
 categories: [laravel-news-it]
-cover_image: /assets/img/post-cover-image-1.png
+cover_image: /assets/articles/post-cover-image-1.png
 author: Alessandro Cappellozza
 featured: true
 ---
@@ -65,8 +65,10 @@ featured: true
 
 <p>Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
 
-<pre><code class="language-bash">cd source/assets/articles
+<pre><code class="language-bash">cd source/assets/articles/nome-del-file.svg
 </code></pre>
+
+<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.</p>
 
 <p>Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.</p>
 
