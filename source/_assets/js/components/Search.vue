@@ -14,7 +14,7 @@
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
-                placeholder="Carca"
+                placeholder="Cerca"
                 type="text"
                 @keyup.esc="reset"
                 @blur="reset"
