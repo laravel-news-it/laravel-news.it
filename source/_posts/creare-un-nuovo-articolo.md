@@ -4,7 +4,7 @@ section: content
 title: Creare un nuovo articolo
 date: 2022-06-03
 description: Creare un nuovo artcolo per il blog di laravel news italia
-categories: [laravel-news-it]
+categories: [configuration]
 cover_image: /assets/articles/creare-un-nuovo-articolo.png
 author: Alessandro Cappellozza
 featured: true
@@ -32,7 +32,7 @@ section: content
 title: Creare un nuovo articolo
 date: 2022-06-03
 description: Creare un nuovo artcolo per il blog di laravel news italia
-categories: [laravel-news-it]
+categories: [news]
 cover_image: /assets/articles/post-cover-image-1.png
 author: Alessandro Cappellozza
 featured: true
