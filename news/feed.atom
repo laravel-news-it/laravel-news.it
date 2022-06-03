@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-06-03T11:01:12+00:00</updated>
+    <updated>2022-06-03T11:05:43+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
