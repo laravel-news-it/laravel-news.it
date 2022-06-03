@@ -1,16 +1,86 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Blog Starter Template</title>
-    <link href="https://jigsaw-blog-template.tighten.co/blog" />
-    <link type="application/atom+xml" rel="self" href="https://jigsaw-blog-template.tighten.co/blog/feed.atom" />
-    <updated>2022-05-29T14:52:07+00:00</updated>
-    <id>https://jigsaw-blog-template.tighten.co/blog/feed.atom</id>
+    <title>Italian Laravel News</title>
+    <link href="https://laravel-news.it/news" />
+    <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
+    <updated>2022-06-03T09:03:23+00:00</updated>
+    <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
     </author>
                 <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/getting-started</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/getting-started" />
+    <id>https://laravel-news.it/news/creare-un-nuovo-articolo</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/creare-un-nuovo-articolo" />
+    <title>Creare un nuovo articolo</title>
+    <published>2022-06-03T00:00:00+00:00</published>
+    <updated>2022-06-03T00:00:00+00:00</updated>
+    <author>
+        <name>Alessandro Cappellozza</name>
+    </author>
+    <summary type="html">Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
+Ricordate che il nome del file rappresetera&#039; anche l&#039;url dell&#039;articolo quindi scrivetelo in modo......</summary>
+    <content type="html"><![CDATA[
+        <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
+Ricordate che il nome del file rappresetera' anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
+
+<pre><code class="language-bash">git clone https://github.com/laravel-news-it/
+
+cd laravel-news.it/source/_posts
+
+touch nuovo-articolo.md
+
+vi nuovo-articolo.md
+</code></pre>
+
+<p>Nella parte iniziale del file vanno messi i dati dell'articolo in questa maniera:</p>
+
+<pre><code>---
+extends: _layouts.post
+section: content
+title: Creare un nuovo articolo
+date: 2022-06-03
+description: Creare un nuovo artcolo per il blog di laravel news italia
+categories: [laravel-news-it]
+cover_image: /assets/img/post-cover-image-1.png
+author: Alessandro Cappellozza
+featured: true
+---
+</code></pre>
+
+<p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:</p>
+
+<p><strong>title</strong>: Titolo dell'articolo.</p>
+
+<p><strong>date</strong>: Data in formato ISO.</p>
+
+<p><strong>description</strong>: Descrizione completa dell'artticolo.</p>
+
+<p><strong>categories</strong>: Questi sono i tag che potete inserire, fate riferimento agli articoli precedenti per prendere spunto.</p>
+
+<p><strong>cover_image</strong>: L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo.</p>
+
+<p><strong>author</strong>: Il vosto nome e congome.</p>
+
+<p><strong>excerpt</strong>: E' opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</p>
+
+<p>Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
+
+<pre><code class="language-bash">cd source/assets/articles
+</code></pre>
+
+<p>Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.</p>
+
+<pre><code class="language-bash">composer install
+npm install
+npm run watch
+</code></pre>
+
+<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine. Potete creare quindi un nuovo branch con <strong><em>"git checkout -b nuovo-articolo"</em></strong> e poi effettuare la <strong><em>"pull-request"</em></strong>.</p>
+    ]]></content>
+</entry>
+            <entry>
+    <id>https://laravel-news.it/news/getting-started</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/getting-started" />
     <title>Getting Started</title>
     <published>2018-12-25T00:00:00+00:00</published>
     <updated>2018-12-25T00:00:00+00:00</updated>
@@ -84,8 +154,8 @@ npm run dev
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/customizing-your-site</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/customizing-your-site" />
+    <id>https://laravel-news.it/news/customizing-your-site</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/customizing-your-site" />
     <title>Customizing Your Site</title>
     <published>2018-12-24T00:00:00+00:00</published>
     <updated>2018-12-24T00:00:00+00:00</updated>
@@ -190,8 +260,8 @@ npm run dev
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/custom-404-page</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/custom-404-page" />
+    <id>https://laravel-news.it/news/custom-404-page</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/custom-404-page" />
     <title>Custom 404 Pages</title>
     <published>2018-12-23T00:00:00+00:00</published>
     <updated>2018-12-23T00:00:00+00:00</updated>
@@ -233,8 +303,8 @@ Depending on where your site is hosted, you may need to......</summary>
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/fuse-search</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/fuse-search" />
+    <id>https://laravel-news.it/news/fuse-search</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/fuse-search" />
     <title>Fuse Search</title>
     <published>2018-12-22T00:00:00+00:00</published>
     <updated>2018-12-22T00:00:00+00:00</updated>
@@ -251,8 +321,8 @@ Depending on where your site is hosted, you may need to......</summary>
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/mailchimp-newsletters</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/mailchimp-newsletters" />
+    <id>https://laravel-news.it/news/mailchimp-newsletters</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/mailchimp-newsletters" />
     <title>Mailchimp Newsletters</title>
     <published>2018-11-21T00:00:00+00:00</published>
     <updated>2018-11-21T00:00:00+00:00</updated>
@@ -297,8 +367,8 @@ To begin accepting......</summary>
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/my-first-blog-post</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/my-first-blog-post" />
+    <id>https://laravel-news.it/news/my-first-blog-post</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/my-first-blog-post" />
     <title>My First Blog Post</title>
     <published>2017-03-23T00:00:00+00:00</published>
     <updated>2017-03-23T00:00:00+00:00</updated>

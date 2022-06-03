@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="Get in touch with us">
+        <meta name="description" content="Creare un nuovo artcolo per il blog di laravel news italia">
 
-        <meta property="og:title" content="Contact | Italian Laravel News"/>
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://laravel-news.it/contact"/>
-        <meta property="og:description" content="Get in touch with us" />
+        <meta property="og:title" content="Creare un nuovo articolo | Italian Laravel News"/>
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://laravel-news.it/news/creare-un-nuovo-articolo"/>
+        <meta property="og:description" content="Creare un nuovo artcolo per il blog di laravel news italia" />
 
-        <title>Contact | Italian Laravel News</title>
+        <title>Creare un nuovo articolo | Italian Laravel News</title>
 
         <link rel="home" href="https://laravel-news.it">
         <link rel="icon" href="/favicon.ico">
@@ -51,7 +51,7 @@
     </a>
 
     <a title="Italian Laravel News Contact" href="/contact"
-        class="ml-6 text-Teal hover:text-Lime active text-Lime">
+        class="ml-6 text-Teal hover:text-Lime ">
         Contact
     </a>
 </nav>
@@ -96,75 +96,94 @@
             <a
                 title="Italian Laravel News Contact"
                 href="/contact"
-                class="block mt-0 mb-4 text-sm no-underline active text-blue-500"
+                class="block mt-0 mb-4 text-sm no-underline text-gray-800 hover:text-blue-500"
             >Contact</a>
         </li>
     </ul>
 </nav>
 
         <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
-            <h1>Contact</h1>
+                        <img src="/assets/img/post-cover-image-1.png" alt="Creare un nuovo articolo cover image" class="mb-2">
+    
+    <h1 class="leading-none mb-2">Creare un nuovo articolo</h1>
 
-<p class="mb-8">
-    Static sites are unable to handle form submissions. However, there are third-party services, like Tighten’s <a href="https://fieldgoal.io" title="FieldGoal">FieldGoal</a>, which can accept the form submission, email you the result, and redirect back to a thank you page.
-</p>
+    <p class="text-gray-700 text-xl md:mt-0">Alessandro Cappellozza  •  June 3, 2022</p>
 
-<form action="/contact" class="mb-12">
-    <div class="flex flex-wrap mb-6 -mx-3">
-        <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
-            <label class="block mb-2 text-gray-800 text-sm font-semibold" for="contact-name">
-                Name
-            </label>
+                        <a
+                href="/news/categories/laravel-news-it"
+                title="View posts in laravel-news-it"
+                class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+            >laravel-news-it</a>
+            
+    <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
+        <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
+Ricordate che il nome del file rappresetera' anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
 
-            <input
-                type="text"
-                id="contact-name"
-                placeholder="Jane Doe"
-                name="name"
-                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
-                required
-            >
-        </div>
+<pre><code class="language-bash">git clone https://github.com/laravel-news-it/
 
-        <div class="w-full px-3 md:w-1/2">
-            <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-email">
-                Email Address
-            </label>
+cd laravel-news.it/source/_posts
 
-            <input
-                type="email"
-                id="contact-email"
-                placeholder="email@domain.com"
-                name="email"
-                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
-                required
-            >
-        </div>
+touch nuovo-articolo.md
+
+vi nuovo-articolo.md
+</code></pre>
+
+<p>Nella parte iniziale del file vanno messi i dati dell'articolo in questa maniera:</p>
+
+<pre><code>---
+extends: _layouts.post
+section: content
+title: Creare un nuovo articolo
+date: 2022-06-03
+description: Creare un nuovo artcolo per il blog di laravel news italia
+categories: [laravel-news-it]
+cover_image: /assets/img/post-cover-image-1.png
+author: Alessandro Cappellozza
+featured: true
+---
+</code></pre>
+
+<p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:</p>
+
+<p><strong>title</strong>: Titolo dell'articolo.</p>
+
+<p><strong>date</strong>: Data in formato ISO.</p>
+
+<p><strong>description</strong>: Descrizione completa dell'artticolo.</p>
+
+<p><strong>categories</strong>: Questi sono i tag che potete inserire, fate riferimento agli articoli precedenti per prendere spunto.</p>
+
+<p><strong>cover_image</strong>: L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo.</p>
+
+<p><strong>author</strong>: Il vosto nome e congome.</p>
+
+<p><strong>excerpt</strong>: E' opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</p>
+
+<p>Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
+
+<pre><code class="language-bash">cd source/assets/articles
+</code></pre>
+
+<p>Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.</p>
+
+<pre><code class="language-bash">composer install
+npm install
+npm run watch
+</code></pre>
+
+<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine. Potete creare quindi un nuovo branch con <strong><em>"git checkout -b nuovo-articolo"</em></strong> e poi effettuare la <strong><em>"pull-request"</em></strong>.</p>
     </div>
 
-    <div class="w-full mb-12">
-        <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-message">
-            Message
-        </label>
+    <nav class="flex justify-between text-sm md:text-base">
+        <div>
+                            <a href="https://laravel-news.it/news/getting-started" title="Older Post: Getting Started">
+                    &LeftArrow; Getting Started
+                </a>
+                    </div>
 
-        <textarea
-            id="contact-message"
-            rows="4"
-            name="message"
-            class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-3"
-            placeholder="A lovely message here."
-            required
-        ></textarea>
-    </div>
-
-    <div class="flex justify-end w-full">
-        <input
-            type="submit"
-            value="Submit"
-            class="block bg-DarkBlue hover:bg-Teal text-white text-sm font-semibold leading-snug tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
-        >
-    </div>
-</form>
+        <div>
+                    </div>
+    </nav>
         </main>
 
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
