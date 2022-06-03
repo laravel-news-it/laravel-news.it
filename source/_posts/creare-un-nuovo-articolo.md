@@ -5,7 +5,7 @@ title: Creare un nuovo articolo
 date: 2022-06-03
 description: Creare un nuovo artcolo per il blog di laravel news italia
 categories: [laravel-news-it]
-cover_image: /assets/img/post-cover-image-1.png
+cover_image: /assets/articles/creare-un-nuovo-articolo.png
 author: Alessandro Cappellozza
 featured: true
 ---
@@ -33,7 +33,7 @@ title: Creare un nuovo articolo
 date: 2022-06-03
 description: Creare un nuovo artcolo per il blog di laravel news italia
 categories: [laravel-news-it]
-cover_image: /assets/img/post-cover-image-1.png
+cover_image: /assets/articles/post-cover-image-1.png
 author: Alessandro Cappellozza
 featured: true
 ---
@@ -58,8 +58,11 @@ Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e sect
 Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:
 
 ```bash
-cd source/assets/articles
+cd source/assets/articles/nome-del-file.svg
 ```
+
+Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.
+
 
 Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.
 
