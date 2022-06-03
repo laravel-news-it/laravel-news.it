@@ -6,24 +6,21 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
 
+        <meta property="og:site_name" content="{{ $page->siteName }}"/>
         <meta property="og:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
         <meta property="og:locale" content="it_IT"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
-
-        @if ($post->cover_image)
-        <meta property="og:image" content="{{ $post->cover_image }}" />
+        
+        @if($page->cover_image )
+        <meta property="og:image" content="{{ $page->cover_image }}" />
+        <meta name="twitter:image" content="{{ $page->cover_image }}"/>
         @endif
 
-        <meta property="og:site_name" content="{{ $page->siteName }}"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
         <meta name="twitter:description" content="{{ $page->description ?? $page->siteDescription }}"/>
-
-        @if ($post->cover_image)
-        <meta name="twitter:image" content="{{ $post->cover_image }}"/>
-        @endif
 
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
