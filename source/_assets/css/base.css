@@ -5,8 +5,8 @@ body {
 a {
     @apply font-semibold;
     @apply no-underline;
-    @apply text-blue-500;
-    @apply hover:text-blue-700;
+    @apply text-Teal;
+    @apply hover:text-DarkBlue;
 }
 
 blockquote {
@@ -48,7 +48,7 @@ h5,
 h6 {
     @apply mt-8;
     @apply mb-4;
-    @apply text-gray-900;
+    @apply text-DarkBlue;
     @apply leading-tight;
 
     &:first-child {
@@ -89,7 +89,7 @@ h6 {
 hr {
     @apply my-12;
     @apply border-b;
-    @apply border-blue-200;
+    @apply border-Teal;
     @apply rounded-full;
 }
 

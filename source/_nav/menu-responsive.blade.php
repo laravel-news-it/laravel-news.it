@@ -2,10 +2,10 @@
     <ul class="my-0">
         <li class="pl-4">
             <a
-                title="{{ $page->siteName }} Blog"
-                href="/blog"
-                class="block mt-0 mb-4 text-sm no-underline {{ $page->isActive('/blog') ? 'active text-blue-500' : 'text-gray-800 hover:text-blue-500' }}"
-            >Blog</a>
+                title="{{ $page->siteName }} News"
+                href="/news"
+                class="block mt-0 mb-4 text-sm no-underline {{ $page->isActive('/news') ? 'active text-blue-500' : 'text-gray-800 hover:text-blue-500' }}"
+            >News</a>
         </li>
         <li class="pl-4">
             <a

@@ -1,6 +1,6 @@
 ---
-title: Blog
-description: The list of blog posts for the site
+title: News
+description: news list
 pagination:
     collection: posts
     perPage: 4
@@ -8,7 +8,7 @@ pagination:
 @extends('_layouts.main')
 
 @section('body')
-    <h1>Blog</h1>
+    <h1>News</h1>
 
     <hr class="border-b my-6">
 
@@ -34,7 +34,7 @@ pagination:
                 <a
                     href="{{ $path }}"
                     title="Go to Page {{ $pageNumber }}"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-blue-600' : 'text-blue-700' }}"
+                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-DarkBlue' : 'text-Teal' }}"
                 >{{ $pageNumber }}</a>
             @endforeach
 

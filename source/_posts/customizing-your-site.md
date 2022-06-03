@@ -4,8 +4,9 @@ section: content
 title: Customizing Your Site
 date: 2018-12-24
 description: Customize your site with CSS and JS
+cover_image: /assets/img/post-cover-image-1.png
 categories: [configuration]
-featured: true
+featured: false
 excerpt: This starter template comes pre-loaded with Tailwind CSS, a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS.
 ---
 

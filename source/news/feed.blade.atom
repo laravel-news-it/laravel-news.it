@@ -1,5 +1,5 @@
 ---
-site_path: blog
+site_path: news
 ---
 
 @extends('_layouts.rss')
