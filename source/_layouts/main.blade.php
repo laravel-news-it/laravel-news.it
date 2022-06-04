@@ -65,12 +65,11 @@
             <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
         @endif
 
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 
     </head>
 
-    <body class="flex flex-col justify-between min-h-screen bg-DirtyWhite text-gray-800 leading-normal font-sans">
+    <body class="flex flex-col justify-between min-h-screen bg-DirtyWhite text-gray-800 leading-normal font-mono">
         <header class="flex items-center shadow bg-DarkBlue border-b h-24 py-4" role="banner">
             <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">

@@ -20,9 +20,6 @@ module.exports = {
                 Teal: "#13cde4",
                 Lime:"#a2ff51",
                 DirtyWhite:"#f7f7f7",
-            },            
-            fontFamily: {
-                sans: ['"Roboto Mono"'],
             },
             lineHeight: {
                 normal: '1.6',
