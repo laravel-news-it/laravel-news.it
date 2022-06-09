@@ -7,17 +7,17 @@
         <meta name="description" content="Creare un nuovo artcolo per il blog di laravel news italia">
 
         <meta property="og:site_name" content="Italian Laravel News"/>
-        <meta property="og:title" content="Creare un nuovo articolo | Italian Laravel News"/>
+        <meta property="og:title" content="Laravel Day 2019 | Italian Laravel News"/>
         <meta property="og:locale" content="it_IT"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://laravel-news.it/news/creare-un-nuovo-articolo"/>
+        <meta property="og:url" content="https://laravel-news.it/news/laravel-day-2019"/>
         <meta property="og:description" content="Creare un nuovo artcolo per il blog di laravel news italia" />
         
-                <meta property="og:image" content="/assets/articles/creare-un-nuovo-articolo.png" />
-        <meta name="twitter:image" content="/assets/articles/creare-un-nuovo-articolo.png"/>
+                <meta property="og:image" content="/assets/articles/laravel-day.png" />
+        <meta name="twitter:image" content="/assets/articles/laravel-day.png"/>
         
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="Creare un nuovo articolo | Italian Laravel News"/>
+        <meta name="twitter:title" content="Laravel Day 2019 | Italian Laravel News"/>
         <meta name="twitter:description" content="Creare un nuovo artcolo per il blog di laravel news italia"/>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
@@ -38,7 +38,7 @@
         <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
         <meta name="theme-color" content="#F48220"/>
 
-        <title>Creare un nuovo articolo | Italian Laravel News</title>
+        <title>Laravel Day 2019 | Italian Laravel News</title>
 
         <link rel="home" href="https://laravel-news.it">
         <link rel="icon" href="/favicon.ico">
@@ -142,115 +142,107 @@
 </nav>
 
         <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
-                        <img src="/assets/articles/creare-un-nuovo-articolo.png" alt="Creare un nuovo articolo cover image" class="mb-2">
+                        <img src="/assets/articles/laravel-day.png" alt="Laravel Day 2019 cover image" class="mb-2">
     
-    <h1 class="leading-none mb-2">Creare un nuovo articolo</h1>
+    <h1 class="leading-none mb-2">Laravel Day 2019</h1>
 
-    <p class="text-gray-700 text-xl md:mt-0">Alessandro Cappellozza  •  June 3, 2022</p>
+    <p class="text-gray-700 text-xl md:mt-0">Alessandro Cappellozza  •  June 3, 2019</p>
 
                         <a
-                href="/news/categories/configuration"
-                title="View posts in configuration"
+                href="/news/categories/laravel-day"
+                title="View posts in laravel-day"
                 class="inline-block bg-Teal hover:bg-DarkBlue hover:text-white leading-loose tracking-wide text-white uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
-            >configuration</a>
+            >laravel-day</a>
             
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
-        <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
-Ricordate che il nome del file rappresetera' anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
+        <p><a href="https://2019.laravelday.it/">Sito ufficiale</a></p>
 
-<pre><code class="language-bash">git clone https://github.com/laravel-news-it/
+<h4>Laravel the Lego™ Way</h4>
 
-cd laravel-news.it/source/_posts
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-touch nuovo-articolo.md
+<p>Affiancare a Laravel uno strumento RAD come un admin package è una tentazione forte che però ha un costo in termini di scalabilità, architettura e a volte debito tecnico. Ci si trova quindi ad assemblare un software come se si avessero in mano dei mattoncini per l'appunto, cercando quelli che si incastrano meglio per forma e colore alle specifiche e desideri del committente. Lo sviluppo i trasforma in un incastro di funzionalità che spesso ci travolge e ci lascia col dubbio di aver fatto la scelta migliore. Cercheremo di trovare un trade off facendo una carrellata sugli strumenti che offre il mercato valutandone pro/contro e cercando di capire come impattano non solo sul codice ma sul rapporto qualità e time to market.</p>
 
-vi nuovo-articolo.md
-</code></pre>
+<p><a href="https://docs.google.com/presentation/d/11dqSyCNc5rxZwrWGGaVaXHCj5Q1iH35lV8IepqruPmE">slide</a> <a href="https://github.com/eppak/legolaravelway">sorgenti</a></p>
 
-<p>Nella parte iniziale del file vanno messi i dati dell'articolo in questa maniera:</p>
+<hr />
 
-<pre><code>---
-extends: _layouts.post
-section: content
-title: Creare un nuovo articolo
-date: 2022-06-03
-description: Creare un nuovo artcolo per il blog di laravel news italia
-categories: [news]
-cover_image: /assets/articles/post-cover-image-1.png
-author: Alessandro Cappellozza
-featured: true
----
-</code></pre>
+<h4>Laravel applicato alle piattaforme e-commerce cloud</h4>
 
-<p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:</p>
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/I2-1Ef1moPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<table>
-<thead>
-<tr>
-  <th>Header</th>
-  <th>Desacrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><strong>title</strong></td>
-  <td>Titolo dell'articolo.</td>
-</tr>
-<tr>
-  <td><strong>date</strong></td>
-  <td>Data in formato ISO</td>
-</tr>
-<tr>
-  <td><strong>description</strong></td>
-  <td>Descrizione completa dell'artticolo.</td>
-</tr>
-<tr>
-  <td><strong>categories</strong></td>
-  <td>Questi sono i tag che potete inserire, fate riferimento agli articoli precedenti per prendere spunto.</td>
-</tr>
-<tr>
-  <td><strong>cover_image</strong></td>
-  <td>L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo.</td>
-</tr>
-<tr>
-  <td><strong>author</strong></td>
-  <td>Il vosto nome e congome.</td>
-</tr>
-<tr>
-  <td><strong>excerpt</strong></td>
-  <td>E' opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</td>
-</tr>
-</tbody>
-</table>
+<p>Ad oggi il mondo e-commerce si sta muovendo verso le tecnologie cloud, mentre il mondo dei gestionali ancora non si evolve o a volte non è in grado di supportare in modo completo i clienti nell'approcio a queste piattaforme. In questo talk andremo a vedere come realizzare e configurare a grandi linee un'app middleware realizzata in Laravel (Migrations, Commands, Services, Controllers, ....) che attraverso l'utilizzo delle api fornite dalla piattaforma Cloud possa comunicare con un gestionale attraverso l'interscambio di file.</p>
 
-<p>Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
+<p><a href="https://drive.google.com/file/d/1T3iB7W99RIQiEGqtAvCJSS0oNp68hbts/view">slide</a></p>
 
-<pre><code class="language-bash">cd source/assets/articles/nome-del-file.svg
-</code></pre>
+<hr />
 
-<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.</p>
+<h4>Controllers, Policies e richieste asincrone</h4>
 
-<p>Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.</p>
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/aMd3PUPnNyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<pre><code class="language-bash"># Necessario solo se e' la prima volta che si avvia
-composer install
-npm install
+<p>Le policy di Laravel sono il miglior strumento a disposizione di uno sviluppatore per poter garantire agli end user una precisa politica di autorizzazione all'accesso e modifica delle risorse. Obiettivo del talk è di dare una panoramica a tutto tondo sull'utilizzo di questo strumento all'interno di un progetto Laravel 6.0, con un focus sulla magia compiuta dal framework dietro le quinte. Per rendere il tutto più interessante, si entrerà nel dettaglio di una Single Page App esemplificativa e di come le richieste asincrone generate tramite il client HTTP axios debbano gestire correttamente i response inviati dai controller successivamente alla verifica di una o più policy.</p>
 
-# Lancio in modalita' debug
-npm run watch
-</code></pre>
+<p><a href="https://docs.google.com/presentation/d/1gYMSpEYvR3q7kR2YeeBPYz0Iy5C7yg9ifoEhEYmaybA/">slide</a></p>
 
-<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine. Potete creare quindi un nuovo branch con <strong><em>"git checkout -b nuovo-articolo"</em></strong> e poi effettuare la <strong><em>"pull-request"</em></strong>.</p>
+<hr />
+
+<h4>MongoDB vs MySQL in applicazioni Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/J4GDCAo4muU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>In questi ultimi anni i database di tipo non relazionale, pur non essendo una novità assoluta, hanno registrato una crescita esponenziale nel loro sviluppo ed utilizzo grazie al sempre più crescente bisogno di scalare in orizzontale superando i limiti ai classici RDBMS (database relazionali). In questo talk mettereremo a confronto i maggiori database relazionali e non, analizzandone i pro ed i contro. Inoltre vedremo come implentare da zero una applicazione CRUD in Laravel con MongoDB e MySQL, come viene influenzato il design dell’applicazione e come varia il carico di lavoro con un database rispetto all’altro.</p>
+
+<p><a href="https://drive.google.com/file/d/1ZZ1tqOTWjdT5MZwbfP5o2_gBIP3n1ynG">slide</a> <a href="https://github.com/offline-agency/laravel-mongodb-blog">sorgenti</a></p>
+
+<hr />
+
+<h4>Service Container Deep Dive</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/fwwfFVqO5gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Laravel non è solo un framework per lo sviluppo di applicazioni web moderne, ma al suo interno nasconde (neanche troppo) un vero e proprio "service container". Nel talk analizzeremo cosa è un service container, perché lo usiamo senza nemmeno accorgercene, come lo possiamo sfruttare per favorire il disaccoppiamento del codice e cosa si nasconde dietro il concetto di Facade.</p>
+
+<p><a href="https://drive.google.com/file/d/1OzdqiKLicncYHgW5HT1npd7YATSiTvJc">slide</a></p>
+
+<hr />
+
+<h4>Laravel Notification System 201</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/eSpvul53B3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Sebbene Laravel non consenta in prima istanza l'invio di messaggi differenti dalle email, questo non preclude l'estrema versatilità del modulo di notifiche, quest'ultimo consente infatti di inviare anche SMS, chiamate e notifiche push se opportunamente configurato. Obiettivo di questo talk è proprio quello di analizzare il funzionamento del modulo e di tutti gli accorgimenti utili alla sua estensione e al suo utilizzo al massimo potenziale.</p>
+
+<hr />
+
+<h4>Test Driven Development con Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/UALxTYn6tB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Testare correttamente il proprio codice è una necessità imprescindibile per realizzare software robusto, pulito e di qualità. Il Test Driven Development è la principale metodologia di riferimento per la definizione di test-suite automatizzate. Il talk descrive le motivazioni, i concetti ed i principi fondamentali di questa disciplina. Tali elementi verranno applicati ad un caso d'uso, e, utilizzando Laravel e PHPUnit, saranno affrontati i concetti di Feature ed Unit testing, l'uso delle asserzioni, l'Integration testing ed il mocking.</p>
+
+<p><a href="https://github.com/robertogallea/laravelday-tdd">sorgenti</a> <a href="https://github.com/robertogallea/laravelday-tdd/blob/master/tdd.pdf">slide</a></p>
+
+<hr />
+
+<h4>Creazione di package Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/0SJn6Tl-i7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Il talk descrive il ciclo di creazione e manutenzione di un package Laravel da utilizzare con composer. In particolare verranno descritte le seguenti fasi: Definizione del package e delle sue funzionalità; Pubblicazione di configurazioni, assets ed altri componenti; Pubblicazione su GitHub; Pubblicazione su packagist; Automazione dell'aggiornamento su packagist in seguito ad un push; Gestione delle versioni. Al fine di comprendere meglio i contenuti, si consiglia la conoscenza base di Laravel, composer e git.</p>
     </div>
 
     <nav class="flex justify-between text-sm md:text-base">
         <div>
-                            <a href="https://laravel-news.it/news/laravel-day-2021" title="Older Post: Laravel Day 2021">
-                    &LeftArrow; Laravel Day 2021
+                            <a href="https://laravel-news.it/news/laravel-day-2018" title="Older Post: Laravel Day 2018">
+                    &LeftArrow; Laravel Day 2018
                 </a>
                     </div>
 
         <div>
+                            <a href="https://laravel-news.it/news/laravel-day-2020" title="Newer Post: Laravel Day 2020">
+                    Laravel Day 2020 &RightArrow;
+                </a>
                     </div>
     </nav>
         </main>

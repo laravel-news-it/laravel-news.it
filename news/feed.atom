@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-06-04T12:50:15+00:00</updated>
+    <updated>2022-06-09T16:33:54+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
@@ -49,19 +49,44 @@ featured: true
 
 <p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:</p>
 
-<p><strong>title</strong>: Titolo dell'articolo.</p>
-
-<p><strong>date</strong>: Data in formato ISO.</p>
-
-<p><strong>description</strong>: Descrizione completa dell'artticolo.</p>
-
-<p><strong>categories</strong>: Questi sono i tag che potete inserire, fate riferimento agli articoli precedenti per prendere spunto.</p>
-
-<p><strong>cover_image</strong>: L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo.</p>
-
-<p><strong>author</strong>: Il vosto nome e congome.</p>
-
-<p><strong>excerpt</strong>: E' opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</p>
+<table>
+<thead>
+<tr>
+  <th>Header</th>
+  <th>Desacrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>title</strong></td>
+  <td>Titolo dell'articolo.</td>
+</tr>
+<tr>
+  <td><strong>date</strong></td>
+  <td>Data in formato ISO</td>
+</tr>
+<tr>
+  <td><strong>description</strong></td>
+  <td>Descrizione completa dell'artticolo.</td>
+</tr>
+<tr>
+  <td><strong>categories</strong></td>
+  <td>Questi sono i tag che potete inserire, fate riferimento agli articoli precedenti per prendere spunto.</td>
+</tr>
+<tr>
+  <td><strong>cover_image</strong></td>
+  <td>L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo.</td>
+</tr>
+<tr>
+  <td><strong>author</strong></td>
+  <td>Il vosto nome e congome.</td>
+</tr>
+<tr>
+  <td><strong>excerpt</strong></td>
+  <td>E' opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</td>
+</tr>
+</tbody>
+</table>
 
 <p>Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
 
@@ -72,8 +97,11 @@ featured: true
 
 <p>Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.</p>
 
-<pre><code class="language-bash">composer install
+<pre><code class="language-bash"># Necessario solo se e' la prima volta che si avvia
+composer install
 npm install
+
+# Lancio in modalita' debug
 npm run watch
 </code></pre>
 
@@ -81,259 +109,404 @@ npm run watch
     ]]></content>
 </entry>
             <entry>
-    <id>https://laravel-news.it/news/getting-started</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/getting-started" />
-    <title>Getting Started</title>
-    <published>2018-12-25T00:00:00+00:00</published>
-    <updated>2018-12-25T00:00:00+00:00</updated>
+    <id>https://laravel-news.it/news/laravel-day-2021</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2021" />
+    <title>Laravel Day 2021</title>
+    <published>2021-06-03T00:00:00+00:00</published>
+    <updated>2021-06-03T00:00:00+00:00</updated>
     <author>
-        <name>Author Name</name>
+        <name>Alessandro Cappellozza</name>
     </author>
-    <summary type="html">This is a starter template for creating a beautiful, customizable blog with minimal effort. You’ll only have to change a few settings and you’re ready to go....</summary>
+    <summary type="html">Sito ufficiale
+
+
+
+
+
+Sin da subito, chi si approccia all&#039;utilizzo di Laravel o altri framework, impara ad utilizzare le sue funzionalità di Service Container. Ma cos&#039;è esattamente e com&#039;è fatto un Service Container? Scoprire come realizzarne uno è il......</summary>
     <content type="html"><![CDATA[
-        <p>This is a starter template for creating a beautiful, customizable blog with minimal effort. You’ll only have to change a few settings and you’re ready to go.<!-- more --></p>
+        <p><a href="https://2021.laravelday.it/">Sito ufficiale</a></p>
 
-<h2>Configuration</h2>
+<h4>Papà, come nascono i Service Container?</h4>
 
-<p>As with all Jigsaw sites, configuration settings can be found in <code>config.php</code>; you can update the variables in that file with settings specific to your site. You can also add new configuration variables there to use across your site; take a look at the <a href="http://jigsaw.tighten.co/docs/site-variables/">Jigsaw documentation</a> to learn more.</p>
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/HyOnd8wSBFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<pre><code class="language-php">// config.php
-return [
-    'baseUrl' =&gt; 'https://my-awesome-jigsaw-site.com/',
-    'production' =&gt; false,
-    'siteName' =&gt; 'My Site',
-    'siteDescription' =&gt; 'Give your blog a boost with Jigsaw.',
-    ...
-];
-</code></pre>
-
-<blockquote>
-  <p>Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts organized by topic). Check out the official <a href="https://jigsaw.tighten.co/docs/collections/">Jigsaw documentation</a> to learn more.</p>
-</blockquote>
+<p>Sin da subito, chi si approccia all'utilizzo di Laravel o altri framework, impara ad utilizzare le sue funzionalità di Service Container. Ma cos'è esattamente e com'è fatto un Service Container? Scoprire come realizzarne uno è il miglior modo per imparare ad usarlo al meglio ed in modo consapevole.</p>
 
 <hr />
 
-<h3>Adding Content</h3>
+<h4>Pillole digeribili di sicurezza</h4>
 
-<p>You can write your content using a <a href="http://jigsaw.tighten.co/docs/content-other-file-types/">variety of file types</a>. By default, this starter template expects your content to be located in the <code>source/_posts/</code> folder.</p>
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/ku7ONFkBkro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p>The top of each content page contains a YAML header that specifies how it should be rendered. The <code>title</code> attribute is used to dynamically generate HTML <code>title</code> and OpenGraph tags for each page. The <code>extends</code> attribute defines which parent Blade layout this content file will render with (e.g. <code>_layouts.post</code> will render with <code>source/_layouts/post.blade.php</code>), and the <code>section</code> attribute defines the Blade "section" that expects this content to be placed into it.</p>
-
-<pre><code class="language-yaml">---
-extends: _layouts.post
-section: content
-title: Getting Started
-date: 2018-12-25
-description: Getting started with the Jigsaw blog starter template
-cover_image: /assets/img/post-cover-image-2.png
-featured: true
----
-</code></pre>
-
-<h3>Adding Assets</h3>
-
-<p>Any assets that need to be compiled (such as JavaScript, Less, or Sass files) can be added to the <code>source/_assets/</code> directory, and Laravel Mix will process them when running <code>npm run dev</code> or <code>npm run prod</code>. The processed assets will be stored in <code>/source/assets/build/</code> (note there is no underscore on this second <code>assets</code> directory).</p>
-
-<p>Then, when Jigsaw builds your site, the entire <code>/source/assets/</code> directory containing your built files (and any other directories containing static assets, such as images or fonts, that you choose to store there) will be copied to the destination build folders (<code>build_local</code>, on your local machine).</p>
-
-<p>Files that don't require processing (such as images and fonts) can be added directly to <code>/source/assets/</code>.</p>
-
-<p><a href="http://jigsaw.tighten.co/docs/compiling-assets/">Read more about compiling assets in Jigsaw using Laravel Mix.</a></p>
+<p>Buone pratiche, package, idee e suggerimenti per mettere in sicurezza il proprio applicativo a livello strutturale e cercare di dormire più tranquilli.</p>
 
 <hr />
 
-<h2 id="getting-started-building-your-site">Building Your Site</h2>
+<h4>CI/CD, the Jobtech way</h4>
 
-<p>Now that you’ve edited your configuration variables and know how to customize your styles and content, let’s build the site.</p>
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/1l_0n34OEG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<pre><code class="language-bash"># build static files with Jigsaw
-./vendor/bin/jigsaw build
-
-# compile assets with Laravel Mix
-# options: dev, prod
-npm run dev
-</code></pre>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/customizing-your-site</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/customizing-your-site" />
-    <title>Customizing Your Site</title>
-    <published>2018-12-24T00:00:00+00:00</published>
-    <updated>2018-12-24T00:00:00+00:00</updated>
-    <author>
-        <name>Author Name</name>
-    </author>
-    <summary type="html">This starter template comes pre-loaded with Tailwind CSS, a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS....</summary>
-    <content type="html"><![CDATA[
-        <p>This starter template comes pre-loaded with <a href="https://tailwindcss.com">Tailwind CSS</a>, a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS. There are also a few base Sass files in the <code>/source/_assets/sass</code> folder, set up with the expectation that you can add any custom CSS into <code>_blog.scss</code>.</p>
-
-<blockquote>
-  <p>You can also re-work the architecture of the Sass files any way you’d like; just make sure to keep the <code>@tailwind</code> references in your final <code>main.scss</code> file.</p>
-</blockquote>
-
-<pre><code class="language-scss">// source/_assets/sass/main.scss
-
-@tailwind preflight;
-@tailwind components;
-
-// Code syntax highlighting,
-// https://highlightjs.org
-@import '~highlightjs/styles/default';
-
-@import 'base';
-@import 'navigation';
-@import 'mailchimp';
-@import 'blog';
-
-@tailwind utilities;
-</code></pre>
+<p>Il mio case study prende spunto dalla vita di tutti i giorni di noi backend developer in Jobtech. A paritre dall'ambiente di sviluppo locale fino al deploy in produzione del codice delle nostre 4 applicazioni core.
+Filippo Galante</p>
 
 <hr />
 
-<h2>Typography Styles</h2>
+<h4>Blade Deep Dive</h4>
 
-<p>Here’s a quick preview of what some of the basic type styles will look like in this starter template:</p>
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/rGQ2AJE2ixM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h1>h1 Heading</h1>
-
-<h2>h2 Heading</h2>
-
-<h3>h3 Heading</h3>
-
-<h4>h4 Heading</h4>
-
-<h5>h5 Heading</h5>
-
-<h6>h6 Heading</h6>
-
-<p>The quick brown fox jumps over the lazy dog</p>
-
-<ul>
-<li>The quick brown fox
-
-<ul>
-<li>jumps over
-
-<ul>
-<li>the lazy dog</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<ol>
-<li>The quick brown fox
-
-<ol>
-<li>jumps over
-
-<ol>
-<li>the lazy dog</li>
-</ol></li>
-</ol></li>
-</ol>
-
-<p><s>The quick brown fox jumps over the lazy dog</s></p>
-
-<p><u>The quick brown fox jumps over the lazy dog</u></p>
-
-<p><em>The quick brown fox jumps over the lazy dog</em></p>
-
-<p><strong>The quick brown fox jumps over the lazy dog</strong></p>
-
-<p><code>The quick brown fox jumps over the lazy dog</code></p>
-
-<p><small>The quick brown fox jumps over the lazy dog</small></p>
-
-<blockquote>
-  <p>The quick brown fox jumps over the lazy dog</p>
-</blockquote>
-
-<p><a href="#">The quick brown fox jumps over the lazy dog</a></p>
-
-<pre><code class="language-php">class Foo extends bar
-{
-    public function fooBar()
-    {
-        //
-    }
-}
-</code></pre>
+<p>Come funziona Laravel Blade? Vediamo come sfruttare al massimo le sue potenzialità</p>
     ]]></content>
 </entry>
             <entry>
-    <id>https://laravel-news.it/news/custom-404-page</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/custom-404-page" />
-    <title>Custom 404 Pages</title>
-    <published>2018-12-23T00:00:00+00:00</published>
-    <updated>2018-12-23T00:00:00+00:00</updated>
+    <id>https://laravel-news.it/news/laravel-day-2020</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2020" />
+    <title>Laravel Day 2020</title>
+    <published>2020-06-03T00:00:00+00:00</published>
+    <updated>2020-06-03T00:00:00+00:00</updated>
     <author>
-        <name>Author Name</name>
+        <name>Alessandro Cappellozza</name>
     </author>
-    <summary type="html">This starter template includes a custom 404 Not Found error page, located at &lt;code&gt;/source/404.blade.php&lt;/code&gt;. To preview the 404 page, you can visit &lt;code&gt;/404&lt;/code&gt; in your browser.
+    <summary type="html">Sito ufficiale
 
 
 
 
 
-Depending on where your site is hosted, you may need to......</summary>
+In questo talk mostrerò tutte le strategie di sviluppo che ho utilizzato per implementare e scalare un prodotto SaaS utilizzando Laravel per la gestione di grandi quantità di traffico. Partendo dall&#039;evoluzione del codice vedremo......</summary>
     <content type="html"><![CDATA[
-        <p>This starter template includes a custom <strong>404 Not Found</strong> error page, located at <code>/source/404.blade.php</code>. <a href="/404">To preview the 404 page</a>, you can visit <code>/404</code> in your browser.</p>
+        <p><a href="https://2020.laravelday.it/">Sito ufficiale</a></p>
 
-<pre><code class="language-html">&lt;!-- source/404.blade.php --&gt;
+<h4>Come ho sviluppato e scalato un prodotto SaaS grazie a Laravel</h4>
 
-@extends('_layouts.main')
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/AgRCg10PIEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-@section('body')
-    &lt;div class="flex flex-col items-center text-gray-700 mt-32"&gt;
-        &lt;h1 class="text-6xl font-light leading-none mb-2"&gt;404&lt;/h1&gt;
-
-        &lt;h2 class="text-3xl"&gt;Page not found.&lt;/h2&gt;
-
-        &lt;hr class="block w-full max-w-sm mx-auto border my-8"&gt;
-
-        &lt;p class="text-xl"&gt;
-            Need to update this page? See the &lt;a title="404 Page Documentation" href="https://jigsaw.tighten.co/docs/custom-404-page/"&gt;Jigsaw documentation&lt;/a&gt;.
-        &lt;/p&gt;
-    &lt;/div&gt;
-@endsection
-</code></pre>
+<p>In questo talk mostrerò tutte le strategie di sviluppo che ho utilizzato per implementare e scalare un prodotto SaaS utilizzando Laravel per la gestione di grandi quantità di traffico. Partendo dall'evoluzione del codice vedremo come ho configurato l'ambiente di sviluppo, l'integrazione con sistemi esterni attraverso i driver, l'uso massivo del sistema Queue/Jobs e l'impatto sul Database, fino alla parte più infrastrutturale con la suddivisione dell'applicazione su più server specializzati e il deploy.</p>
 
 <hr />
 
-<p>Depending on where your site is hosted, you may need to configure your server to use the custom 404 page. For more details, visit the <a href="https://jigsaw.tighten.co/docs/custom-404-page/">Jigsaw documentation about configuring a custom 404 page</a>.</p>
+<h4>LiveWire Hands-on, frontend moderno senza toccare una riga di javascript</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/Q-pmLL_zkuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Sappiamo tutti che per avere un frontend al passo coi tempi è necessario fare spesso due progetti uno di frontend e uno backend distinti e specializzati,complicando sia lo sviluppo che il deploy delle applicazioni. Questo nuovo strumento si prefigge di colmare questo gap consentendo di creare componenti "ajax" con il solo PHP; una strada già battuta da altri linguaggi ma con un approccio nuovo già usato da grossi portali, qui lo vedremo pacchettizzato e standardizzato per Laravel. Analizzeremo il principio di funzionamento, cosa mette a disposizione di base, un esempio pratico e dei contesti dove può effettivamente essere utile.</p>
+
+<p><a href="https://slides.com/eppak/livewire-hands-on-frontend-moderno-senza-toccare-una-riga-di-javascript">slide</a></p>
+
+<hr />
+
+<h4>How can I trust my test suite?</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/-I10fHpy14Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>You just started working on a new project. Or maybe you've been working on it since some time, and it evolved a lot, thanks to many different developers. This means that you probably don't have enough knowledge on how the automated tests are written, and how effective they are. So, how can you be confident to ship new features in production, or to refactor that old piece of software that's slowing you down? Are you fairly sure that if your CI build is green you're not gonna break anything? There are a lot of tools out there that give you some numbers about your code and your tests, like code coverage and CRAP metrics, but they are significant up to some extent. In this talk, we will see how can you measure the effectiveness of your test suite, how you can actually improve it, and what are the benefits of having a reliable and comprehensive set of automated tests.</p>
+
+<hr />
+
+<h4>Applicazioni "Modulitiche"</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/TAszZm0m6ME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>In certi contesti un'applicazione non si presta ad essere racchiusa in un unico pacchetto monolitico, ma non è nemmeno sufficientemente distribuita da essere realizzata mediante un'architettura a servizi. Il paradigma “modulitico” è una soluzione ibrida intermedia fra questi due estremi. Questo approccio, oltre a risolvere problemi di gestione del progetto, richiede l'osservanza e l'applicazione di alcuni concetti fondamentali di Clean code and architecture, elevando il livello di qualità della codebase. Scopriremo quando e perché questa metodologia è uno strumento potente se usato in modo corretto.</p>
+
+<p><a href="https://docs.google.com/presentation/d/1pm2uaq6wLV4onWq6zuKAC71EOjA0mO4dxFuxpEwOlps">slide</a> <a href="https://github.com/robertogallea/applicazioni-modulitiche">sorgenti</a></p>
+
+<hr />
+
+<h4>Multi-tenancy in Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/ftYFX8SYLE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Il multi-tenancy è la principale modalità per creare delle SaaS. Analizzeremo cos'è, i pacchetti più noti e creeremo un applicativo di test utilizzando il pacchetto "stancl/tenancy".</p>
+
+<hr />
+
+<h4>Laravel Authentication Deep Dive</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/l1L1xEAslqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Facciamo un tuffo nel sistema di autenticazione utenti di Laravel: vedremo nel dettaglio cosa sono le Guard e gli UserProvider, analizzeremo sessioni e token e useremo queste informazioni per creare il nostro sistema di autenticazione</p>
+
+<hr />
+
+<h4>Organizzazione del codice su Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/_qtwTjTi6Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>In questo talk andremo a vedere le tecniche che il team di Playmoove utilizza per tenere organizzata e accessibile la codebase, nello specifico: - Scrittura di API controller - Business logic isolation - Dependency injection - Generazione automagica delle API docs</p>
     ]]></content>
 </entry>
             <entry>
-    <id>https://laravel-news.it/news/fuse-search</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/fuse-search" />
-    <title>Fuse Search</title>
-    <published>2018-12-22T00:00:00+00:00</published>
-    <updated>2018-12-22T00:00:00+00:00</updated>
+    <id>https://laravel-news.it/news/laravel-day-2019</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2019" />
+    <title>Laravel Day 2019</title>
+    <published>2019-06-03T00:00:00+00:00</published>
+    <updated>2019-06-03T00:00:00+00:00</updated>
     <author>
-        <name>Author Name</name>
+        <name>Alessandro Cappellozza</name>
     </author>
-    <summary type="html">To provide fast, local search of your blog, this starter template comes with a pre-built Vue.js component that uses Fuse.js. Fuse.js is a &quot;lightweight fuzzy-search library with no dependencies.&quot; It works by running queries against a JSON index of your......</summary>
+    <summary type="html">Sito ufficiale
+
+
+
+
+
+Affiancare a Laravel uno strumento RAD come un admin package è una tentazione forte che però ha un costo in termini di scalabilità, architettura e a volte debito tecnico. Ci si trova quindi ad assemblare un software come se si......</summary>
     <content type="html"><![CDATA[
-        <p>To provide fast, local search of your blog, this starter template comes with a pre-built Vue.js component that uses Fuse.js. <a href="http://fusejs.io/">Fuse.js</a> is a "lightweight fuzzy-search library with <em>no</em> dependencies." It works by running queries against a JSON index of your content.</p>
+        <p><a href="https://2019.laravelday.it/">Sito ufficiale</a></p>
 
-<p>During the <a href="http://jigsaw.tighten.co/docs/building-and-previewing/">build process</a>, the contents of your <code>posts</code> collection is processed by the <code>GenerateIndex.php</code> listener, and an <code>index.json</code> file is generated in the build directory. The <code>Search.vue</code> component provides a search input that queries this local index.</p>
+<h4>Laravel the Lego™ Way</h4>
 
-<p>If you'd like to customize the generation of your search index, take a look at the <code>handle</code> method of the <code>GenerateIndex.php</code> file.</p>
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Affiancare a Laravel uno strumento RAD come un admin package è una tentazione forte che però ha un costo in termini di scalabilità, architettura e a volte debito tecnico. Ci si trova quindi ad assemblare un software come se si avessero in mano dei mattoncini per l'appunto, cercando quelli che si incastrano meglio per forma e colore alle specifiche e desideri del committente. Lo sviluppo i trasforma in un incastro di funzionalità che spesso ci travolge e ci lascia col dubbio di aver fatto la scelta migliore. Cercheremo di trovare un trade off facendo una carrellata sugli strumenti che offre il mercato valutandone pro/contro e cercando di capire come impattano non solo sul codice ma sul rapporto qualità e time to market.</p>
+
+<p><a href="https://docs.google.com/presentation/d/11dqSyCNc5rxZwrWGGaVaXHCj5Q1iH35lV8IepqruPmE">slide</a> <a href="https://github.com/eppak/legolaravelway">sorgenti</a></p>
+
+<hr />
+
+<h4>Laravel applicato alle piattaforme e-commerce cloud</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/I2-1Ef1moPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Ad oggi il mondo e-commerce si sta muovendo verso le tecnologie cloud, mentre il mondo dei gestionali ancora non si evolve o a volte non è in grado di supportare in modo completo i clienti nell'approcio a queste piattaforme. In questo talk andremo a vedere come realizzare e configurare a grandi linee un'app middleware realizzata in Laravel (Migrations, Commands, Services, Controllers, ....) che attraverso l'utilizzo delle api fornite dalla piattaforma Cloud possa comunicare con un gestionale attraverso l'interscambio di file.</p>
+
+<p><a href="https://drive.google.com/file/d/1T3iB7W99RIQiEGqtAvCJSS0oNp68hbts/view">slide</a></p>
+
+<hr />
+
+<h4>Controllers, Policies e richieste asincrone</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/aMd3PUPnNyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Le policy di Laravel sono il miglior strumento a disposizione di uno sviluppatore per poter garantire agli end user una precisa politica di autorizzazione all'accesso e modifica delle risorse. Obiettivo del talk è di dare una panoramica a tutto tondo sull'utilizzo di questo strumento all'interno di un progetto Laravel 6.0, con un focus sulla magia compiuta dal framework dietro le quinte. Per rendere il tutto più interessante, si entrerà nel dettaglio di una Single Page App esemplificativa e di come le richieste asincrone generate tramite il client HTTP axios debbano gestire correttamente i response inviati dai controller successivamente alla verifica di una o più policy.</p>
+
+<p><a href="https://docs.google.com/presentation/d/1gYMSpEYvR3q7kR2YeeBPYz0Iy5C7yg9ifoEhEYmaybA/">slide</a></p>
+
+<hr />
+
+<h4>MongoDB vs MySQL in applicazioni Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/J4GDCAo4muU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>In questi ultimi anni i database di tipo non relazionale, pur non essendo una novità assoluta, hanno registrato una crescita esponenziale nel loro sviluppo ed utilizzo grazie al sempre più crescente bisogno di scalare in orizzontale superando i limiti ai classici RDBMS (database relazionali). In questo talk mettereremo a confronto i maggiori database relazionali e non, analizzandone i pro ed i contro. Inoltre vedremo come implentare da zero una applicazione CRUD in Laravel con MongoDB e MySQL, come viene influenzato il design dell’applicazione e come varia il carico di lavoro con un database rispetto all’altro.</p>
+
+<p><a href="https://drive.google.com/file/d/1ZZ1tqOTWjdT5MZwbfP5o2_gBIP3n1ynG">slide</a> <a href="https://github.com/offline-agency/laravel-mongodb-blog">sorgenti</a></p>
+
+<hr />
+
+<h4>Service Container Deep Dive</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/fwwfFVqO5gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Laravel non è solo un framework per lo sviluppo di applicazioni web moderne, ma al suo interno nasconde (neanche troppo) un vero e proprio "service container". Nel talk analizzeremo cosa è un service container, perché lo usiamo senza nemmeno accorgercene, come lo possiamo sfruttare per favorire il disaccoppiamento del codice e cosa si nasconde dietro il concetto di Facade.</p>
+
+<p><a href="https://drive.google.com/file/d/1OzdqiKLicncYHgW5HT1npd7YATSiTvJc">slide</a></p>
+
+<hr />
+
+<h4>Laravel Notification System 201</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/eSpvul53B3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Sebbene Laravel non consenta in prima istanza l'invio di messaggi differenti dalle email, questo non preclude l'estrema versatilità del modulo di notifiche, quest'ultimo consente infatti di inviare anche SMS, chiamate e notifiche push se opportunamente configurato. Obiettivo di questo talk è proprio quello di analizzare il funzionamento del modulo e di tutti gli accorgimenti utili alla sua estensione e al suo utilizzo al massimo potenziale.</p>
+
+<hr />
+
+<h4>Test Driven Development con Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/UALxTYn6tB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Testare correttamente il proprio codice è una necessità imprescindibile per realizzare software robusto, pulito e di qualità. Il Test Driven Development è la principale metodologia di riferimento per la definizione di test-suite automatizzate. Il talk descrive le motivazioni, i concetti ed i principi fondamentali di questa disciplina. Tali elementi verranno applicati ad un caso d'uso, e, utilizzando Laravel e PHPUnit, saranno affrontati i concetti di Feature ed Unit testing, l'uso delle asserzioni, l'Integration testing ed il mocking.</p>
+
+<p><a href="https://github.com/robertogallea/laravelday-tdd">sorgenti</a> <a href="https://github.com/robertogallea/laravelday-tdd/blob/master/tdd.pdf">slide</a></p>
+
+<hr />
+
+<h4>Creazione di package Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/0SJn6Tl-i7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Il talk descrive il ciclo di creazione e manutenzione di un package Laravel da utilizzare con composer. In particolare verranno descritte le seguenti fasi: Definizione del package e delle sue funzionalità; Pubblicazione di configurazioni, assets ed altri componenti; Pubblicazione su GitHub; Pubblicazione su packagist; Automazione dell'aggiornamento su packagist in seguito ad un push; Gestione delle versioni. Al fine di comprendere meglio i contenuti, si consiglia la conoscenza base di Laravel, composer e git.</p>
     ]]></content>
 </entry>
             <entry>
-    <id>https://laravel-news.it/news/my-first-blog-post</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/my-first-blog-post" />
-    <title>My First Blog Post</title>
-    <published>2017-03-23T00:00:00+00:00</published>
-    <updated>2017-03-23T00:00:00+00:00</updated>
+    <id>https://laravel-news.it/news/laravel-day-2018</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2018" />
+    <title>Laravel Day 2018</title>
+    <published>2018-06-03T00:00:00+00:00</published>
+    <updated>2018-06-03T00:00:00+00:00</updated>
     <author>
-        <name>Author Name</name>
+        <name>Alessandro Cappellozza</name>
     </author>
-    <summary type="html">This is the start of your first blog post....</summary>
+    <summary type="html">Sito ufficiale
+
+
+
+
+
+Il percorso che ho fatto negli ultimi due anni mi ha portato ad avvicinare il settore del web, dal quale provengo, al settore dell&#039;IIOT. Grazie alla sua duttilità Laravel ha consentito a me e alla mia azienda di creare un prodotto......</summary>
     <content type="html"><![CDATA[
-        <p>This is the start of your first blog post.</p>
+        <p><a href="https://2018.laravelday.it/">Sito ufficiale</a></p>
+
+<h4>Laravel applicato all'IIOT</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/YEkmK09QulU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Il percorso che ho fatto negli ultimi due anni mi ha portato ad avvicinare il settore del web, dal quale provengo, al settore dell'IIOT. Grazie alla sua duttilità Laravel ha consentito a me e alla mia azienda di creare un prodotto industriale competitivo e completo in tempi brevi e di continuare a supportarlo riducendo tempi e costi. Questo a ppliance hardware si occupa della collezione, monitoraggio e analisi di dati provenienti da dispositivi telemetrici industriali usati nei più svariati ambiti del telecontrollo. La flessibilità e la completezza di Laravel ha permesso di risolvere molti problemi rapidamente e in maniera pulita facendo da collante alle tecnologie che ruotavano intorno al progetto, questo è quello che di cui voglio raccontarvi nel mio talk.</p>
+
+<p><a href="https://slides.com/eppak/lday2018-laravel-iiot">Slide del talk</a></p>
+
+<hr />
+
+<h4>Modern PHP development with Laravel 5.6</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/AqFtr60vytU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>In soli 5 anni il mondo PHP si è rivoluzionato completamente. Prima di allora veniva considerato un semplice linguaggio di scripting per siti web di piccole dimensioni. Ora ha guadagnato a tutti gli effetti lo status di linguaggio di programmazione per professionisti da utilizzare all’interno di contesti Enterprise. Tutto nacque grazie a Composer ed il suo gestore delle dipendenze. Da quel momento in poi la community ha potuto condividere librerie open source con una facilità mai vista prima, creando un campo fertile e dando spazio all’innovazione. Tra i principali utilizzatori delle novità introdotte vi è sicuramente Laravel, il framework backend con piu star su GitHub e tutt’ora in fortissima crescita. In questo talk faremo un overview sulle principali metodologie di sviluppo moderne. Si passerà dal TDD al Continuous Integration, continuando per Clean Code, Object Calisthenics, principi di Domain Driven Design ed Architettura Esagonale.</p>
+
+<p><a href="https://slides.com/damianopetrungaro/modern-laravel-talk">Slide del talk</a></p>
+
+<hr />
+
+<h4>The Kubernetes hitchhiker's guide to the CI/CD</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/O1kem6cym-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Sei dunque riuscito a creare un ambiente produttivo per lo sviluppo locale adottando la metodologia 12 Factor, la tua applicazione è correttamente ""containerizzata"" e padroneggi Docker: ottimo, ora è tempo di fare il passo in avanti ed ottenere Continuous Integration, Continuous Delivery e Continuous Deployment... SI - PUÒ - FARE! (cit. Frankenstein Junior) Kubernetes è diventato lo standard de-facto per l'orchestrazione di container: questo talk sarà una demo live inerente il life-cycle di un ecosistema Laravel e di come Kubernetes possa essere la tecnologia chiave per diminuire il lead-time oltre che i costi infrastrutturali.</p>
+
+<p><a href="https://slides.com/dariotranchitella/laravelday-2018">Slide del talk</a></p>
+
+<hr />
+
+<h4>Sviluppare API con Laravel e Serverless su AWS</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/YvHGsKuM7ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Una della più grandi innovazioni legate al cloud computing è sicuramente rappresentato dall'ecosistema Serverless cui negli ultimi anni abbiamo assistito a una grande diffusione di questo paradigma di sviluppo. Il serverless è un ecosistema di servizi e metodi di progettazione dai confini molto ampi e che necessita di un certo spirito critico per essere inquadrato nel modo giusto e impiegato nei propri progetti. Nel caso di un'applicazione Laravel su Serverless in ambiente AWS occorre adottare qualche accorgimento e configurazione per utilizzarne a pieno i vantaggi. In questo talk vedremo come sviluppare un API REST completa di feature come autenticazione JWT, rate-limit, cache e best practice e vederla girare su un'ambiente AWS Serveless; si affronterà anche come monitorarne il funzionamento, progeettare ed effettuare i test, per avere API sempre "up &amp; running"</p>
+
+<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vT6UZEEdQAie3dt2h4NoZuK-PxRst8XmSsVd5j2QlmMGYW_kI03ndYBQLJoGUZrcyQ29jf03aXj0-uc/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.g48a9a83844_2_45">Slide del talk</a></p>
+
+<hr />
+
+<h4>Laravel e Vue JS</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/zunRHtpisDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Vue.js è una framework per realizzare applicazioni web interattive; l'obiettivo di Vue.js è fornire i benefici del reactive data binding e del composable view components attraverso un'API il più possibile semplice. Purtroppo, data la grande flessibilità, ci si trova ad un bivio per capire cosa fare lato frontend, sia lato backend, creando a volte applicazioni difficili sotto il profilo della manutenzione. In questo talk vedremo come l'accoppiata Laravel e Vue JS ci torna utile per la creazione di Single Page Application e Progressive Web Application, in modo rapido e affidabile, toccando gli aspetti progettuali, implementativi e di deploy.</p>
+
+<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vQWJ0Ac0IFV-goQxunm8gCHauAC-M-wCtI_YsMuKZ9fftw7im5jdW0HuR_aQYFz_yT_j9Z9pvMjfB2b/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.g48a98c831d_2_45">Slide del talk</a></p>
+
+<hr />
+
+<h4>Flexible Laravel: come rendere meno traumatica la gestione di un sistema legacy</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/mtGvpxYTYPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Sappiamo tutti quanto sia importante sviluppare codice pulito, di facile e comprensione e ben strutturato. Spesso però siamo costretti a fare i conti con la scomoda eredità di un’architettura preesistente, sviluppata senza tenere in considerazione anche le più basilari best-practice o martoriata da deadline stringenti e, più banalmente, dagli inevitabili segni del tempo. Recentemente ho avuto la (s)fortuna di lavorare ad un progetto di grandi dimensioni senza la possibilità modificare neanche una virgola del suo vecchio e malandato database, ma grazie all’utilizzo di Laravel e del nostro caro Eloquent, rimettere il tutto in carreggiata è stato meno difficile del previsto. In questo talk cercherò di sviscerare alcuni dei passaggi chiave di questa profittevole transizione: sebbene Laravel aderisca al paradigma “convention over configuration” per semplificare al massimo la nostra vita e aumentare la produttività, può dimostrarsi un alleato molto flessibile anche fuori dalla sua naturale "comfort zone".</p>
+
+<p><a href="https://slides.com/matteomangoni/flexible-laravel">Slide del talk</a></p>
+
+<hr />
+
+<h4>Deploying Laravel from dev to production</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/JYmhIpXuyR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Scrivere un buon software costituisce solo una parte del lavoro necessario per far sì che questo possa essere proficuamente utilizzato dal pubblico. In questa sessione sarà fatta una panoramica di quelle che sono le soluzioni più comuni per il rilascio in di applicazioni laravel in ambienti locali, self-hosted, PaaS e IaaS comparandoli tra loro al fine di comprendere perchè in alcune situazioni alcune soluzioni siano preferibili alle altre. Particolare attenzione verrà data all'ambiente di sviluppo al fine di ottenere un ambiente il più possibile production-like ed evitare il presentarsi di alcuni tra i problemi più comuni.</p>
+
+<hr />
+
+<h4>Docker for PHP Developers</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/x5mDjUkHiGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Parleremo di come configurare e utilizzare Docker in un progetto Laravel per uno sviluppatore che si inserisce in un nuovo Team per la prima volta. Prendedermo come esempio alcuni progetti già pre-costituiti come Laravel Homestead e Laradock fino ad arrivare ad a costruire un ambiente docker più strutturato con Laravel, Redis, Memcached, Laravel Echo Server per avere un ambiente facilmente deployable sul cloud.</p>
+
+<p><a href="https://www.slideshare.net/skyweb/laravelday2018">Slide del talk</a></p>
+    ]]></content>
+</entry>
+            <entry>
+    <id>https://laravel-news.it/news/laravel-day-2017</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2017" />
+    <title>Laravel Day 2017</title>
+    <published>2017-06-03T00:00:00+00:00</published>
+    <updated>2017-06-03T00:00:00+00:00</updated>
+    <author>
+        <name>Alessandro Cappellozza</name>
+    </author>
+    <summary type="html">Sito ufficiale
+
+
+
+
+
+Laravel 5.5 ha aggiunto alcune cose per aiutarci a creare più velocemente la basi di un API restful. Per esempio, adesso i transformer sono stati integrati, quindi non c&#039;è più bisogno di includere Fractal. Questa talk parlerà......</summary>
+    <content type="html"><![CDATA[
+        <p><a href="https://2017.laravelday.it/">Sito ufficiale</a></p>
+
+<h4>RESTful API: la novità in Laravel 5.5</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/xi8AguAjuUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Laravel 5.5 ha aggiunto alcune cose per aiutarci a creare più velocemente la basi di un API restful. Per esempio, adesso i transformer sono stati integrati, quindi non c'è più bisogno di includere Fractal. Questa talk parlerà degli step necessari per creare un'API RESTful semplice partendo da zero, usando la varie novità.</p>
+
+<hr />
+
+<h4>12 Factors Laravel</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/iAe6BK8XBzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>"It works on my machine: è la frase che tutti noi abbiamo usato o che ci siamo sentiti dire almeno una volta nella vita, in combinazione a "non possiamo scalare orizzontalmente". Con l'ausilio a Docker è possibile rendere un'applicazione Laravel altamente scalabile nel cloud: grazie agli adapter offerti per la gestione della base dati, della cache, delle sessioni e delle code è possibile adottare i principi dettati dal manifesto '12 factors app', seguendo dunque le best practices di DevOps per creare un ambiente ottimizzato a qualsiasi environment con pochi comandi."</p>
+
+<hr />
+
+<h4>Laravel Doctrine: a Data Mapper approach</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/7aeArtHwfCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>"Eloquent è uno strumento potentissimo: permette di velocizzare, e di molto, lo sviluppo di applicazioni web offrendoti un’interfaccia molto chiara e intuitiva. Per la prototipazione rapida è il massimo. Tuttavia, non appena l’applicazione cresce di dimensione, la situazione rischia di esploderci in mano in quanto Eloquent soffre di tutti i limiti di un Active Record. Un’alternativa a questo pattern è il Data Mapper, implementato in maniera eccellente da Doctrine. In questo talk vedremo quindi come integrare Doctrine all'interno di Laravel e verrà dato qualche spunto su come strutturare un’architettura molto più solida."</p>
+
+<hr />
+
+<h4>Codemotion, Laravel &amp; me: 3 anni in un'azienda in rapida crescita</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/MSymm3-K_nU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>"Tre anni fa è iniziato lo sviluppo di tool per la gestione delle conferenze di Codemotion, dall’esigenza naturale di automatizzare alcuni processi che fino a quel momento erano gestiti manualmente. Data la presenza di uno stack LAMP per i siti web degli eventi, la scelta tecnologica è caduta su Laravel, tra i framework php più in voga al momento. Questi strumenti di supporto sono diventati nel frattempo dei veri e propri progetti, chiamati a rispondere alle continue e nuove necessità dell’azienda che continua a crescere e ad espandersi, diventando un importante punto di riferimento per i developers in Europa. Il talk vuole ripercorrere questa evoluzione, dal punto di vista dello sviluppatore che ha iniziato a sviluppare su un framework da zero, mostrando alcune delle sfide che si sono presentate e come sono state affrontate con Laravel."</p>
+
+<hr />
+
+<h4>Playmoove: Shared mobility within everyone's reach (developers included)</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/Qto4Nzjsmtc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>"Understanding the tools we use every day it’s a critical component of building good software in a reasonable amount of time. But tools are not enough when software grows, in this talk I am condensing my experience with laravel to help you bootstrap and be really productive on your next project. In this talk we will introduce how we built Playmoove to be as simple as possible for the final customer and extremely extensible and revisionable for the developers. We will (almost) deep dive into the top things that have enhanced our developing experience: - From writing better controllers with eloquent automatic model binding and Abstract requests with the FormRequest, to Enhance application response time using queues to balance and delegate the load and eloquent eager loading, up to Improve maintainability and inspectability with Abstract models on API layers, ‎Log exception to track down problems and exception rendering to give end user coherent error messages"</p>
+
+<hr />
+
+<h4>Using Repository Pattern with Eloquent for Code That Lasts</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/NgHsl9dpIao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>"Laravel è un framework moderno e davvero potente sotto moltissimi punti di vista, componenti semplici da utilizzare ed estendere sono la chiave del suo successo. Tra questi brilla l'ORM Eloquent che riesce a darci un'ottima astrazione per manipolare velocemente i modelli e la loro persistenza. Quando però entrano in gioco logiche di dominio particolarmente complesse o si necessità di più controllo e di una forte elasticità per mappare i dati a nostro piacimento, Eloquent comincia a remarci contro e non essere più un fedele alleato. Scopriamo come continuare ad utilizzare Eloquent rendendo il nostro codice più pulito e disaccoppiato dalla sua dipendenza, senza però perderne i numerosi vantaggi e l'incredibile immediatezza d'utilizzo."</p>
+
+<hr />
+
+<h4>Designing Virtual Reality App with Laravel Integration</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/3RaYDC7A0KE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>"Nowaday, Laravel is used in an increasing number of web applications, platforms, mobile applications and web services. However, Laravel can be a great solution to implementing RESTful APIs for content management within a virtual reality application. After a short introduction, we will implement a basic VR application that uses Laravel and the recent API Resources as source for data display. Finally, we will show Coderblock as case study for Laravel integration into an online 3D VR office."</p>
+
+<hr />
+
+<h4>Deploy di applicazioni Laravel con le pipeline di Bitbucket</h4>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/J3ySFHXIFZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>"Da sempre fare il deploy di applicazioni multi-istanza rappresenta una sfida per lo sviluppatore e per il sistemista. Oggi grazie a strumenti gratuiti e un pò di esperienza in materia è possibile eseguire tale operazione lavorando su pipeline che prevedono testing automatico, validazione del code style e molto altro, in modo da ottenere una Continuous Integration consistente, efficace ed in tempi brevissimi. Scopriamo insieme come con un progetto Laravel e le pipeline di Bitbucket."</p>
     ]]></content>
 </entry>
     </feed>
