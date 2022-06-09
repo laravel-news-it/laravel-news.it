@@ -611,80 +611,93 @@ video {
 
 /* Code syntax highlighting, powered by https://highlightjs.org */
 
-/* a11y-light theme */
-
-/* Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css */
-
-/* @author: ericwbailey */
-
-/* Comment */
-
-.hljs-comment,
-.hljs-quote {
-  color: #696969;
-}
-
-/* Red */
-
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-  color: #d91e18;
-}
-
-/* Orange */
-
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-  color: #aa5d00;
-}
-
-/* Yellow */
-
-.hljs-attribute {
-  color: #aa5d00;
-}
-
-/* Green */
-
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-  color: #008000;
-}
-
-/* Blue */
-
-.hljs-title,
-.hljs-section {
-  color: #007faa;
-}
-
-/* Purple */
-
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #7928a1;
-}
+/**
+ * Shades of Purple Theme — for Highlightjs.
+ *
+ * @author (c) Ahmad Awais <https://twitter.com/mrahmadawais/>
+ * @link GitHub Repo → https://github.com/ahmadawais/Shades-of-Purple-HighlightJS
+ * @version 1.5.0
+ */
 
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #fefefe;
-  color: #545454;
+  /* Custom font is optional */
+  /* font-family: 'Operator Mono', 'Fira Code', 'Menlo', 'Monaco', 'Courier New', 'monospace';  */
   padding: 0.5em;
+  background: #2d2b57;
+  font-weight: normal;
+}
+
+.hljs-title {
+  color: #fad000;
+  font-weight: normal;
+}
+
+.hljs-name {
+  color: #a1feff;
+}
+
+.hljs-tag {
+  color: #ffffff;
+}
+
+.hljs-attr {
+  color: #f8d000;
+  font-style: italic;
+}
+
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section {
+  color: #fb9e00;
+}
+
+.hljs-keyword {
+  color: #fb9e00;
+}
+
+.hljs,
+.hljs-subst {
+  color: #e3dfff;
+}
+
+.hljs-string,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-code,
+.hljs-regexp,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.hljs-quote,
+.hljs-deletion {
+  color: #4cd213;
+}
+
+.hljs-meta,
+.hljs-meta-string {
+  color: #fb9e00;
+}
+
+.hljs-comment {
+  color: #ac65ff;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name,
+.hljs-strong {
+  font-weight: normal;
+}
+
+.hljs-literal,
+.hljs-number {
+  color: #fa658d;
 }
 
 .hljs-emphasis {
@@ -693,31 +706,6 @@ video {
 
 .hljs-strong {
   font-weight: bold;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .hljs-addition,
-  .hljs-attribute,
-  .hljs-built_in,
-  .hljs-builtin-name,
-  .hljs-bullet,
-  .hljs-comment,
-  .hljs-link,
-  .hljs-literal,
-  .hljs-meta,
-  .hljs-number,
-  .hljs-params,
-  .hljs-string,
-  .hljs-symbol,
-  .hljs-type,
-  .hljs-quote {
-    color: highlight;
-  }
-
-  .hljs-keyword,
-    .hljs-selector-tag {
-    font-weight: bold;
-  }
 }
 
 body {
@@ -33243,6 +33231,60 @@ pre code {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+pre {
+  background-color: #142836;
+}
+
+table {
+  min-width: 100%;
+  table-layout: fixed;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  padding: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+th {
+  --tw-bg-opacity: 1;
+  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: left;
+  font-size: .8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1rem;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+  background-color: #142836;
+}
+
+tbody {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
+td {
+  overflow-wrap: break-word;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  vertical-align: top;
+  word-wrap:break-word
 }
 
 @media (min-width: 640px) {
@@ -194264,4 +194306,3 @@ pre code {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-
