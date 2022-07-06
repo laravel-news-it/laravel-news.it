@@ -3,11 +3,10 @@ extends: _layouts.post
 section: content
 title: Creare un nuovo articolo
 date: 2022-06-03
-description: Creare un nuovo artcolo per il blog di laravel news italia
+description: Creare un nuovo articolo per il blog di laravel news italia
 categories: [configuration]
 cover_image: /assets/articles/creare-un-nuovo-articolo.png
 author: Alessandro Cappellozza
-featured: true
 ---
 Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
 Ricordate che il nome del file rappresetera' anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.

@@ -4,3 +4,4 @@ node_modules
 build_local
 build_production
 build_prod
+.idea
