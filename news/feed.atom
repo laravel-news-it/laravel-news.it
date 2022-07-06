@@ -3,12 +3,82 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-06-09T16:33:54+00:00</updated>
+    <updated>2022-07-06T21:00:14+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
     </author>
                 <entry>
+    <id>https://laravel-news.it/news/22-02-inizializzazione-proibita</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-02-inizializzazione-proibita" />
+    <title>L&#039;inizializzazione proibita</title>
+    <published>2022-07-15T00:00:00+00:00</published>
+    <updated>2022-07-15T00:00:00+00:00</updated>
+    <author>
+        <name>Alberto Peripolli</name>
+    </author>
+    <summary type="html">In PHP è possibile dare un valore di default ai parametri di una funzione.
+Questo serve ad evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare ad ogni invocazione....</summary>
+    <content type="html"><![CDATA[
+        <p>In PHP è possibile dare un valore di default ai parametri di una funzione.<br />
+Questo serve ad evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare ad ogni invocazione.
+<!-- more --></p>
+
+<pre><code class="language-php">function makecoffee($type = "cappuccino")
+{
+    return "Making a cup of $type.\n";
+}
+echo makecoffee(); // Making a cup of cappuccino.
+echo makecoffee(null); // Making a cup of .
+echo makecoffee("espresso"); // Making a cup of espresso.
+</code></pre>
+
+<p>Il problema è che con PHP possiamo assegnare ai parametri solo dei valori semplici come una stringa, un numero, <code>null</code> o un <code>array</code> di elementi semplici. 
+Molto spesso però capita di volere assegnare un oggetto o addirittura il risultato di una funzione</p>
+
+<pre><code class="language-php">function printDate(Carbon $date = now())
+{
+    return $date-&gt;format('d/m/Y');
+}
+</code></pre>
+
+<p>Purtroppo questa sintassi ritorna l'errore: <code>Fatal error: Constant expression contains invalid operations</code>.</p>
+
+<p>Quindi l'unica soluzione è inizializzare il parametro a <code>null</code> e poi andarlo a definire dentro la funzione.</p>
+
+<pre><code class="language-php">function printDate(?Carbon $date = null)
+{
+    if(is_null($date)){
+        $date = now();
+    }
+
+    return $date-&gt;format('d/m/Y');
+}
+</code></pre>
+
+<p>Anche se questa sintassi può sembrare pulita, all'aumentare dei parametri può diventare molto prolissa.
+Per fortuna da PHP 7.4 abbiamo un nuovo operatore di assegnazione chiamato <code>Null Coalesce</code> che rende il codice più coinciso e meglio leggibile:</p>
+
+<pre><code class="language-php">function printDate(?Carbon $date = null)
+{
+    $date ??= now();
+
+    return $date-&gt;format('d/m/Y');
+}
+</code></pre>
+
+<p>Questo compatto operatore è l'evoluzione dell'operatore ternario di PHP</p>
+
+<pre><code class="language-php">// before PHP 7
+$data['username'] = (isset($data['username']) ? $data['username'] : 'guest');
+// before PHP 7.4
+$data['username'] = $data['username'] ?? 'guest';
+// after PHP 7.4
+$data['username'] ??= 'guest';
+</code></pre>
+    ]]></content>
+</entry>
+            <entry>
     <id>https://laravel-news.it/news/creare-un-nuovo-articolo</id>
     <link type="text/html" rel="alternate" href="https://laravel-news.it/news/creare-un-nuovo-articolo" />
     <title>Creare un nuovo articolo</title>
