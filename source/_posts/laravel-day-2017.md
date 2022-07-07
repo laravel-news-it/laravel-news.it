@@ -4,7 +4,7 @@ section: content
 title: Laravel Day 2017
 date: 2017-06-03
 description: Creare un nuovo artcolo per il blog di laravel news italia
-categories: [laravel-day]
+categories: [events]
 cover_image: /assets/articles/laravel-day.png
 author: Alessandro Cappellozza
 featured: false

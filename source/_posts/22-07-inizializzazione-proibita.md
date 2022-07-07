@@ -4,8 +4,8 @@ section: content
 title: L'inizializzazione proibita
 date: 2022-07-15
 description: Come inizializzare gli argomenti di una funzione.
-categories: [tips]
-cover_image: /assets/articles/22-02-inizializzazione-proibita.png
+categories: [tips,php]
+cover_image: /assets/articles/22-07-inizializzazione-proibita.png
 author: Alberto Peripolli
 featured: true
 ---

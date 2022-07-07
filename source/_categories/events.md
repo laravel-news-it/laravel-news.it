@@ -1,7 +1,7 @@
 ---
 extends: _layouts.category
 title: Eventi
-description: Segnalazione eventi interessanti.
+description: Novità, Talk e Informazioni.
 ---
 
-In questa sezione segnaliamo tutti gli eventi degni di nota sul mondo della prograzmmazione, Laravel e PHP.
+In questa sezione segnaliamo tutti gli eventi degni di nota sul mondo dello sviluppo web, Laravel e PHP.
