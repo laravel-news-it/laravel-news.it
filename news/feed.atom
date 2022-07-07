@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-07-06T21:00:14+00:00</updated>
+    <updated>2022-07-07T08:13:43+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
@@ -33,8 +33,9 @@ echo makecoffee(null); // Making a cup of .
 echo makecoffee("espresso"); // Making a cup of espresso.
 </code></pre>
 
-<p>Il problema è che con PHP possiamo assegnare ai parametri solo dei valori semplici come una stringa, un numero, <code>null</code> o un <code>array</code> di elementi semplici. 
-Molto spesso però capita di volere assegnare un oggetto o addirittura il risultato di una funzione</p>
+<p>Il problema è che con PHP possiamo assegnare ai parametri solo dei valori semplici come una stringa, un numero, <code>null</code> o un <code>array</code> di elementi semplici.</p>
+
+<p>Molto spesso però capita di volere assegnare un oggetto o addirittura il risultato di una funzione.</p>
 
 <pre><code class="language-php">function printDate(Carbon $date = now())
 {
@@ -56,8 +57,9 @@ Molto spesso però capita di volere assegnare un oggetto o addirittura il risult
 }
 </code></pre>
 
-<p>Anche se questa sintassi può sembrare pulita, all'aumentare dei parametri può diventare molto prolissa.
-Per fortuna da PHP 7.4 abbiamo un nuovo operatore di assegnazione chiamato <code>Null Coalesce</code> che rende il codice più coinciso e meglio leggibile:</p>
+<p>Anche se questa sintassi può sembrare pulita, all'aumentare dei parametri può diventare molto prolissa.</p>
+
+<p>Per fortuna da PHP 7.4 abbiamo un nuovo operatore di assegnazione chiamato <code>Null Coalesce</code> che rende il codice più coinciso e meglio leggibile:</p>
 
 <pre><code class="language-php">function printDate(?Carbon $date = null)
 {
@@ -76,6 +78,8 @@ $data['username'] = $data['username'] ?? 'guest';
 // after PHP 7.4
 $data['username'] ??= 'guest';
 </code></pre>
+
+<p>Quindi la prossima volta che vi servirà di inizializzare un parametro di una funzione ricordatevi questo piccolo amico <code>??=</code>.</p>
     ]]></content>
 </entry>
             <entry>

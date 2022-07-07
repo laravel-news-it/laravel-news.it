@@ -13,8 +13,8 @@
         <meta property="og:url" content="https://laravel-news.it/news/22-02-inizializzazione-proibita"/>
         <meta property="og:description" content="Come inizializzare gli argomenti di una funzione." />
         
-                <meta property="og:image" content="/assets/articles/tips.png" />
-        <meta name="twitter:image" content="/assets/articles/tips.png"/>
+                <meta property="og:image" content="/assets/articles/22-02-inizializzazione-proibita.png" />
+        <meta name="twitter:image" content="/assets/articles/22-02-inizializzazione-proibita.png"/>
         
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="L&#039;inizializzazione proibita | Italian Laravel News"/>
@@ -142,7 +142,7 @@
 </nav>
 
         <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
-                        <img src="/assets/articles/tips.png" alt="L&#039;inizializzazione proibita cover image" class="mb-2">
+                        <img src="/assets/articles/22-02-inizializzazione-proibita.png" alt="L&#039;inizializzazione proibita cover image" class="mb-2">
     
     <h1 class="leading-none mb-2">L&#039;inizializzazione proibita</h1>
 
@@ -168,8 +168,9 @@ echo makecoffee(null); // Making a cup of .
 echo makecoffee("espresso"); // Making a cup of espresso.
 </code></pre>
 
-<p>Il problema è che con PHP possiamo assegnare ai parametri solo dei valori semplici come una stringa, un numero, <code>null</code> o un <code>array</code> di elementi semplici. 
-Molto spesso però capita di volere assegnare un oggetto o addirittura il risultato di una funzione</p>
+<p>Il problema è che con PHP possiamo assegnare ai parametri solo dei valori semplici come una stringa, un numero, <code>null</code> o un <code>array</code> di elementi semplici.</p>
+
+<p>Molto spesso però capita di volere assegnare un oggetto o addirittura il risultato di una funzione.</p>
 
 <pre><code class="language-php">function printDate(Carbon $date = now())
 {
@@ -191,8 +192,9 @@ Molto spesso però capita di volere assegnare un oggetto o addirittura il risult
 }
 </code></pre>
 
-<p>Anche se questa sintassi può sembrare pulita, all'aumentare dei parametri può diventare molto prolissa.
-Per fortuna da PHP 7.4 abbiamo un nuovo operatore di assegnazione chiamato <code>Null Coalesce</code> che rende il codice più coinciso e meglio leggibile:</p>
+<p>Anche se questa sintassi può sembrare pulita, all'aumentare dei parametri può diventare molto prolissa.</p>
+
+<p>Per fortuna da PHP 7.4 abbiamo un nuovo operatore di assegnazione chiamato <code>Null Coalesce</code> che rende il codice più coinciso e meglio leggibile:</p>
 
 <pre><code class="language-php">function printDate(?Carbon $date = null)
 {
@@ -211,6 +213,8 @@ $data['username'] = $data['username'] ?? 'guest';
 // after PHP 7.4
 $data['username'] ??= 'guest';
 </code></pre>
+
+<p>Quindi la prossima volta che vi servirà di inizializzare un parametro di una funzione ricordatevi questo piccolo amico <code>??=</code>.</p>
     </div>
 
     <nav class="flex justify-between text-sm md:text-base">
