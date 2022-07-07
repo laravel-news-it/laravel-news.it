@@ -3,14 +3,14 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-07-07T08:13:43+00:00</updated>
+    <updated>2022-07-07T08:34:10+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
     </author>
                 <entry>
-    <id>https://laravel-news.it/news/22-02-inizializzazione-proibita</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-02-inizializzazione-proibita" />
+    <id>https://laravel-news.it/news/22-07-inizializzazione-proibita</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-07-inizializzazione-proibita" />
     <title>L&#039;inizializzazione proibita</title>
     <published>2022-07-15T00:00:00+00:00</published>
     <updated>2022-07-15T00:00:00+00:00</updated>
@@ -106,6 +106,8 @@ touch nuovo-articolo.md
 vi nuovo-articolo.md
 </code></pre>
 
+<p>Il nome del file deve essere composto da [ANNO]-[MESE]-titolo in formato slug es: <code>22-07-titolo.md</code></p>
+
 <p>Nella parte iniziale del file vanno messi i dati dell'articolo in questa maniera:</p>
 
 <pre><code>---
@@ -115,9 +117,8 @@ title: Creare un nuovo articolo
 date: 2022-06-03
 description: Creare un nuovo artcolo per il blog di laravel news italia
 categories: [news]
-cover_image: /assets/articles/post-cover-image-1.png
+cover_image: /assets/articles/22-07-nome-del-file.png
 author: Alessandro Cappellozza
-featured: true
 ---
 </code></pre>
 
@@ -145,11 +146,11 @@ featured: true
 </tr>
 <tr>
   <td><strong>categories</strong></td>
-  <td>Questi sono i tag che potete inserire, fate riferimento agli articoli precedenti per prendere spunto.</td>
+  <td>Questi sono i tag che potete inserire, se ne possono inserire anche più di uno [events,contents,mnews,packages,php,tips,tutorials].</td>
 </tr>
 <tr>
   <td><strong>cover_image</strong></td>
-  <td>L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo.</td>
+  <td>L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.</td>
 </tr>
 <tr>
   <td><strong>author</strong></td>
@@ -164,7 +165,7 @@ featured: true
 
 <p>Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
 
-<pre><code class="language-bash">cd source/assets/articles/nome-del-file.svg
+<pre><code class="language-bash">cd source/assets/articles/
 </code></pre>
 
 <p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.</p>
@@ -179,7 +180,8 @@ npm install
 npm run watch
 </code></pre>
 
-<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine. Potete creare quindi un nuovo branch con <strong><em>"git checkout -b nuovo-articolo"</em></strong> e poi effettuare la <strong><em>"pull-request"</em></strong>.</p>
+<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine. 
+Potete creare quindi un nuovo branch con <strong><em>"git checkout -b nuovo-articolo"</em></strong> e poi effettuare la <strong><em>"pull-request"</em></strong>.</p>
     ]]></content>
 </entry>
             <entry>
