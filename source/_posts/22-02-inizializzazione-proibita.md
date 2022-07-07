@@ -5,7 +5,7 @@ title: L'inizializzazione proibita
 date: 2022-07-15
 description: Come inizializzare gli argomenti di una funzione.
 categories: [tips]
-cover_image: /assets/articles/tips.png
+cover_image: /assets/articles/22-02-inizializzazione-proibita.png
 author: Alberto Peripolli
 featured: true
 ---
@@ -24,7 +24,8 @@ echo makecoffee("espresso"); // Making a cup of espresso.
 ```
 
 Il problema è che con PHP possiamo assegnare ai parametri solo dei valori semplici come una stringa, un numero, `null` o un `array` di elementi semplici. 
-Molto spesso però capita di volere assegnare un oggetto o addirittura il risultato di una funzione
+
+Molto spesso però capita di volere assegnare un oggetto o addirittura il risultato di una funzione.
 ```php
 function printDate(Carbon $date = now())
 {
@@ -48,6 +49,7 @@ function printDate(?Carbon $date = null)
 ```
 
 Anche se questa sintassi può sembrare pulita, all'aumentare dei parametri può diventare molto prolissa.
+
 Per fortuna da PHP 7.4 abbiamo un nuovo operatore di assegnazione chiamato `Null Coalesce` che rende il codice più coinciso e meglio leggibile:
 
 
@@ -69,3 +71,5 @@ $data['username'] = $data['username'] ?? 'guest';
 // after PHP 7.4
 $data['username'] ??= 'guest';
 ```
+
+Quindi la prossima volta che vi servirà di inizializzare un parametro di una funzione ricordatevi questo piccolo amico `??=`.
