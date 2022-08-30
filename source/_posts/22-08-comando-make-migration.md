@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: I segreti del comando make:migrazion
+title: I segreti del comando make:migration
 date: 2022-08-25
 description: Il comando di Laravel per creare le migrazioni nasconde dei trucchetti interessanti.
 categories: [tips]
