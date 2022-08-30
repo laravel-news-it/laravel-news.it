@@ -156,7 +156,7 @@
             
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
         <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
-Ricordate che il nome del file rappresetera' anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
+Ricordate che il nome del file rappreseterà anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
 
 <pre><code class="language-bash">git clone https://github.com/laravel-news-it/
 
@@ -167,9 +167,9 @@ touch nuovo-articolo.md
 vi nuovo-articolo.md
 </code></pre>
 
-<p>Il nome del file deve essere composto da [ANNO]-[MESE]-titolo in formato slug es: <code>22-07-titolo.md</code></p>
+<p>Il nome del file deve essere composto da [ANNO]-[MESE]-titolo in formato slug es: <code>22-12-titolo.md</code></p>
 
-<p>Nella parte iniziale del file vanno messi i dati dell'articolo in questa maniera:</p>
+<p>Nella parte iniziale del file vanno messi i metadati dell'articolo in questa maniera:</p>
 
 <pre><code>---
 extends: _layouts.post
@@ -211,7 +211,7 @@ author: Alessandro Cappellozza
 </tr>
 <tr>
   <td><strong>cover_image</strong></td>
-  <td>L'immaginbe di copertina e' molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.</td>
+  <td>L'immaginbe di copertina è molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.</td>
 </tr>
 <tr>
   <td><strong>author</strong></td>
@@ -219,31 +219,44 @@ author: Alessandro Cappellozza
 </tr>
 <tr>
   <td><strong>excerpt</strong></td>
-  <td>E' opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</td>
+  <td>è opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</td>
 </tr>
 </tbody>
 </table>
 
-<p>Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
+<p>Nell'easempio è utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
 
 <pre><code class="language-bash">cd source/assets/articles/
 </code></pre>
 
-<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.<br />
-Se vi servono immagini con codice potete usare questo servizio online <a href="https://10015.io/tools/code-to-image-converter">10015</a>.</p>
+<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file è meglio fare una cartella col nome dell'articolo.<br />
+Se vi servono immagini con codice sorgente potete usare questo servizio online <a href="https://10015.io/tools/code-to-image-converter">10015</a>.</p>
 
-<p>Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.</p>
+<p>Potete inserire parti di codice con questa sintassi:</p>
 
-<pre><code class="language-bash"># Necessario solo se e' la prima volta che si avvia
+<pre><code class="language-markdown"> ```linguaggio
+  codice
+ ```
+</code></pre>
+
+<p>I linguaggi supportati sono: <code>bash</code>, <code>css</code>, <code>html</code>, <code>javascript</code>, <code>json</code>, <code>markdown</code>, <code>php</code>, <code>scss</code>, <code>yaml</code>.<br />
+Potete comunque prendere spunto dagli articoli già scritti.</p>
+
+<p>Per fare una preview del vostro articolo potete lanciare il sito in modalità di debug in questa maniera.</p>
+
+<pre><code class="language-bash"># Necessario solo se è la prima volta che si avvia
 composer install
 npm install
 
-# Lancio in modalita' debug
+# Lancio in modalità debug
 npm run watch
 </code></pre>
 
-<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine. 
-Potete creare quindi un nuovo branch con <strong><em>"git checkout -b nuovo-articolo"</em></strong> e poi effettuare la <strong><em>"pull-request"</em></strong>.</p>
+<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine.</p>
+
+<p>Potete creare quindi un nuovo branch con<br />
+<code>git checkout -b nuovo-articolo</code><br />
+e poi effettuare la <strong><em>pull-request</em></strong>.</p>
     </div>
 
     <nav class="flex justify-between text-sm md:text-base">
