@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-08-30T16:18:55+00:00</updated>
+    <updated>2022-08-30T16:29:01+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
@@ -11,7 +11,7 @@
                 <entry>
     <id>https://laravel-news.it/news/22-08-comando-make-migration</id>
     <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-08-comando-make-migration" />
-    <title>I segreti del comando make:migrazion</title>
+    <title>I segreti del comando make:migration</title>
     <published>2022-08-25T00:00:00+00:00</published>
     <updated>2022-08-25T00:00:00+00:00</updated>
     <author>
