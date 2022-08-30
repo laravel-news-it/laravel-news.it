@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-07-07T08:34:10+00:00</updated>
+    <updated>2022-08-30T14:23:19+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
@@ -168,7 +168,8 @@ author: Alessandro Cappellozza
 <pre><code class="language-bash">cd source/assets/articles/
 </code></pre>
 
-<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.</p>
+<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.<br />
+Se vi servono immagini con codice potete usare questo servizio online <a href="https://10015.io/tools/code-to-image-converter">10015</a>.</p>
 
 <p>Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.</p>
 
