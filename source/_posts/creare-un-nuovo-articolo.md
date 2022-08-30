@@ -57,8 +57,8 @@ Nell'easempio e' utilizzato vim ma potete utilizzare qualsiasi altro editor, le 
 cd source/assets/articles/
 ```
 
-Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.
-
+Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file e' meglio fare una cartella col nome dell'articolo.  
+Se vi servono immagini con codice potete usare questo servizio online [10015](https://10015.io/tools/code-to-image-converter).
 
 Per fare una preview del vostro articolo potete lanciare il sito in modalita' di debug in questa maniera.
 
