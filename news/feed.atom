@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-08-30T16:29:01+00:00</updated>
+    <updated>2022-08-31T09:15:44+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
@@ -51,26 +51,26 @@ Per fortuna è possibile passare il nome dentro a degli apici "" utilizzando cos
 <h2>2. Creare una nuova tabella</h2>
 
 <p>Per creare una nuova tabella dobbiamo far capire al comando che si tratta di una creazione e il nome della tabella.<br />
-Possiamo quindi usare un nome specifico per la migrazione o passare opzioni aggiuntive. 
+Possiamo quindi usare un nome specifico per la migrazione o passare opzioni aggiuntive <code>–create[=CREATE]</code> e/o <code>–table[=TABLE]</code>. 
 Il comando tenterà di scoprire tali informazioni dal nome tramite un componente chiamato <code>TableGuesser</code>.</p>
 
 <pre><code class="language-bash"># utilizzando semplicemente il TableGuesser
-php artisan make:migration "create nome_tabella table"
+php artisan make:migration "create users table"
 
 # con i parametri --table e --create
-php artisan make:migration "La mia migrazione" --table=nome_tabella --create
+php artisan make:migration "My migration" --table=users --create
 
 # oppure più semplicemente
-php artisan make:migration "La mia migrazione" --create=nome_tabella
+php artisan make:migration "My migration" --create=users
 </code></pre>
 
 <p>Per far capire al <code>TableGuesser</code> che vogliamo creare una nuova tabella basta mettere nel nome "<strong>create</strong> nome_tabella <strong>table</strong>" oppure solamente "<strong>create</strong> nome_tabella".</p>
 
-<p>Una volta lanciato il comando verrà creata una nuova migration con il nome <code>data_time_nome_della_migrazione.php</code> con precompilato il codice per la creazione della tabella:</p>
+<p>Una volta lanciato il comando verrà creata una nuova migration con il nome <code>date_time_[nome_della_migrazione].php</code> con precompilato il codice per la creazione della tabella:</p>
 
 <pre><code class="language-php">public function up()
 {
-    Schema::create('nome_tabella', function (Blueprint $table) {
+    Schema::create('my_table', function (Blueprint $table) {
         $table-&gt;id();
         $table-&gt;timestamps();
     });
@@ -78,43 +78,62 @@ php artisan make:migration "La mia migrazione" --create=nome_tabella
 
 public function down()
 {
-    Schema::dropIfExists('nome_tabella');
+    Schema::dropIfExists('my_table');
 }
 </code></pre>
 
 <h2>3. Modificare una tabella esistente</h2>
 
 <p>Similmente al comando per creare la tabella anche per modificare una tabella esistente abbiamo due modi per farlo capire il nome della tabella.
-Anche in questo caso possiamo utilizzare un nome interpretabile dal <code>TableGuesser</code> o specificarlo con l'opzione <code>--table=</code>.</p>
+Anche in questo caso possiamo utilizzare un nome interpretabile dal <code>TableGuesser</code> o specificarlo con l'opzione <code>--table[=TABLE]</code>.</p>
 
 <pre><code class="language-bash"># utilizzando semplicemente il TableGuesser
-php artisan make:migration "add field to nome_tabella"
-php artisan make:migration remove_field_from_nome_tabella_table
+php artisan make:migration "add field to users"
+php artisan make:migration remove_field_from_users_table
 
 # con l'opzione --table
-php artisan make:migration "La mia migrazione" --table=nome_tabella
+php artisan make:migration "My migration" --table=my_table
 </code></pre>
 
 <p>Per far capire al <code>TableGuesser</code> il nome della tabella ci basta scriverlo alla fine del nome e anteporlo alle preposizioni <code>to</code>, <code>from</code> o <code>in</code>.</p>
 
-<p>Una volta lanciato il comando verrà creata una nuova migration con il nome <code>data_time_nome_della_migrazione.php</code> con precompilato il codice per la modifica della tabella:</p>
+<p>Una volta lanciato il comando verrà creata una nuova migration con il nome <code>date_time_[nome_della_migrazione].php</code> con precompilato il codice per la modifica della tabella:</p>
 
 <pre><code class="language-php">public function up()
 {
-    Schema::table('nome_tabella', function (Blueprint $table) {
+    Schema::table('my_table', function (Blueprint $table) {
         //
     });
 }
 
 public function down()
 {
-    Schema::table('nome_tabella', function (Blueprint $table) {
+    Schema::table('my_table', function (Blueprint $table) {
         //
     });
 }
 </code></pre>
 
-<h2>4. Personalizzazione degli stub</h2>
+<h2>4. Personalizzazione dei path</h2>
+
+<p>Di default tutte le migrazioni verranno create nella cartella <code>database/migrations</code>, ma in molti casi (ad esempio nella DDD) potremmo essere interessati a cambiare questo percorso.</p>
+
+<p>Per far questo possiamo usare l'opzione <code>--path[=PATH]</code>, nella quale definiamo il percorso alternativo dove creare la migrazione.<br />
+Inoltre se aggiungiamo l'opzione <code>--realpath</code> il path passato al comando sarà un path assoluto (utilizzando il path base di Laravel).</p>
+
+<pre><code class="language-bash">php artisan make:migration my_migration --path=test/folder
+# Crea la migrazione in ./test/folder/date_time_my_migration.php
+
+php artisan make:migration my_migration --path=test/folder
+# Crea la migrazione in /var/www/laravel-project/test/folder/date_time_my_migration.php se laravel è nella cartella /var/www/laravel-project
+</code></pre>
+
+<p>Per completezza segnalo anche che se viene passata l'opzione <code>--fullpath</code> nel messaggio del comando artisan verrà aggiunto il path al nome.</p>
+
+<pre><code class="language-bash"> INFO  Created migration [test/folder/2022_08_31_085751_my_migration.php]. 
+</code></pre>
+
+<h2>5. Personalizzazione degli stub</h2>
 
 <p>Molte volte il codice di base che ci propone Laravel ci va un po' stretto... per fortuna possiamo personalizzarlo semplicemente.</p>
 
@@ -135,7 +154,18 @@ Una volta modificati verranno utilizzate queste nuove versioni dai comandi.</p>
 </ul>
 
 <p>TIP: Se siete a corto di idee potete utilizzare il <a href="https://github.com/spatie/laravel-stubs">pacchetto di spatie <code>spatie/laravel-stubs</code></a>, che contiene le personalizzazioni opinionate degli stub di Laravel. 
-In questo caso ad esempio hanno completamente rimosso le funzioni di rollback del database.</p>
+In questo caso ad esempio hanno completamente rimosso le funzioni di rollback delle migrazioni.</p>
+
+<h2>6. Creazione del modello insieme alla migrazione</h2>
+
+<p>Nel caso volessimo creare anche un nuovo Model insieme alla migrazione, possiamo ricorrere al comando artisan <code>make:model</code>.</p>
+
+<p>Questo comando crea un nuovo Model ma passando l'opzione <code>-m</code> o <code>--migration</code> crea anche la migrazione di creazione tabella.</p>
+
+<pre><code class="language-bash">php artisan make:model Flight --migration
+# questo comando creerà il model in app/Models/Flight.php 
+# ed anche la migrazione in database/migrations/date_time_create_flights_table.php
+</code></pre>
     ]]></content>
 </entry>
             <entry>
