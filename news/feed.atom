@@ -3,12 +3,66 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-08-31T09:15:44+00:00</updated>
+    <updated>2022-09-06T09:42:06+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
     </author>
                 <entry>
+    <id>https://laravel-news.it/news/22-09-laracon-2022</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-09-laracon-2022" />
+    <title>Laracon 2022</title>
+    <published>2022-09-06T00:00:00+00:00</published>
+    <updated>2022-09-06T00:00:00+00:00</updated>
+    <author>
+        <name>Alberto Peripolli</name>
+    </author>
+    <summary type="html">Laracon è il più grande evento dell&#039;anno relativo a Laravel.
+Si terrà il 14 Settembre in live gratuitamente su Youtube.
+
+
+
+
+
+
+15:00 - Not Quite My Type - Kai Sassnowski
+15:40 - Kubernetes and Laravel - Bosun Egberinde
+16:20 - The future of Livewire -......</summary>
+    <content type="html"><![CDATA[
+        <p><a href="https://laracon.net">Laracon</a> è il più grande evento dell'anno relativo a Laravel.<br />
+Si terrà il 14 Settembre in live gratuitamente su Youtube.</p>
+
+<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/f4QShF42c6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3>Programmazione dell'evento</h3>
+
+<ul>
+<li>15:00 - Not Quite My Type - Kai Sassnowski</li>
+<li>15:40 - Kubernetes and Laravel - Bosun Egberinde</li>
+<li>16:20 - The future of Livewire - Caleb Porzio</li>
+<li>17:00 - PAUSA</li>
+<li>17:20 - Sustainable Self-Care - Marje Holmstrom-Sabo</li>
+<li>17:35 - Let's Get Physical: Database Internals and You - Tim Martin</li>
+<li>17:50 - Deep Dive into Carbon - Ralph J. Smit</li>
+<li>18:05 - UI and Component testing with Cypress - Marcel Pociot</li>
+<li>18:20 - The Hitchhiker's Guide to the Laravel Community - Caneco</li>
+<li>18:35 - Abstracting too early - Matt Stauffer</li>
+<li>19:15 - PAUSA</li>
+<li>19:35 - Laravel Update - Taylor Otwell</li>
+<li>20:35 - Database Performance for Application Developers - Aaron Francis</li>
+<li>21:15 - Christoph Dreams of Simple Code - Christoph Rumpel</li>
+<li>21:35 - PAUSA</li>
+<li>22:15 - Is there any problem Git interactive rebase can't solve? - Rissa Jackson</li>
+<li>22:30 - Meaningful Mentorship - Alex Six</li>
+<li>22:45 - I shall say… err define this only once - Freek Van der Herten</li>
+<li>23:00 - I can't believe it's not local! - Chris Fidao</li>
+<li>23:15 - Valid Variants of Validating Validation - Luke Downing</li>
+<li>23:30 - A Grab Bag of Useful Tips - Colin DeCarlo</li>
+<li>23:45 - Browsers are Magical Creatures - Stephen Rees-Carter</li>
+</ul>
+    ]]></content>
+</entry>
+            <entry>
     <id>https://laravel-news.it/news/22-08-comando-make-migration</id>
     <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-08-comando-make-migration" />
     <title>I segreti del comando make:migration</title>
