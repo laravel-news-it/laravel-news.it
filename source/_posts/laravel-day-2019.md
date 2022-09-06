@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Laravel Day 2019
 date: 2019-06-03
-description: Creare un nuovo artcolo per il blog di laravel news italia
+description: Riepilogo dell'evento Laravel Day 2019
 categories: [events]
 cover_image: /assets/articles/laravel-day.png
 author: Alessandro Cappellozza
