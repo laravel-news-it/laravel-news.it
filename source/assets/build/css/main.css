@@ -831,6 +831,10 @@ ol, ul {
   margin-bottom: 1rem;
 }
 
+ol, ul {
+  margin-left: 1rem;
+}
+
 ol {
   list-style-type: decimal;
 }
