@@ -3,7 +3,7 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-09-06T09:46:26+00:00</updated>
+    <updated>2022-09-06T09:52:17+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
@@ -18,19 +18,11 @@
         <name>Alberto Peripolli</name>
     </author>
     <summary type="html">Laracon è il più grande evento dell&#039;anno relativo a Laravel.
-Si terrà il 14 Settembre in live gratuitamente su Youtube.
-
-
-
-
-
-
-15:00 - Not Quite My Type - Kai Sassnowski
-15:40 - Kubernetes and Laravel - Bosun Egberinde
-16:20 - The future of Livewire -......</summary>
+Si terrà il 14 Settembre in live gratuitamente su Youtube....</summary>
     <content type="html"><![CDATA[
         <p><a href="https://laracon.net">Laracon</a> è il più grande evento dell'anno relativo a Laravel.<br />
-Si terrà il 14 Settembre in live gratuitamente su Youtube.</p>
+Si terrà il 14 Settembre in live gratuitamente su Youtube.
+<!-- more --></p>
 
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/f4QShF42c6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
