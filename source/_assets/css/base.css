@@ -104,7 +104,7 @@ li {
 ol,
 ul {
     @apply my-4;
-    @apply ml-4;
+    @apply ml-5;
 }
 
 ol {
