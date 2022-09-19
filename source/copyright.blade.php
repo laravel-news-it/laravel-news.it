@@ -18,4 +18,9 @@ description: Informazioni sul copyright
     <p>
         Le immagini e i banner sono prese dalle illustrazioni di <strong>Katerina Limpitsouni</strong>, maggiori informazioni qui <a href="https://undraw.co/">undraw.co</a>
     </p>
+
+    <p>
+        I loghi sono stati diusegnati da <strong>Caneco</strong>, trovate il materiale nel repository <a href="https://github.com/caneco/laravel-country-logomarks">Laravel Country Logomarks</a>
+    </p>
+
 @endsection

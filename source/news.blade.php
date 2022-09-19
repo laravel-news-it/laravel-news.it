@@ -10,14 +10,8 @@ pagination:
 @section('body')
     <h1>News</h1>
 
-    <hr class="border-b my-6">
-
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
-
-        @if ($post != $pagination->items->last())
-            <hr class="border-b my-6">
-        @endif
     @endforeach
 
     @if ($pagination->pages->count() > 1)

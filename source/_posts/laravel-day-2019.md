@@ -14,7 +14,7 @@ featured: false
 
 #### Laravel the Lego™ Way
 
-<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/pgxJFOHqLxU" class="rounded border border-gray-400 shadow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Affiancare a Laravel uno strumento RAD come un admin package è una tentazione forte che però ha un costo in termini di scalabilità, architettura e a volte debito tecnico. Ci si trova quindi ad assemblare un software come se si avessero in mano dei mattoncini per l'appunto, cercando quelli che si incastrano meglio per forma e colore alle specifiche e desideri del committente. Lo sviluppo i trasforma in un incastro di funzionalità che spesso ci travolge e ci lascia col dubbio di aver fatto la scelta migliore. Cercheremo di trovare un trade off facendo una carrellata sugli strumenti che offre il mercato valutandone pro/contro e cercando di capire come impattano non solo sul codice ma sul rapporto qualità e time to market. 
 

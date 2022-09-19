@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+use Carbon\Carbon;
 
 return [
     'baseUrl' => '',
@@ -27,6 +28,9 @@ return [
     ],
 
     // helpers
+    'localeDate' => function ($page) {
+        return Carbon::createFromTimestamp($page->date)->locale('it_IT')->translatedFormat('d F Y');
+    },
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },

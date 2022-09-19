@@ -5,14 +5,19 @@
 @endphp
 
 @section('body')
+
+<div>
     @if ($page->cover_image)
-        <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
+        <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2 rounded-lg shadow-lg overflow-hidden">
     @endif
 
-    <h1 class="leading-none mb-2">{{ $page->title }}</h1>
+    <h1 class="leading-none mb-2 text-right">{{ $page->title }}</h1>
 
-    <p class="text-gray-700 text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
+    <p class="text-gray-700 md:mt-0 text-right">{{ $page->author }}  •  {{ $page->localeDate() }}</p>
 
+    <hr class="border-b my-4">
+
+    <div class="mb-4 text-right">
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
             <a
@@ -22,6 +27,7 @@
             >{{ $category }}</a>
         @endforeach
     @endif
+    </div>
 
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
         @yield('content')
@@ -44,4 +50,5 @@
             @endif
         </div>
     </nav>
+
 @endsection

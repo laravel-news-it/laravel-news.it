@@ -1,4 +1,4 @@
-<div class="flex flex-col mb-4">
+<div class="flex flex-col mb-6">
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         @if ($post->cover_image)
             <div class="flex-shrink-0">
@@ -28,7 +28,7 @@
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex text-sm text-gray-500">
-            <time datetime="2020-03-10">{{ $post->getDate()->format('F j, Y') }}</time>
+            <time datetime="2020-03-10">{{ $post->localeDate() }}</time>
             </div>
           </div>
         </div>

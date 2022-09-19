@@ -1,4 +1,4 @@
-<div class="flex justify-center lg:-mx-12 my-12 p-6 md:px-12 bg-gray-200 border border-gray-400 text-sm md:rounded shadow">
+<div class="flex justify-center lg:-mx-12 my-12 p-8 md:px-12 bg-gray-100 border border-gray-200 text-sm md:rounded shadow">
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
         <form action="https://laravel-news.us17.list-manage.com/subscribe/post?u=e32abc9cc1622d81b1e9308c8&id=cb256d4002" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
