@@ -1,99 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="Guide e spiegazioni dettagliate con esempi pratici.">
 
-        <meta property="og:site_name" content="Italian Laravel News"/>
-        <meta property="og:title" content="Tutorial | Italian Laravel News"/>
-        <meta property="og:locale" content="it_IT"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://laravel-news.it/news/categories/tutorials"/>
-        <meta property="og:description" content="Guide e spiegazioni dettagliate con esempi pratici." />
-        
-        
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="Tutorial | Italian Laravel News"/>
-        <meta name="twitter:description" content="Guide e spiegazioni dettagliate con esempi pratici."/>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Guide e spiegazioni dettagliate con esempi pratici.">
 
-        <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-        <link rel="manifest" href="/assets/icons/manifest.json">
-        <meta name="msapplication-TileColor" content="#F48220">
-        <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#F48220"/>
+    <meta property="og:site_name" content="Italian Laravel News" />
+    <meta property="og:title" content="Tutorial | Italian Laravel News" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://laravel-news.it/news/categories/tutorials" />
+    <meta property="og:description" content="Guide e spiegazioni dettagliate con esempi pratici." />
 
-        <title>Tutorial | Italian Laravel News</title>
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tutorial | Italian Laravel News" />
+    <meta name="twitter:description" content="Guide e spiegazioni dettagliate con esempi pratici." />
 
-        <link rel="home" href="https://laravel-news.it">
-        <link rel="icon" href="/favicon.ico">
-        <link href="/news/feed.atom" type="application/atom+xml" rel="alternate" title="Italian Laravel News Atom Feed">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#F48220">
+    <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#F48220" />
 
-                    <script type="text/javascript">
-                (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-                    for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
-                    MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+    <title>Tutorial | Italian Laravel News</title>
 
-                // Enabling the debug mode flag is useful during implementation,
-                // but it's recommended you remove it for production
-                mixpanel.init('066588ba07824828cd3becc145c0ddd7', {debug: true});
-                mixpanel.track('Sign up');
-            </script>
-            <script type="text/javascript">
-                var _iub = _iub || [];
-                _iub.csConfiguration = {"ccpaAcknowledgeOnDisplay":true,"ccpaApplies":true,"consentOnContinuedBrowsing":false,"enableCcpa":true,"floatingPreferencesButtonDisplay":"bottom-right","invalidateConsentWithoutLog":true,"perPurposeConsent":true,"siteId":2680106,"whitelabel":false,"cookiePolicyId":89440925,"lang":"it","cookiePolicyUrl":"https://www.iubenda.com/privacy-policy/14174587/cookie-policy","privacyPolicyUrl":"https://www.iubenda.com/privacy-policy/89440925/legal", "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","rejectButtonDisplay":true }};
-            </script>
-            <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
-            <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-        
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=2d181057867b245216fd2c025c629439">
-    </head>
+    <link rel="home" href="https://laravel-news.it">
+    <link rel="icon" href="/favicon.ico">
+    <link href="/news/feed.atom" type="application/atom+xml" rel="alternate" title="Italian Laravel News Atom Feed">
 
-    <body class="flex flex-col justify-between min-h-screen bg-DirtyWhite text-gray-800 leading-normal font-mono">
-        <header class="flex items-center shadow bg-DarkBlue border-b h-24 py-4" role="banner">
-            <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
-                <div class="flex items-center">
-                    <a href="/" title="Italian Laravel News home" class="inline-flex items-center">
-                        <div class="p-2 rounded bg-white">
-                            <img class="h-6 md:h-10" src="/assets/images/logo.jpg" alt="Italian Laravel News logo" />
-                        </div>
-                    </a>
-                </div>
+        <script type="text/javascript">
+        (function(f, b) {
+            if (!b.__SV) {
+                var e, g, i, h;
+                window.mixpanel = b;
+                b._i = [];
+                b.init = function(e, f, c) {
+                    function g(a, d) {
+                        var b = d.split(".");
+                        2 == b.length && (a = a[b[0]], d = b[1]);
+                        a[d] = function() {
+                            a.push([d].concat(Array.prototype.slice.call(arguments, 0)))
+                        }
+                    }
+                    var a = b;
+                    "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel";
+                    a.people = a.people || [];
+                    a.toString = function(a) {
+                        var d = "mixpanel";
+                        "mixpanel" !== c && (d += "." + c);
+                        a || (d += " (stub)");
+                        return d
+                    };
+                    a.people.toString = function() {
+                        return a.toString(1) + ".people (stub)"
+                    };
+                    i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+                    for (h = 0; h < i.length; h++) g(a, i[h]);
+                    var j = "set set_once union unset remove delete".split(" ");
+                    a.get_group = function() {
+                        function b(c) {
+                            d[c] = function() {
+                                call2_args = arguments;
+                                call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+                                a.push([e, call2])
+                            }
+                        }
+                        for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]);
+                        return d
+                    };
+                    b._i.push([e, f, c])
+                };
+                b.__SV = 1.2;
+                e = f.createElement("script");
+                e.type = "text/javascript";
+                e.async = !0;
+                e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+                    MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                g = f.getElementsByTagName("script")[0];
+                g.parentNode.insertBefore(e, g)
+            }
+        })(document, window.mixpanel || []);
 
-                <div id="vue-search" class="flex flex-1 justify-end items-center bg-DarkBlue">
-                    <search></search>
+        // Enabling the debug mode flag is useful during implementation,
+        // but it's recommended you remove it for production
+        mixpanel.init('066588ba07824828cd3becc145c0ddd7', {
+            debug: true
+        });
+        mixpanel.track('Sign up');
+    </script>
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = {
+            "ccpaAcknowledgeOnDisplay": true,
+            "ccpaApplies": true,
+            "consentOnContinuedBrowsing": false,
+            "enableCcpa": true,
+            "floatingPreferencesButtonDisplay": "bottom-right",
+            "invalidateConsentWithoutLog": true,
+            "perPurposeConsent": true,
+            "siteId": 2680106,
+            "whitelabel": false,
+            "cookiePolicyId": 89440925,
+            "lang": "it",
+            "cookiePolicyUrl": "https://www.iubenda.com/privacy-policy/14174587/cookie-policy",
+            "privacyPolicyUrl": "https://www.iubenda.com/privacy-policy/89440925/legal",
+            "banner": {
+                "acceptButtonDisplay": true,
+                "closeButtonDisplay": false,
+                "customizeButtonDisplay": true,
+                "explicitWithdrawal": true,
+                "listPurposes": true,
+                "position": "float-top-center",
+                "rejectButtonDisplay": true
+            }
+        };
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=e4dc8657fdc15ce5c5e1ae836c0477df">
+</head>
 
-                    <nav class="hidden lg:flex items-center justify-end text-lg">
+<body class="flex flex-col justify-between min-h-screen bg-DirtyWhite text-gray-800 leading-normal font-mono">
+    <header class="flex items-center shadow bg-DarkBlue border-b h-24 py-4" role="banner">
+        <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
+            <div class="flex items-center">
+                <a href="/" title="Italian Laravel News home" class="inline-flex items-center">
+                    <div class="p-2 rounded bg-white">
+                        <img class="h-6 md:h-10" src="/assets/images/logo-full.png" alt="Italian Laravel News logo" />
+                    </div>
+                </a>
+            </div>
+
+            <div id="vue-search" class="flex flex-1 justify-end items-center bg-DarkBlue">
+                <!-- <search></search> -->
+
+                <nav class="hidden lg:flex items-center justify-end text-lg">
     <a title="Italian Laravel News News" href="/news"
         class="ml-6 text-Teal hover:text-Lime ">
-        News
+        { News }
     </a>
 
-    <a title="Italian Laravel News About" href="/about"
+    <a title="Italian Laravel News Community" href="/communities"
         class="ml-6 text-Teal hover:text-Lime ">
-        About
-    </a>
-
-    <a title="Italian Laravel News Contact" href="/contact"
-        class="ml-6 text-Teal hover:text-Lime ">
-        Contact
+        { Community }
     </a>
 </nav>
 
-                    <button class="flex justify-center items-center bg-Teal h-10 px-5 rounded-full lg:hidden focus:outline-none"
+                <button class="flex justify-center items-center bg-Teal h-10 px-5 rounded-full lg:hidden focus:outline-none"
     onclick="navMenu.toggle()"
 >
     <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
@@ -109,11 +178,11 @@
     </svg>
 </button>
 
-                </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <nav id="js-nav-menu" class="w-auto px-2 pt-6 pb-2 bg-gray-200 shadow hidden lg:hidden">
+    <nav id="js-nav-menu" class="w-auto px-2 pt-6 pb-2 bg-gray-200 shadow hidden lg:hidden">
     <ul class="my-0">
         <li class="pl-4">
             <a
@@ -124,30 +193,23 @@
         </li>
         <li class="pl-4">
             <a
-                title="Italian Laravel News About"
-                href="/about"
+                title="Italian Laravel News Community"
+                href="/communities"
                 class="block mt-0 mb-4 text-sm no-underline text-gray-800 hover:text-blue-500"
-            >About</a>
-        </li>
-        <li class="pl-4">
-            <a
-                title="Italian Laravel News Contact"
-                href="/contact"
-                class="block mt-0 mb-4 text-sm no-underline text-gray-800 hover:text-blue-500"
-            >Contact</a>
+            >Community</a>
         </li>
     </ul>
 </nav>
 
-        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
-                <h1>Tutorial</h1>
+    <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-8 px-6">
+            <h1>Tutorial</h1>
 
     <div class="text-2xl border-b border-blue-200 mb-6 pb-10">
         <p>In questa sezione troverai guide passo passo e spiegazioni dettagliate su esempi pratici.</p>
     </div>
 
     
-    <div class="flex justify-center lg:-mx-12 my-12 p-6 md:px-12 bg-gray-200 border border-gray-400 text-sm md:rounded shadow">
+    <div class="flex justify-center lg:-mx-12 my-12 p-8 md:px-12 bg-gray-100 border border-gray-200 text-sm md:rounded shadow">
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
         <form action="https://laravel-news.us17.list-manage.com/subscribe/post?u=e32abc9cc1622d81b1e9308c8&id=cb256d4002" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -171,23 +233,54 @@
     <!--End Mailchimp Signup Form -->
 </div>
 
-        </main>
+    </main>
 
-        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
-            <ul class="flex flex-col md:flex-row justify-center list-none">
-                <li class="md:mr-2">
-                    &copy; <a href="/copyright" title="Copyright">Laravel News Italia</a> 2022.
-                </li>
+    <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
 
-                <li>
-                    Trattamento dei dati e <a target="_blank" href="https://www.iubenda.com/privacy-policy/89440925/legal" title="Jigsaw by Tighten">Privacy</a>
-                </li>
-            </ul>
-        </footer>
+        <ul class="flex flex-col md:flex-row justify-center list-disc">
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/configuration">Configuration</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/contents">Contenuti</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/devops">Devops</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/events">Eventi</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/news">News</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/packages">Pacchetti</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/php">PHP</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/tips">Tips</a>
+            </li>
+                        <li class="md:mr-6">
+                <a href="https://laravel-news.it/news/categories/tutorials">Tutorial</a>
+            </li>
+                    </ul>
 
-        <script src="/assets/build/js/main.js?id=70344500d5f59b465fe2496606f75007"></script>
+        <ul class="flex flex-col md:flex-row justify-center list-none">
+            <li class="md:mr-2">
+                &copy; <a href="/copyright" title="Copyright">Laravel News Italia</a> 2022.
+            </li>
 
-            <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            <li>
+                Trattamento dei dati e <a target="_blank" href="https://www.iubenda.com/privacy-policy/89440925/legal" title="Jigsaw by Tighten">Privacy</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="/assets/build/js/main.js?id=70344500d5f59b465fe2496606f75007"></script>
+
+        <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script>(function($) {
         window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
     </script>
@@ -202,5 +295,6 @@
         },
     }
 </script>
-    </body>
+</body>
+
 </html>

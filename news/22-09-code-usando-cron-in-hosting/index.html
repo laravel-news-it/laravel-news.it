@@ -5,19 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Posts related to configuring the Jigsaw blog starter template">
+    <meta name="description" content="come usare le code (queue) in hosting senza supervisor">
 
     <meta property="og:site_name" content="Italian Laravel News" />
-    <meta property="og:title" content="Configuration | Italian Laravel News" />
+    <meta property="og:title" content="Usare le code con cron in Hosting | Italian Laravel News" />
     <meta property="og:locale" content="it_IT" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://laravel-news.it/news/categories/configuration" />
-    <meta property="og:description" content="Posts related to configuring the Jigsaw blog starter template" />
+    <meta property="og:url" content="https://laravel-news.it/news/22-09-code-usando-cron-in-hosting" />
+    <meta property="og:description" content="come usare le code (queue) in hosting senza supervisor" />
 
+        <meta property="og:image" content="/assets/articles/22-09-queue.png" />
+    <meta name="twitter:image" content="/assets/articles/22-09-queue.png" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Configuration | Italian Laravel News" />
-    <meta name="twitter:description" content="Posts related to configuring the Jigsaw blog starter template" />
+    <meta name="twitter:title" content="Usare le code con cron in Hosting | Italian Laravel News" />
+    <meta name="twitter:description" content="come usare le code (queue) in hosting senza supervisor" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
@@ -37,7 +39,7 @@
     <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#F48220" />
 
-    <title>Configuration | Italian Laravel News</title>
+    <title>Usare le code con cron in Hosting | Italian Laravel News</title>
 
     <link rel="home" href="https://laravel-news.it">
     <link rel="icon" href="/favicon.ico">
@@ -202,67 +204,107 @@
 </nav>
 
     <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-8 px-6">
-            <h1>Configuration</h1>
-
-    <div class="text-2xl border-b border-blue-200 mb-6 pb-10">
-        <p>These posts are all related to configuring your Jigsaw blog starter template.</p>
-    </div>
-
-            <div class="flex flex-col mb-6">
-    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                    <div class="flex-shrink-0">
-            <img class="h-48 w-full object-cover" src="/assets/articles/creare-un-nuovo-articolo.png" alt="Creare un nuovo articolo cover image">
-            </div>
         
-        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-          <div class="flex-1">
-
-                      
-            <a
-                href="/news/categories/configuration"
-                title="View posts in configuration"
-                class="inline-block bg-Teal hover:bg-DarkBlue hover:text-white leading-loose tracking-wide text-white uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
-            >configuration</a>
-
-                      
-            <a href="https://laravel-news.it/news/creare-un-nuovo-articolo" class="block mt-2">
-              <p class="text-xl font-semibold text-gray-900">Creare un nuovo articolo</p>
-              <p class="mt-3 text-base text-gray-500">Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
-Ricordate che il nome del file rappreseterà...</p>
-            </a>
-          </div>
-          <div class="mt-6 flex items-center">
-            <div class="flex text-sm text-gray-500">
-            <time datetime="2020-03-10">03 giugno 2022</time>
-            </div>
-          </div>
-        </div>
-      </div>
-</div>
+<div>
+            <img src="/assets/articles/22-09-queue.png" alt="Usare le code con cron in Hosting cover image" class="mb-2 rounded-lg shadow-lg overflow-hidden">
     
-    <div class="flex justify-center lg:-mx-12 my-12 p-8 md:px-12 bg-gray-100 border border-gray-200 text-sm md:rounded shadow">
-    <!-- Begin Mailchimp Signup Form -->
-    <div id="mc_embed_signup">
-        <form action="https://laravel-news.us17.list-manage.com/subscribe/post?u=e32abc9cc1622d81b1e9308c8&id=cb256d4002" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-                <h2>Iscriviti alla nostra newsletter</h2>
-                <div class="mb-2 text-xs">Cliccando Invia accetti la nostra <a href="https://www.iubenda.com/privacy-policy/89440925/legal" target="_blank">Privacy Policy</a>.<br/>Una volta iscritto riceverai una email di conferma.</div>
-                <div class="mc-field-group">
-                    <label for="mce-EMAIL">Indirizzo email <span class="asterisk">*</span></label>
-                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Indirizzo email">
+    <h1 class="leading-none mb-2 text-right">Usare le code con cron in Hosting</h1>
+
+    <p class="text-gray-700 md:mt-0 text-right">Alessandro Cappellozza  •  08 settembre 2022</p>
+
+    <hr class="border-b my-4">
+
+    <div class="mb-4 text-right">
+                        <a
+                href="/news/categories/tips"
+                title="View posts in tips"
+                class="inline-block bg-Teal hover:bg-DarkBlue hover:text-white leading-loose tracking-wide text-white uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+            >tips</a>
+                    <a
+                href="/news/categories/devops"
+                title="View posts in devops"
+                class="inline-block bg-Teal hover:bg-DarkBlue hover:text-white leading-loose tracking-wide text-white uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+            >devops</a>
                 </div>
 
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e32abc9cc1622d81b1e9308c8_cb256d4002" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Invia" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                <div id="mce-responses" class="clear foot pt-6">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            </div>
-        </form>
+    <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
+        <h2>Il contesto dell'hosting</h2>
+
+<p>Quando installiamo in hosting puo' capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita piu' spesso e' non potrer installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre pero' possiamo definire dei <strong>CRON</strong>. Il primo pensiero e' quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioe' di annotare le cose da fare in una tabella per poi elaborarle. Va da se' che stiamo riscrivendo delle funzionalita' e questo non e' un buon punto di partenza.</p>
+
+<p>La comodita' dlle code di Laravel e' proprio quello di poter aggiungere un elemento a questa pila e farlo girare con comodo successivamente senza peraltro <strong>timeout</strong> che avremmo usandolo in una pagina. La soluzione in questo caso e' piuttosto semplice: nei meandri della documentazione e' possibile vedere che ci sono piu' opzioni per il demone delle code e uno di questi ci viene incontro. In pratica si tratta di far partire il demone in un <strong>CRON</strong> e farlo uscire dopo aver processato un certo numero di job.</p>
+
+<h2>1. Configurazione</h2>
+
+<p>Inziamo pero' con ordine partendo dalla configurazione dell'env; dobbiamo indicare che le code non sono sincrone ma usando il database:</p>
+
+<pre><code class="language-bash">QUEUE_CONNECTION=database
+</code></pre>
+
+<h2>2. Il database</h2>
+
+<p>Per il database che sostiene le code e' sempre consigliato <strong>REDIS</strong> ma in hosting spesso non e' presente quindi possiamo optare per <strong>MySql</strong> che, se non abbiamo moli di calcolo grosse, puo' fare il suo lavoro bene. Si prosegue poi creando le tabelle per le code, laravel mette a disposizione un comando per creare la migration che verra' eseguito poi insieme anche alle altre del vostro progetto:</p>
+
+<pre><code class="language-bash">php artisan queue:table
+php artisan migrate
+</code></pre>
+
+<h2>3. Il CRON</h2>
+
+<p>A questo punto possiamo impostare il cron nel nostro hosting in indicando al worker di uscire dopo aver processato un certo numero di elementi (<a href="https://laravel.com/docs/9.x/queues#processing-a-specified-number-of-jobs">processing-a-specified-number-of-jobs</a>):</p>
+
+<pre><code class="language-bash">php artisan queue:work --max-jobs=10
+</code></pre>
+
+<p>Qui lo stiamo usando direttamente nel CRON ma potete tranquillamente chiamarlo nello scheduler e mettere il classico <strong>schedule:run</strong> e usarlo dal kernel del command.</p>
+
+<pre><code class="language-php">class Kernel extends ConsoleKernel
+{
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule-&gt;command('queue:work', [ '--max-jobs' =&gt; 10 ])-&gt;everyMinute();
+    }
+}        
+</code></pre>
+
+<p>Nel caso che mi ha fatto arrivare a questa soluzione avevo un amico che in hosting non aveva supervisor e in piu' non poteva inviare piu' di 600 email l'ora ma voleva usare le code che oggettivamente sono molto comode, inviandone 10 per minuto auto limitava il tutto a 600.</p>
+
+<h2>Alternative?</h2>
+
+<p>Esiste un'alternativa a questo tipo di approccio ed e' quello di lanciarlo dal kernel del command con l'opzione <strong><em>withoutOverlapping</em></strong>, questo lancera' il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa <strong>non e' pero' una buona soluzione</strong> in hosting perche' lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del procersso che diviene difficile da monitorare per memory leak e altre situazioni per cui non e' studiato.</p>
+
+<pre><code class="language-php">class Kernel extends ConsoleKernel
+{
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule-&gt;command('queue:work')-&gt;withoutOverlapping()-&gt;everyMinute();
+    }
+}        
+</code></pre>
     </div>
-    <!--End Mailchimp Signup Form -->
-</div>
+
+    <nav class="flex justify-between text-sm md:text-base">
+        <div>
+                            <a href="https://laravel-news.it/news/22-09-laracon-2022" title="Older Post: Laracon 2022">
+                    &LeftArrow; Laracon 2022
+                </a>
+                    </div>
+
+        <div>
+                    </div>
+    </nav>
 
     </main>
 
@@ -311,11 +353,7 @@ Ricordate che il nome del file rappreseterà...</p>
 
     <script src="/assets/build/js/main.js?id=70344500d5f59b465fe2496606f75007"></script>
 
-        <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-    <script>(function($) {
-        window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-    </script>
-<script>
+    <script>
     const navMenu = {
         toggle() {
             const menu = document.getElementById('js-nav-menu');

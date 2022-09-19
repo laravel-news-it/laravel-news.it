@@ -3,12 +3,90 @@
     <title>Italian Laravel News</title>
     <link href="https://laravel-news.it/news" />
     <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-09-07T11:10:32+00:00</updated>
+    <updated>2022-09-19T17:19:31+00:00</updated>
     <id>https://laravel-news.it/news/feed.atom</id>
     <author>
         <name>Author Name</name>
     </author>
                 <entry>
+    <id>https://laravel-news.it/news/22-09-code-usando-cron-in-hosting</id>
+    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-09-code-usando-cron-in-hosting" />
+    <title>Usare le code con cron in Hosting</title>
+    <published>2022-09-08T00:00:00+00:00</published>
+    <updated>2022-09-08T00:00:00+00:00</updated>
+    <author>
+        <name>Alessandro Cappellozza</name>
+    </author>
+    <summary type="html">Quando installiamo in hosting puo&#039; capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita piu&#039; spesso e&#039; non potrer installare SUPERVISOR e quindi dover rinunciare alle code; quasi sempre......</summary>
+    <content type="html"><![CDATA[
+        <h2>Il contesto dell'hosting</h2>
+
+<p>Quando installiamo in hosting puo' capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita piu' spesso e' non potrer installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre pero' possiamo definire dei <strong>CRON</strong>. Il primo pensiero e' quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioe' di annotare le cose da fare in una tabella per poi elaborarle. Va da se' che stiamo riscrivendo delle funzionalita' e questo non e' un buon punto di partenza.</p>
+
+<p>La comodita' dlle code di Laravel e' proprio quello di poter aggiungere un elemento a questa pila e farlo girare con comodo successivamente senza peraltro <strong>timeout</strong> che avremmo usandolo in una pagina. La soluzione in questo caso e' piuttosto semplice: nei meandri della documentazione e' possibile vedere che ci sono piu' opzioni per il demone delle code e uno di questi ci viene incontro. In pratica si tratta di far partire il demone in un <strong>CRON</strong> e farlo uscire dopo aver processato un certo numero di job.</p>
+
+<h2>1. Configurazione</h2>
+
+<p>Inziamo pero' con ordine partendo dalla configurazione dell'env; dobbiamo indicare che le code non sono sincrone ma usando il database:</p>
+
+<pre><code class="language-bash">QUEUE_CONNECTION=database
+</code></pre>
+
+<h2>2. Il database</h2>
+
+<p>Per il database che sostiene le code e' sempre consigliato <strong>REDIS</strong> ma in hosting spesso non e' presente quindi possiamo optare per <strong>MySql</strong> che, se non abbiamo moli di calcolo grosse, puo' fare il suo lavoro bene. Si prosegue poi creando le tabelle per le code, laravel mette a disposizione un comando per creare la migration che verra' eseguito poi insieme anche alle altre del vostro progetto:</p>
+
+<pre><code class="language-bash">php artisan queue:table
+php artisan migrate
+</code></pre>
+
+<h2>3. Il CRON</h2>
+
+<p>A questo punto possiamo impostare il cron nel nostro hosting in indicando al worker di uscire dopo aver processato un certo numero di elementi (<a href="https://laravel.com/docs/9.x/queues#processing-a-specified-number-of-jobs">processing-a-specified-number-of-jobs</a>):</p>
+
+<pre><code class="language-bash">php artisan queue:work --max-jobs=10
+</code></pre>
+
+<p>Qui lo stiamo usando direttamente nel CRON ma potete tranquillamente chiamarlo nello scheduler e mettere il classico <strong>schedule:run</strong> e usarlo dal kernel del command.</p>
+
+<pre><code class="language-php">class Kernel extends ConsoleKernel
+{
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule-&gt;command('queue:work', [ '--max-jobs' =&gt; 10 ])-&gt;everyMinute();
+    }
+}        
+</code></pre>
+
+<p>Nel caso che mi ha fatto arrivare a questa soluzione avevo un amico che in hosting non aveva supervisor e in piu' non poteva inviare piu' di 600 email l'ora ma voleva usare le code che oggettivamente sono molto comode, inviandone 10 per minuto auto limitava il tutto a 600.</p>
+
+<h2>Alternative?</h2>
+
+<p>Esiste un'alternativa a questo tipo di approccio ed e' quello di lanciarlo dal kernel del command con l'opzione <strong><em>withoutOverlapping</em></strong>, questo lancera' il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa <strong>non e' pero' una buona soluzione</strong> in hosting perche' lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del procersso che diviene difficile da monitorare per memory leak e altre situazioni per cui non e' studiato.</p>
+
+<pre><code class="language-php">class Kernel extends ConsoleKernel
+{
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule-&gt;command('queue:work')-&gt;withoutOverlapping()-&gt;everyMinute();
+    }
+}        
+</code></pre>
+    ]]></content>
+</entry>
+            <entry>
     <id>https://laravel-news.it/news/22-09-laracon-2022</id>
     <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-09-laracon-2022" />
     <title>Laracon 2022</title>
@@ -554,7 +632,7 @@ Affiancare a Laravel uno strumento RAD come un admin package è una tentazione f
 
 <h4>Laravel the Lego™ Way</h4>
 
-<iframe width="100%" height="480" class="rounded border border-gray-400 shadow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/pgxJFOHqLxU" class="rounded border border-gray-400 shadow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>Affiancare a Laravel uno strumento RAD come un admin package è una tentazione forte che però ha un costo in termini di scalabilità, architettura e a volte debito tecnico. Ci si trova quindi ad assemblare un software come se si avessero in mano dei mattoncini per l'appunto, cercando quelli che si incastrano meglio per forma e colore alle specifiche e desideri del committente. Lo sviluppo i trasforma in un incastro di funzionalità che spesso ci travolge e ci lascia col dubbio di aver fatto la scelta migliore. Cercheremo di trovare un trade off facendo una carrellata sugli strumenti che offre il mercato valutandone pro/contro e cercando di capire come impattano non solo sul codice ma sul rapporto qualità e time to market.</p>
 
