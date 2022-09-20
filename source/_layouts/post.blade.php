@@ -11,9 +11,9 @@
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2 rounded-lg shadow-lg overflow-hidden">
     @endif
 
-    <h1 class="leading-none mb-2 text-right">{{ $page->title }}</h1>
+    <h1 class="leading-none mb-2">{{ $page->title }}</h1>
 
-    <p class="text-gray-700 md:mt-0 text-right">{{ $page->author }}  •  {{ $page->localeDate() }}</p>
+    <p class="text-gray-700 md:mt-0">{{ $page->author }}  •  {{ $page->localeDate() }}</p>
 
     <hr class="border-b my-4">
 
