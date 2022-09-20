@@ -41,15 +41,15 @@ author: Alessandro Cappellozza
 
 Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:
 
-| Header   | Desacrizione                                                                                                                         |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **title**| Titolo dell'articolo.                                                                                                                |
-| **date** | Data in formato ISO                                                                                                                  |
-| **description**| Descrizione completa dell'artticolo.                                                                                                 |
-| **categories**| Questi sono i tag che potete inserire, se ne possono inserire anche più di uno [events,contents,mnews,packages,php,tips,tutorials].  |
-| **cover_image**| L'immaginbe di copertina è molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.    |
-| **author**| Il vosto nome e congome.                                                                                                             |
-| **excerpt**| è opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente. |
+| Header   | Desacrizione                                                                                                                             |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------|
+| **title**| Titolo dell'articolo.                                                                                                                    |
+| **date** | Data in formato ISO                                                                                                                      |
+| **description**| Descrizione completa dell'artticolo.                                                                                                     |
+| **categories**| Questi sono i tag che potete inserire, se ne possono inserire anche più di uno [events, contents, news, packages, php, tips, tutorials]. |
+| **cover_image**| L'immaginbe di copertina è molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.         |
+| **author**| Il vosto nome e congome.                                                                                                                 |
+| **excerpt**| è opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.      |
 
 Nell'easempio è utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:
 
