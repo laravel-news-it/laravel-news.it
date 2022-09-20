@@ -212,7 +212,7 @@
 
 <p class="mb-6">Ci impegnamo quotidianamente per tenerlo aggiornato, ci trovate nei canali che trovate qui sotto dove aggreghiamo le principali community e i solcial dove sono attive.</p>
 
-<p class="mb-6">Se voleste partecipare con un articolo a tema PHP o Laravel potete mandarci una PR seguendo <a href="http://localhost:3000/news/creare-un-nuovo-articolo/">questo post</a>.</p>
+<p class="mb-6">Se voleste partecipare con un articolo a tema PHP o Laravel potete mandarci una PR seguendo <a href="/news/creare-un-nuovo-articolo/">questo post</a>.</p>
 
 <a href="http://www.laravel-italia.it" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/avatar@1x.jpg" alt="">
@@ -308,7 +308,19 @@
     </footer>
 
     <script src="/assets/build/js/main.js?id=70344500d5f59b465fe2496606f75007"></script>
-
+    <script>
+        var disqus_config = function () {
+        this.page.url = 'https://laravel-news.it/communities';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'communities'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://laravel-news-it.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
     <script>
     const navMenu = {
         toggle() {
