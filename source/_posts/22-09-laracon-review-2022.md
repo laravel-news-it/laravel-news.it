@@ -152,7 +152,7 @@ Poi ha portato una serie di esempi di classici errori di astrazione prematuri:
 
 Resoconto sugli ultimi aggiornamenti di Laravel, ora che il framework ha un rilascio annuale tutte le novità vengono introdotte durante i rilasci periodici, quindi si tratta semplicemente di un resoconto di novità già rilasciate e qualche cosa che verrà rilasciata a breve:
 
-- laravel cli restiling
+- laravel cli restyling
 - artisan about
 - commando db:monitor
 - comandi xxx:show 
