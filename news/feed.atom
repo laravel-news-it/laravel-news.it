@@ -13,12 +13,14 @@
                 <link>https://laravel-news.it/news/22-09-laracon-review-2022</link>
                 <guid isPermaLink="true">https://laravel-news.it/news/22-09-laracon-review-2022</guid>
                 <description><![CDATA[Valutazione e riassunto dell'evento di riferimento della community di Laravel]]></description>
-                <content:encoded><![CDATA[<p>Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per soffermarmi su tutti i punti salienti.
+                <content:encoded><![CDATA[<p>Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per mettere in risalto tutti i punti salienti.
 <!-- more --></p>
 
-<p>Ad ogni talk ho allegato anche una mia personale valutazioneed una stima del livello di difficoltà.</p>
+<p>Ogni talk ha il link al punto esatto della conferenza e ho dato anche una mia personale valutazione ed una stima del livello di difficoltà.</p>
 
 <p>Spero così di aiutare chi non ha il tempo di guardarlo tutto a scegliere le cose più interessanti.</p>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=874">Not Quite My Type</a></h2>
 
@@ -49,6 +51,8 @@
 <li>UUID vs string</li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=3332">Kubernetes and Laravel</a></h2>
 
 <table>
@@ -69,6 +73,8 @@
 </table>
 
 <p>Panoramica di Kubernetes e un esempio pratico di utilizzo e configurazione con Laravel.</p>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=6014">The future of Livewire</a></h2>
 
@@ -100,6 +106,8 @@
 <li>miglioramento della reattività e dell'utilizzo di componenti annidati</li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=9181">Sustainable Self-Care</a></h2>
 
 <table>
@@ -120,6 +128,8 @@
 </table>
 
 <p>Ha parlato di sostenibilità, cura di se stessi sia fisica che spirituale.</p>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=10059">Let's Get Physical: Database Internals and You</a></h2>
 
@@ -149,6 +159,8 @@
 <li>UUID vs ID.</li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=10712">Deep Dive into Carbon</a></h2>
 
 <table>
@@ -176,6 +188,8 @@
 <li>period: le funzionalità di CarbonPeriod</li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=11950">UI and Component testing with Cypress</a></h2>
 
 <table>
@@ -199,6 +213,8 @@
 attraverso il pacchetto <a href="https://github.com/laracasts/cypress">laracast/cypress</a> di Jeffrey Way 
 e il fantastico sito demo <a href="https://laragone.net/">laragone.net</a>.</p>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=12936">The Hitchhiker's Guide to the Laravel Community</a></h2>
 
 <table>
@@ -220,6 +236,8 @@ e il fantastico sito demo <a href="https://laragone.net/">laragone.net</a>.</p>
 
 <p>Piccolo resoconto storico di Laravel, di Taylor Otwell e dei servizi legati a Laravel.<br />
 Ricapitolazione dello stato di salute di Laravel e delle community che ci girano attorno.</p>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=13999">Abstracting too early</a></h2>
 
@@ -254,6 +272,8 @@ Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi a
 <li>Estrazione di classi/componenti in librerie</li>
 <li>Event sourcing</li>
 </ul>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=17519">Laravel Update</a></h2>
 
@@ -294,6 +314,8 @@ Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi a
 <li><a href="https://bootcamp.laravel.com">Laravel Bootcamp</a></li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=21744">Database Performance for Application Developers</a></h2>
 
 <table>
@@ -321,6 +343,8 @@ Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi a
 <li>query: utilizzo indici, select, subquery</li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=24315">Christoph Dreams of Simple Code</a></h2>
 
 <table>
@@ -343,6 +367,8 @@ Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi a
 <p>Riepiloga un po' la storia della sua vita personale e come sviluppatore, mostrando come è cambiato il suo codice negli anni ed il suo modo di pensare a proposito del codice.</p>
 
 <p>Ha mostrato alcuni concetti per scrivere codice migliore, più leggibile, più testabile, più manutenibile e di cui andare più orgogliosi.</p>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=27069">Is there any problem Git interactive rebase can't solve?</a></h2>
 
@@ -373,6 +399,8 @@ Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi a
 <li>rebase abort</li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=28126">Meaningful Mentorship</a></h2>
 
 <table>
@@ -396,6 +424,8 @@ Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi a
 Come creare una relazione sana tra le parti e incoraggiare i passi in avanti.
 Utilizzare il pair programming per fare diventare l'allievo indipendente, definire degli obbiettivi ragionevoli e riuscire a farsi guidare da esso.</p>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=29111">I shall say… err define this only once<small></a></h2>
 
 <table>
@@ -417,6 +447,8 @@ Utilizzare il pair programming per fare diventare l'allievo indipendente, defini
 
 <p>Ha spiegato l'utilizzo del pacchetto <a href="https://spatie.be/docs/laravel-data">spatie/laravel-data</a> che permette di definire un oggetto 
 una sola volta per molteplici utilizzi come form request, api resource e definizioni typescript.</p>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=30223">I can't believe it's not local!</a></h2>
 
@@ -440,6 +472,8 @@ una sola volta per molteplici utilizzi come form request, api resource e definiz
 <p>Ha spiegato come lavorare completamente remoto senza aver niente installato in locale sul computer, per non avere dipendenze o dover fare installazioni di versioni di php, mysql ecc...
 In locale si usa l'editor e git e tutto il resto su un server remoto.
 Ha fatto un esempio utilizzando fly.io, vessel cli e mutagen.</p>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=31139">Valid Variants of Validating Validation</a></h2>
 
@@ -468,6 +502,8 @@ Ha fatto un esempio utilizzando fly.io, vessel cli e mutagen.</p>
 <li>request factorty con il pacchetto <a href="https://github.com/worksome/request-factories">worksome/request-factories</a></li>
 </ul>
 
+<hr />
+
 <h2><a href="https://youtu.be/f4QShF42c6E?t=32271">A Grab Bag of Useful Tips</a></h2>
 
 <table>
@@ -494,6 +530,8 @@ Ha fatto un esempio utilizzando fly.io, vessel cli e mutagen.</p>
 <li>Shimming Data Functions con i test in SQLite (utilizzare funzionalità di Mysql con SQLite)</li>
 <li>Model Factory: come dare valori diversi alle colonne dei pivot con le <code>Sequence</code></li>
 </ul>
+
+<hr />
 
 <h2><a href="https://youtu.be/f4QShF42c6E?t=33315">Browsers are Magical Creatures</a></h2>
 
