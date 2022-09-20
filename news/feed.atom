@@ -1,40 +1,270 @@
-<?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Italian Laravel News</title>
-    <link href="https://laravel-news.it/news" />
-    <link type="application/atom+xml" rel="self" href="https://laravel-news.it/news/feed.atom" />
-    <updated>2022-09-19T17:19:31+00:00</updated>
-    <id>https://laravel-news.it/news/feed.atom</id>
-    <author>
-        <name>Author Name</name>
-    </author>
-                <entry>
-    <id>https://laravel-news.it/news/22-09-code-usando-cron-in-hosting</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-09-code-usando-cron-in-hosting" />
-    <title>Usare le code con cron in Hosting</title>
-    <published>2022-09-08T00:00:00+00:00</published>
-    <updated>2022-09-08T00:00:00+00:00</updated>
-    <author>
-        <name>Alessandro Cappellozza</name>
-    </author>
-    <summary type="html">Quando installiamo in hosting puo&#039; capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita piu&#039; spesso e&#039; non potrer installare SUPERVISOR e quindi dover rinunciare alle code; quasi sempre......</summary>
-    <content type="html"><![CDATA[
-        <h2>Il contesto dell'hosting</h2>
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title>Italian Laravel News</title>
+        <link>https://laravel-news.it</link>
+        <description><![CDATA[Generate an elegant blog with Jigsaw]]></description>
+        <atom:link href="https://laravel-news.it/news/feed.atom" rel="self" type="application/rss+xml" />
+        <language></language>
+        <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate>
 
-<p>Quando installiamo in hosting puo' capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita piu' spesso e' non potrer installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre pero' possiamo definire dei <strong>CRON</strong>. Il primo pensiero e' quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioe' di annotare le cose da fare in una tabella per poi elaborarle. Va da se' che stiamo riscrivendo delle funzionalita' e questo non e' un buon punto di partenza.</p>
+                    <item>
+                <title><![CDATA[Laracon review & recap 2022]]></title>
+                <link>https://laravel-news.it/news/22-09-laracon-review-2022</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/22-09-laracon-review-2022</guid>
+                <description><![CDATA[Valutazione e riassunto dell'evento di riferimento della community di Laravel]]></description>
+                <content:encoded><![CDATA[<p>Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per soffermarmi su tutti i punti salienti.
+<!-- more --></p>
 
-<p>La comodita' dlle code di Laravel e' proprio quello di poter aggiungere un elemento a questa pila e farlo girare con comodo successivamente senza peraltro <strong>timeout</strong> che avremmo usandolo in una pagina. La soluzione in questo caso e' piuttosto semplice: nei meandri della documentazione e' possibile vedere che ci sono piu' opzioni per il demone delle code e uno di questi ci viene incontro. In pratica si tratta di far partire il demone in un <strong>CRON</strong> e farlo uscire dopo aver processato un certo numero di job.</p>
+<p>Ad ogni talk ho allegato anche una mia personale valutazione (5 stelline massimo) e una stima del livello di difficoltà (da 1 a 5).</p>
+
+<p>Spero così di aiutare chi non ha il tempo di guardarlo tutto a scegliere le cose più interessanti.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=874">Not Quite My Type</a></h3>
+
+<h5>Speaker: Kai Sassnowski - Valutazione: ★★★★★ - Livello: 3/5</h5>
+
+<p>Talk che spiega l'utilizzo dei Value Object per riuscire a definire meglio i parametri passati alle funzioni, centralizzando il controllo e la validazione dei valori.
+Ha portato 3 esempi in live code:
+- durata vs int
+- percentuale vs int
+- UUID vs string</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=3332">Kubernetes and Laravel</a></h3>
+
+<h5>Speaker: Bosun Egberinde - Valutazione: ★★★☆☆ - Livello: 4/5</h5>
+
+<p>Panoramica di Kubernetes e un esempio pratico di utilizzo e configurazione con Laravel.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=6014">The future of Livewire</a></h3>
+
+<h5>Speaker: Caleb Porzio - Valutazione: ★★★★★ - Livello: 3/5</h5>
+
+<p>Ha parlato dello stato attuale dello sviluppo in internet, di Livewire e del suo futuro...
+Ha mostrato delle anticipazioni di Livewire v3:</p>
+
+<ul>
+<li>includerà anche alpineJS di default e l'integrazione tra i due framework sarà maggiore</li>
+<li>hot reload</li>
+<li>ottimizzazione e riduzione delle chiamate AJAX</li>
+<li>miglioramento della reattività e dell'utilizzo di componenti annidati</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=9181">Sustainable Self-Care</a></h3>
+
+<h5>Speaker: Marje Holmstrom-Sabo - Valutazione: ★★☆☆☆ - Livello: 1/5</h5>
+
+<p>Ha parlato di sostenibilità, cura di se stessi sia fisica che spirituale.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=10059">Let's Get Physical: Database Internals and You</a></h3>
+
+<h5>Speaker: Tim Martin - Valutazione: ★★★☆☆ - Livello: 3/5</h5>
+
+<p>Ha spiegato un po' di concetti di basso livello relativi a MySQL:</p>
+
+<ul>
+<li>uso della memoria</li>
+<li>performance</li>
+<li>indici e alberi</li>
+<li>UUID vs ID.</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=10712">Deep Dive into Carbon</a></h3>
+
+<h5>Speaker: Ralph J. Smit - Valutazione: ★★★★☆ - Livello: 2/5</h5>
+
+<p>Approfondimenti sulla famosa libreria di gestione delle date <code>Carbon</code>:</p>
+
+<ul>
+<li>gems: closest, farthest</li>
+<li>interval: diffForHumans vs diff/diffAsCarbonInterval, CarbonInterface</li>
+<li>period: le funzionalità di CarbonPeriod</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=11950">UI and Component testing with Cypress</a></h3>
+
+<h5>Speaker: Marcel Pociot - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Esempio di come testare l'UI con Cypress: un componente JS per il test end2end o a componenti, attraverso il pacchetto <a href="https://github.com/laracasts/cypress">laracast/cypress</a> di Jeffrey Way attraverso il fantastico sito demo <a href="https://laragone.net/">laragone.net</a>.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=12936">The Hitchhiker's Guide to the Laravel Community</a></h3>
+
+<h5>Speaker: Caneco - Valutazione: ★★★☆☆ - Livello: 1/5</h5>
+
+<p>Piccolo resoconto storico di Laravel, di Taylor Otwell e dei servizi legati a Laravel. 
+Ricapitolazione dello stato di salute di Laravel e delle community che ci girano attorno.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=13999">Abstracting too early</a></h3>
+
+<h5>Speaker: Matt Stauffer - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Ha raccontato una storia che ha come morale: non usare strumenti grandi e complicati se non servono (YAGNI = "You Aren't Gonna Need It").
+Poi ha spiegato che molte volte non è necessario scrivere il migliore codice possibile, ma deve essere un compromesso in base all'uso e al team (simply design e incremental design, duplicazione &lt; astrazione sbagliata).
+Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi all'estrazione di piccole parti (un po' alla volta), rifattorizzando prima la parte interessata.</p>
+
+<p>Poi ha portato una serie di esempi di classici errori di astrazione prematuri:</p>
+
+<ul>
+<li>Repository pattern</li>
+<li>Microservices</li>
+<li>Kubernetes</li>
+<li>Docker</li>
+<li>Estrazione di classi/componenti in librerie</li>
+<li>Event sourcing</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=17519">Laravel Update</a></h3>
+
+<h5>Speaker: Taylor Otwell - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Resoconto sugli ultimi aggiornamenti di Laravel, ora che il framework ha un rilascio annuale tutte le novità vengono introdotte durante i rilasci periodici, quindi si tratta semplicemente di un resoconto di novità già rilasciate e qualche cosa che verrà rilasciata a breve:</p>
+
+<ul>
+<li>laravel cli restiling</li>
+<li>artisan about</li>
+<li>commando db:monitor</li>
+<li>comandi xxx:show</li>
+<li>pint</li>
+<li>controllore di uscita da un comando con <code>trap</code></li>
+<li>vite preprocessor</li>
+<li>allegati di <code>Mailable</code> con model che implementano l'interfaccia `Attachable</li>
+<li>validazione con classi <code>InvokableRule</code></li>
+<li>errori per mancanza di attributi in $fillable del Model</li>
+<li>UUID, ULID</li>
+<li>seeder di model con chiavi ripetute su più Model collegati con il metodo <code>recycle</code></li>
+<li><code>Process</code> api</li>
+<li><code>precognition</code> nuovo metodo di validazione</li>
+<li><a href="https://bootcamp.laravel.com">Laravel Bootcamp</a></li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=21744">Database Performance for Application Developers</a></h3>
+
+<h5>Speaker: Aaron Francis - Valutazione: ★★★★★ - Livello: 3/5</h5>
+
+<p>Come migliorare le performance del nostro database andando ad agire su più livelli:</p>
+
+<ul>
+<li>schema: grandezza dei tipi, tipi giusti</li>
+<li>indici: b tree, indici multicolonna, ordinamento, colonne virtuali</li>
+<li>query: utilizzo indici, select, subquery</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=24315">Christoph Dreams of Simple Code</a></h3>
+
+<h5>Speaker: Christoph Rumpel - Valutazione: ★★★★☆ - Livello: 2/5</h5>
+
+<p>Riepiloga un po' la storia della sua vita personale e come sviluppatore, mostrando come è cambiato il suo codice negli anni ed il suo modo di pensare a proposito del codice.
+Ha mostrato alcuni concetti per scrivere codice migliore, più leggibile, più testabile, più manutenibile e di cui andare più orgogliosi.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=27069">Is there any problem Git interactive rebase can't solve?</a></h3>
+
+<h5>Speaker: Rissa Jackson - Valutazione: ★★★☆☆ - Livello: 4/5</h5>
+
+<p>Una panoramica sui comandi git con preferenza per gli interactive rebase:</p>
+
+<ul>
+<li>git merge vs git  rebase</li>
+<li>git drop <commit> => git rebase -i <commit></li>
+<li>reword, amend</li>
+<li>squash, fixup</li>
+<li>rebase abort</li>
+</ul>
+
+<h3>[<a href="https://youtu.be/f4QShF42c6E?t=28126">Meaningful Mentorship</a><small> - </small></h3>
+
+<h5>Speaker: Alex Six - Valutazione: ★★★☆☆ - Livello: 2/5</h5>
+
+<p>Questo talk parla di cosa vuol dire essere Mentor, perchè diventarlo e i vantaggi che porta.
+Come creare una relazione sana tra le parti ed incoraggiare i passi in avanti.
+Utilizzare il pair programming per fare diventare l'allievo indipendente, definire degli obbiettivi ragionevoli e riuscire a farsi guidare da esso.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=29111">I shall say… err define this only once<small></a> - </small></h3>
+
+<h5>Speaker: Freek Van der Herten - Valutazione: ★★★★★ - Livello: 3/5</h5>
+
+<p>Ha spiegato l'utilizzo del pacchetto <a href="https://spatie.be/docs/laravel-data">spatie/laravel-data</a> che permette di definire un oggetto una sola volta per molteplici utilizzi come form request, api resource e  definizioni typescript.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=30223">I can't believe it's not local!</a></h3>
+
+<h5>Speaker: Chris Fidao - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Ha spiegato come lavorare completamente remoto senza aver niente installato in locale sul computer, per non avere dipendenze o dover fare installazioni di versioni di php, mysql ecc...
+In locale si usa l'editor e git e tutto il resto su un server remoto.
+Ha fatto un esempio utilizzando fly.io, vessel cli e mutagen.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=31139">Valid Variants of Validating Validation</a></h3>
+
+<h5>Speaker: Luke Downing - Valutazione: ★★★★☆ - Livello: 2/5</h5>
+
+<p>Ha parlato di come validare le validazioni con diversi approcci incrementali:</p>
+
+<ul>
+<li>snapshot delle regole</li>
+<li>array condiviso tra i test dei casi</li>
+<li>request factorty con il pacchetto <a href="https://github.com/worksome/request-factories">worksome/request-factories</a></li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=32271">A Grab Bag of Useful Tips</a></h3>
+
+<h5>Speaker: Colin DeCarlo - Valutazione: ★★★☆☆ - Livello: 3/5</h5>
+
+<p>Ha spiegato 3 utili tip:</p>
+
+<ul>
+<li>Configurare XDebug con Valet in PHPStorm</li>
+<li>Shimming Data Functions con i test in SQLite (utilizzare funzionalità di Mysql con SQLite)</li>
+<li>Model Factory: come dare valori diversi alle colonne dei pivot con le <code>Sequence</code></li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=33315">Browsers are Magical Creatures</a></h3>
+
+<h5>Speaker: Stephen Rees-Carter - Valutazione: ★★★★☆ - Livello: 4/5</h5>
+
+<p>Ha parlato della sicurezza dei siti web attraverso la compilazione di alcuni Header (<code>X-Frame-Options</code>, <code>X-Content-Type-Options</code>, <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code>, <code>Referrer-Policy</code>, <code>Permissions-Policy</code>, <code>X-XSS-Protection</code>) e alcune modalità di attacco attraverso l'utilizzo di servizi ed esempi.</p>
+
+<ul>
+<li>Servizi per eseguire i controlli: <a href="https://securityheaders.com/">securityheaders.com</a>, <a href="https://hstspreload.org">hstspreload.org</a>.</li>
+<li>Esempio di clickjacking <a href="https://portswigger.net/web-security/clickjacking/lab-basic-csrf-protected">portswigger.net</a></li>
+<li>Servizio di report realtime di sicurezza <a href="https://report-uri.com/">report-uri.com</a></li>
+<li>Servizio per generare l'Header <code>Permissions-Policy</code>: <a href="https://permissionspolicy.com/">permissionspolicy.com</a></li>
+</ul>
+
+<p>Poi ha spiegato il Subresource Integrity (SRI) con un esempio attraverso il codice di esempio di alpineJS ed il servizio (srihash.org)[https://www.srihash.org/].
+Infine ha parlato di Cross-Origin Resource Sharing (CORS) e SameSite Cookies</p>
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alberto Peripolli</dc:creator>
+                <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
+
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/22-09-laracon-review.jpg"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Usare le code con cron in Hosting]]></title>
+                <link>https://laravel-news.it/news/22-09-code-usando-cron-in-hosting</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/22-09-code-usando-cron-in-hosting</guid>
+                <description><![CDATA[come usare le code (queue) in hosting senza supervisor]]></description>
+                <content:encoded><![CDATA[<h2>Il contesto dell'hosting</h2>
+
+<p>Quando installiamo in hosting può capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita più spesso è non poter installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre però possiamo definire dei <strong>CRON</strong>. 
+<!-- more -->
+Il primo pensiero è quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioè di annotare le cose da fare in una tabella per poi elaborarle. Va da sè che stiamo riscrivendo delle funzionalità e questo non è un buon punto di partenza.</p>
+
+<p>La comodità dalle code di Laravel è proprio quello di poter aggiungere un elemento a questa pila e farlo girare con comodo successivamente senza peraltro <strong>timeout</strong> che avremmo usandolo in una pagina. La soluzione in questo caso è piuttosto semplice: nei meandri della documentazione è possibile vedere che ci sono più opzioni per il demone delle code e uno di questi ci viene incontro. In pratica si tratta di far partire il demone in un <strong>CRON</strong> e farlo uscire dopo aver processato un certo numero di job.</p>
 
 <h2>1. Configurazione</h2>
 
-<p>Inziamo pero' con ordine partendo dalla configurazione dell'env; dobbiamo indicare che le code non sono sincrone ma usando il database:</p>
+<p>Iniziamo però con ordine partendo dalla configurazione dell'env; dobbiamo indicare che le code non sono sincrone ma usando il database:</p>
 
 <pre><code class="language-bash">QUEUE_CONNECTION=database
 </code></pre>
 
 <h2>2. Il database</h2>
 
-<p>Per il database che sostiene le code e' sempre consigliato <strong>REDIS</strong> ma in hosting spesso non e' presente quindi possiamo optare per <strong>MySql</strong> che, se non abbiamo moli di calcolo grosse, puo' fare il suo lavoro bene. Si prosegue poi creando le tabelle per le code, laravel mette a disposizione un comando per creare la migration che verra' eseguito poi insieme anche alle altre del vostro progetto:</p>
+<p>Per il database che sostiene le code è sempre consigliato <strong>REDIS</strong> ma in hosting spesso non è presente quindi possiamo optare per <strong>MySql</strong> che, se non abbiamo moli di calcolo grosse, può fare il suo lavoro bene. Si prosegue poi creando le tabelle per le code, laravel mette a disposizione un comando per creare la migration che verrà eseguito poi insieme anche alle altre del vostro progetto:</p>
 
 <pre><code class="language-bash">php artisan queue:table
 php artisan migrate
@@ -64,11 +294,11 @@ php artisan migrate
 }        
 </code></pre>
 
-<p>Nel caso che mi ha fatto arrivare a questa soluzione avevo un amico che in hosting non aveva supervisor e in piu' non poteva inviare piu' di 600 email l'ora ma voleva usare le code che oggettivamente sono molto comode, inviandone 10 per minuto auto limitava il tutto a 600.</p>
+<p>Il caso che mi ha fatto arrivare a questa soluzione deriva da un amico che in hosting non aveva supervisor e non poteva inviare più di 600 email l'ora; lui voleva usare le code, che oggettivamente sono molto comode, inviandone 10 per minuto auto limitava il tutto a 600.</p>
 
 <h2>Alternative?</h2>
 
-<p>Esiste un'alternativa a questo tipo di approccio ed e' quello di lanciarlo dal kernel del command con l'opzione <strong><em>withoutOverlapping</em></strong>, questo lancera' il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa <strong>non e' pero' una buona soluzione</strong> in hosting perche' lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del procersso che diviene difficile da monitorare per memory leak e altre situazioni per cui non e' studiato.</p>
+<p>Esiste un'alternativa a questo tipo di approccio ed è quello di lanciarlo dal kernel del command con l'opzione <strong><em>withoutOverlapping</em></strong>, questo lancerà il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa <strong>non è però una buona soluzione</strong> in hosting perchè lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del procersso che diviene difficile da monitorare per memory leak e altre situazioni per cui non è studiato.</p>
 
 <pre><code class="language-php">class Kernel extends ConsoleKernel
 {
@@ -84,21 +314,23 @@ php artisan migrate
     }
 }        
 </code></pre>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/22-09-laracon-2022</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-09-laracon-2022" />
-    <title>Laracon 2022</title>
-    <published>2022-09-06T00:00:00+00:00</published>
-    <updated>2022-09-06T00:00:00+00:00</updated>
-    <author>
-        <name>Alberto Peripolli</name>
-    </author>
-    <summary type="html">Laracon è il più grande evento dell&#039;anno relativo a Laravel.
-Si terrà il 14 Settembre in live gratuitamente su Youtube....</summary>
-    <content type="html"><![CDATA[
-        <p><a href="https://laracon.net">Laracon</a> è il più grande evento dell'anno relativo a Laravel.<br />
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Cappellozza</dc:creator>
+                <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/22-09-queue.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Laracon 2022]]></title>
+                <link>https://laravel-news.it/news/22-09-laracon-2022</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/22-09-laracon-2022</guid>
+                <description><![CDATA[L'evento di riferimento della community di Laravel]]></description>
+                <content:encoded><![CDATA[<p><a href="https://laracon.net">Laracon</a> è il più grande evento dell'anno relativo a Laravel.<br />
 Si terrà il 14 Settembre in live gratuitamente su Youtube.
 <!-- more --></p>
 
@@ -130,24 +362,23 @@ Si terrà il 14 Settembre in live gratuitamente su Youtube.
 <li>23:30 - A Grab Bag of Useful Tips - Colin DeCarlo</li>
 <li>23:45 - Browsers are Magical Creatures - Stephen Rees-Carter</li>
 </ul>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/22-08-comando-make-migration</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-08-comando-make-migration" />
-    <title>I segreti del comando make:migration</title>
-    <published>2022-08-25T00:00:00+00:00</published>
-    <updated>2022-08-25T00:00:00+00:00</updated>
-    <author>
-        <name>Alberto Peripolli</name>
-    </author>
-    <summary type="html">Una delle operazioni più comuni in Laravel è la creazione delle migrazioni, esse ci consentono semplicemente di cambiare 
-stato al nostro database.
-Il metodo più consono per creare una nuova migrazione è attraverso relativo comando artisan make, al quale la 
-documentazione ufficiale limita un solo paragrafo, 
-pochi però sanno che nascosti nel comando base ci sono molti trucchetti che possono semplificare e velocizzare queste operazioni....</summary>
-    <content type="html"><![CDATA[
-        <p>Una delle operazioni più comuni in Laravel è la creazione delle migrazioni, esse ci consentono semplicemente di cambiare 
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alberto Peripolli</dc:creator>
+                <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate>
+
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/22-09-laracon.jpg"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[I segreti del comando make:migration]]></title>
+                <link>https://laravel-news.it/news/22-08-comando-make-migration</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/22-08-comando-make-migration</guid>
+                <description><![CDATA[Il comando di Laravel per creare le migrazioni nasconde dei trucchetti interessanti.]]></description>
+                <content:encoded><![CDATA[<p>Una delle operazioni più comuni in Laravel è la creazione delle migrazioni, esse ci consentono semplicemente di cambiare 
 stato al nostro database.<br />
 Il metodo più consono per creare una nuova migrazione è attraverso relativo comando artisan make, al quale la 
 <a href="https://laravel.com/docs/9.x/migrations#generating-migrations">documentazione ufficiale</a> limita un solo paragrafo, 
@@ -290,21 +521,23 @@ In questo caso ad esempio hanno completamente rimosso le funzioni di rollback de
 # questo comando creerà il model in app/Models/Flight.php 
 # ed anche la migrazione in database/migrations/date_time_create_flights_table.php
 </code></pre>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/22-07-inizializzazione-proibita</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/22-07-inizializzazione-proibita" />
-    <title>L&#039;inizializzazione proibita</title>
-    <published>2022-07-15T00:00:00+00:00</published>
-    <updated>2022-07-15T00:00:00+00:00</updated>
-    <author>
-        <name>Alberto Peripolli</name>
-    </author>
-    <summary type="html">In PHP è possibile dare un valore di default ai parametri di una funzione.
-Questo serve ad evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare ad ogni invocazione....</summary>
-    <content type="html"><![CDATA[
-        <p>In PHP è possibile dare un valore di default ai parametri di una funzione.<br />
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alberto Peripolli</dc:creator>
+                <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/22-08-comando-make-migration.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[L'inizializzazione proibita]]></title>
+                <link>https://laravel-news.it/news/22-07-inizializzazione-proibita</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/22-07-inizializzazione-proibita</guid>
+                <description><![CDATA[Come inizializzare gli argomenti di una funzione.]]></description>
+                <content:encoded><![CDATA[<p>In PHP è possibile dare un valore di default ai parametri di una funzione.<br />
 Questo serve ad evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare ad ogni invocazione.
 <!-- more --></p>
 
@@ -364,21 +597,23 @@ $data['username'] ??= 'guest';
 </code></pre>
 
 <p>Quindi la prossima volta che vi servirà di inizializzare un parametro di una funzione ricordatevi questo piccolo amico <code>??=</code>.</p>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/creare-un-nuovo-articolo</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/creare-un-nuovo-articolo" />
-    <title>Creare un nuovo articolo</title>
-    <published>2022-06-03T00:00:00+00:00</published>
-    <updated>2022-06-03T00:00:00+00:00</updated>
-    <author>
-        <name>Alessandro Cappellozza</name>
-    </author>
-    <summary type="html">Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
-Ricordate che il nome del file rappreseterà anche l&#039;url dell&#039;articolo quindi scrivetelo in modo......</summary>
-    <content type="html"><![CDATA[
-        <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alberto Peripolli</dc:creator>
+                <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
+
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/22-07-inizializzazione-proibita.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Creare un nuovo articolo]]></title>
+                <link>https://laravel-news.it/news/creare-un-nuovo-articolo</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/creare-un-nuovo-articolo</guid>
+                <description><![CDATA[Creare un nuovo articolo per il blog di laravel news italia]]></description>
+                <content:encoded><![CDATA[<p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
 Ricordate che il nome del file rappreseterà anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
 
 <pre><code class="language-bash">git clone https://github.com/laravel-news-it/
@@ -480,26 +715,23 @@ npm run watch
 <p>Potete creare quindi un nuovo branch con<br />
 <code>git checkout -b nuovo-articolo</code><br />
 e poi effettuare la <strong><em>pull-request</em></strong>.</p>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/laravel-day-2021</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2021" />
-    <title>Laravel Day 2021</title>
-    <published>2021-06-03T00:00:00+00:00</published>
-    <updated>2021-06-03T00:00:00+00:00</updated>
-    <author>
-        <name>Alessandro Cappellozza</name>
-    </author>
-    <summary type="html">Sito ufficiale
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Cappellozza</dc:creator>
+                <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
 
-
-
-
-
-Sin da subito, chi si approccia all&#039;utilizzo di Laravel o altri framework, impara ad utilizzare le sue funzionalità di Service Container. Ma cos&#039;è esattamente e com&#039;è fatto un Service Container? Scoprire come realizzarne uno è il......</summary>
-    <content type="html"><![CDATA[
-        <p><a href="https://2021.laravelday.it/">Sito ufficiale</a></p>
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/creare-un-nuovo-articolo.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Laravel Day 2021]]></title>
+                <link>https://laravel-news.it/news/laravel-day-2021</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/laravel-day-2021</guid>
+                <description><![CDATA[Riepilogo dell'evento Laravel Day 2021]]></description>
+                <content:encoded><![CDATA[<p><a href="https://2021.laravelday.it/">Sito ufficiale</a></p>
 
 <h4>Papà, come nascono i Service Container?</h4>
 
@@ -531,26 +763,23 @@ Filippo Galante</p>
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/rGQ2AJE2ixM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>Come funziona Laravel Blade? Vediamo come sfruttare al massimo le sue potenzialità</p>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/laravel-day-2020</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2020" />
-    <title>Laravel Day 2020</title>
-    <published>2020-06-03T00:00:00+00:00</published>
-    <updated>2020-06-03T00:00:00+00:00</updated>
-    <author>
-        <name>Alessandro Cappellozza</name>
-    </author>
-    <summary type="html">Sito ufficiale
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Cappellozza</dc:creator>
+                <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
 
-
-
-
-
-In questo talk mostrerò tutte le strategie di sviluppo che ho utilizzato per implementare e scalare un prodotto SaaS utilizzando Laravel per la gestione di grandi quantità di traffico. Partendo dall&#039;evoluzione del codice vedremo......</summary>
-    <content type="html"><![CDATA[
-        <p><a href="https://2020.laravelday.it/">Sito ufficiale</a></p>
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/laravel-day.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Laravel Day 2020]]></title>
+                <link>https://laravel-news.it/news/laravel-day-2020</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/laravel-day-2020</guid>
+                <description><![CDATA[Riepilogo dell'evento Laravel Day 2020]]></description>
+                <content:encoded><![CDATA[<p><a href="https://2020.laravelday.it/">Sito ufficiale</a></p>
 
 <h4>Come ho sviluppato e scalato un prodotto SaaS grazie a Laravel</h4>
 
@@ -609,26 +838,23 @@ In questo talk mostrerò tutte le strategie di sviluppo che ho utilizzato per im
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/_qtwTjTi6Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>In questo talk andremo a vedere le tecniche che il team di Playmoove utilizza per tenere organizzata e accessibile la codebase, nello specifico: - Scrittura di API controller - Business logic isolation - Dependency injection - Generazione automagica delle API docs</p>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/laravel-day-2019</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2019" />
-    <title>Laravel Day 2019</title>
-    <published>2019-06-03T00:00:00+00:00</published>
-    <updated>2019-06-03T00:00:00+00:00</updated>
-    <author>
-        <name>Alessandro Cappellozza</name>
-    </author>
-    <summary type="html">Sito ufficiale
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Cappellozza</dc:creator>
+                <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
 
-
-
-
-
-Affiancare a Laravel uno strumento RAD come un admin package è una tentazione forte che però ha un costo in termini di scalabilità, architettura e a volte debito tecnico. Ci si trova quindi ad assemblare un software come se si......</summary>
-    <content type="html"><![CDATA[
-        <p><a href="https://2019.laravelday.it/">Sito ufficiale</a></p>
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/laravel-day.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Laravel Day 2019]]></title>
+                <link>https://laravel-news.it/news/laravel-day-2019</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/laravel-day-2019</guid>
+                <description><![CDATA[Riepilogo dell'evento Laravel Day 2019]]></description>
+                <content:encoded><![CDATA[<p><a href="https://2019.laravelday.it/">Sito ufficiale</a></p>
 
 <h4>Laravel the Lego™ Way</h4>
 
@@ -703,26 +929,23 @@ Affiancare a Laravel uno strumento RAD come un admin package è una tentazione f
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/0SJn6Tl-i7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>Il talk descrive il ciclo di creazione e manutenzione di un package Laravel da utilizzare con composer. In particolare verranno descritte le seguenti fasi: Definizione del package e delle sue funzionalità; Pubblicazione di configurazioni, assets ed altri componenti; Pubblicazione su GitHub; Pubblicazione su packagist; Automazione dell'aggiornamento su packagist in seguito ad un push; Gestione delle versioni. Al fine di comprendere meglio i contenuti, si consiglia la conoscenza base di Laravel, composer e git.</p>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/laravel-day-2018</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2018" />
-    <title>Laravel Day 2018</title>
-    <published>2018-06-03T00:00:00+00:00</published>
-    <updated>2018-06-03T00:00:00+00:00</updated>
-    <author>
-        <name>Alessandro Cappellozza</name>
-    </author>
-    <summary type="html">Sito ufficiale
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Cappellozza</dc:creator>
+                <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
 
-
-
-
-
-Il percorso che ho fatto negli ultimi due anni mi ha portato ad avvicinare il settore del web, dal quale provengo, al settore dell&#039;IIOT. Grazie alla sua duttilità Laravel ha consentito a me e alla mia azienda di creare un prodotto......</summary>
-    <content type="html"><![CDATA[
-        <p><a href="https://2018.laravelday.it/">Sito ufficiale</a></p>
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/laravel-day.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Laravel Day 2018]]></title>
+                <link>https://laravel-news.it/news/laravel-day-2018</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/laravel-day-2018</guid>
+                <description><![CDATA[Riepilogo dell'evento Laravel Day 2018]]></description>
+                <content:encoded><![CDATA[<p><a href="https://2018.laravelday.it/">Sito ufficiale</a></p>
 
 <h4>Laravel applicato all'IIOT</h4>
 
@@ -799,26 +1022,23 @@ Il percorso che ho fatto negli ultimi due anni mi ha portato ad avvicinare il se
 <p>Parleremo di come configurare e utilizzare Docker in un progetto Laravel per uno sviluppatore che si inserisce in un nuovo Team per la prima volta. Prendedermo come esempio alcuni progetti già pre-costituiti come Laravel Homestead e Laradock fino ad arrivare ad a costruire un ambiente docker più strutturato con Laravel, Redis, Memcached, Laravel Echo Server per avere un ambiente facilmente deployable sul cloud.</p>
 
 <p><a href="https://www.slideshare.net/skyweb/laravelday2018">Slide del talk</a></p>
-    ]]></content>
-</entry>
-            <entry>
-    <id>https://laravel-news.it/news/laravel-day-2017</id>
-    <link type="text/html" rel="alternate" href="https://laravel-news.it/news/laravel-day-2017" />
-    <title>Laravel Day 2017</title>
-    <published>2017-06-03T00:00:00+00:00</published>
-    <updated>2017-06-03T00:00:00+00:00</updated>
-    <author>
-        <name>Alessandro Cappellozza</name>
-    </author>
-    <summary type="html">Sito ufficiale
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Cappellozza</dc:creator>
+                <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
 
-
-
-
-
-Laravel 5.5 ha aggiunto alcune cose per aiutarci a creare più velocemente la basi di un API restful. Per esempio, adesso i transformer sono stati integrati, quindi non c&#039;è più bisogno di includere Fractal. Questa talk parlerà......</summary>
-    <content type="html"><![CDATA[
-        <p><a href="https://2017.laravelday.it/">Sito ufficiale</a></p>
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/laravel-day.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+                    <item>
+                <title><![CDATA[Laravel Day 2017]]></title>
+                <link>https://laravel-news.it/news/laravel-day-2017</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/laravel-day-2017</guid>
+                <description><![CDATA[Riepilogo dell'evento Laravel Day 2017]]></description>
+                <content:encoded><![CDATA[<p><a href="https://2017.laravelday.it/">Sito ufficiale</a></p>
 
 <h4>RESTful API: la novità in Laravel 5.5</h4>
 
@@ -881,6 +1101,16 @@ Laravel 5.5 ha aggiunto alcune cose per aiutarci a creare più velocemente la ba
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/J3ySFHXIFZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>"Da sempre fare il deploy di applicazioni multi-istanza rappresenta una sfida per lo sviluppatore e per il sistemista. Oggi grazie a strumenti gratuiti e un pò di esperienza in materia è possibile eseguire tale operazione lavorando su pipeline che prevedono testing automatico, validazione del code style e molto altro, in modo da ottenere una Continuous Integration consistente, efficace ed in tempi brevissimi. Scopriamo insieme come con un progetto Laravel e le pipeline di Bitbucket."</p>
-    ]]></content>
-</entry>
-    </feed>
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Cappellozza</dc:creator>
+                <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/laravel-day.png"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
+            </channel>
+</rss>

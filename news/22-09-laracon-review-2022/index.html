@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Creare un nuovo articolo per il blog di laravel news italia">
+    <meta name="description" content="Valutazione e riassunto dell&#039;evento di riferimento della community di Laravel">
 
     <meta property="og:site_name" content="Italian Laravel News" />
-    <meta property="og:title" content="Creare un nuovo articolo | Italian Laravel News" />
+    <meta property="og:title" content="Laracon review &amp; recap 2022 | Italian Laravel News" />
     <meta property="og:locale" content="it_IT" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://laravel-news.it/news/creare-un-nuovo-articolo" />
-    <meta property="og:description" content="Creare un nuovo articolo per il blog di laravel news italia" />
+    <meta property="og:url" content="https://laravel-news.it/news/22-09-laracon-review-2022" />
+    <meta property="og:description" content="Valutazione e riassunto dell&#039;evento di riferimento della community di Laravel" />
 
-        <meta property="og:image" content="/assets/articles/creare-un-nuovo-articolo.png" />
-    <meta name="twitter:image" content="/assets/articles/creare-un-nuovo-articolo.png" />
+        <meta property="og:image" content="/assets/articles/22-09-laracon-review.jpg" />
+    <meta name="twitter:image" content="/assets/articles/22-09-laracon-review.jpg" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Creare un nuovo articolo | Italian Laravel News" />
-    <meta name="twitter:description" content="Creare un nuovo articolo per il blog di laravel news italia" />
+    <meta name="twitter:title" content="Laracon review &amp; recap 2022 | Italian Laravel News" />
+    <meta name="twitter:description" content="Valutazione e riassunto dell&#039;evento di riferimento della community di Laravel" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
@@ -39,7 +39,7 @@
     <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#F48220" />
 
-    <title>Creare un nuovo articolo | Italian Laravel News</title>
+    <title>Laracon review &amp; recap 2022 | Italian Laravel News</title>
 
     <link rel="home" href="https://laravel-news.it">
     <link rel="icon" href="/favicon.ico">
@@ -206,138 +206,251 @@
     <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-8 px-6">
         
 <div>
-            <img src="/assets/articles/creare-un-nuovo-articolo.png" alt="Creare un nuovo articolo cover image" class="mb-2 rounded-lg shadow-lg overflow-hidden">
+            <img src="/assets/articles/22-09-laracon-review.jpg" alt="Laracon review &amp; recap 2022 cover image" class="mb-2 rounded-lg shadow-lg overflow-hidden">
     
-    <h1 class="leading-none mb-2">Creare un nuovo articolo</h1>
+    <h1 class="leading-none mb-2">Laracon review &amp; recap 2022</h1>
 
-    <p class="text-gray-700 md:mt-0">Alessandro Cappellozza  •  03 giugno 2022</p>
+    <p class="text-gray-700 md:mt-0">Alberto Peripolli  •  18 settembre 2022</p>
 
     <hr class="border-b my-4">
 
     <div class="mb-4 text-right">
                         <a
-                href="/news/categories/configuration"
-                title="View posts in configuration"
+                href="/news/categories/events"
+                title="View posts in events"
                 class="inline-block bg-Teal hover:bg-DarkBlue hover:text-white leading-loose tracking-wide text-white uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
-            >configuration</a>
+            >events</a>
                 </div>
 
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
-        <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
-Ricordate che il nome del file rappreseterà anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
+        <p>Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per soffermarmi su tutti i punti salienti.
+<!-- more --></p>
 
-<pre><code class="language-bash">git clone https://github.com/laravel-news-it/
+<p>Ad ogni talk ho allegato anche una mia personale valutazione (5 stelline massimo) e una stima del livello di difficoltà (da 1 a 5).</p>
 
-cd laravel-news.it/source/_posts
+<p>Spero così di aiutare chi non ha il tempo di guardarlo tutto a scegliere le cose più interessanti.</p>
 
-touch nuovo-articolo.md
+<h3><a href="https://youtu.be/f4QShF42c6E?t=874">Not Quite My Type</a></h3>
 
-vi nuovo-articolo.md
-</code></pre>
+<h5>Speaker: Kai Sassnowski - Valutazione: ★★★★★ - Livello: 3/5</h5>
 
-<p>Il nome del file deve essere composto da [ANNO]-[MESE]-titolo in formato slug es: <code>22-12-titolo.md</code></p>
+<p>Talk che spiega l'utilizzo dei Value Object per riuscire a definire meglio i parametri passati alle funzioni, centralizzando il controllo e la validazione dei valori.
+Ha portato 3 esempi in live code:
+- durata vs int
+- percentuale vs int
+- UUID vs string</p>
 
-<p>Nella parte iniziale del file vanno messi i metadati dell'articolo in questa maniera:</p>
+<h3><a href="https://youtu.be/f4QShF42c6E?t=3332">Kubernetes and Laravel</a></h3>
 
-<pre><code>---
-extends: _layouts.post
-section: content
-title: Creare un nuovo articolo
-date: 2022-06-03
-description: Creare un nuovo artcolo per il blog di laravel news italia
-categories: [news]
-cover_image: /assets/articles/22-07-nome-del-file.png
-author: Alessandro Cappellozza
----
-</code></pre>
+<h5>Speaker: Bosun Egberinde - Valutazione: ★★★☆☆ - Livello: 4/5</h5>
 
-<p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:</p>
+<p>Panoramica di Kubernetes e un esempio pratico di utilizzo e configurazione con Laravel.</p>
 
-<table>
-<thead>
-<tr>
-  <th>Header</th>
-  <th>Desacrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><strong>title</strong></td>
-  <td>Titolo dell'articolo.</td>
-</tr>
-<tr>
-  <td><strong>date</strong></td>
-  <td>Data in formato ISO</td>
-</tr>
-<tr>
-  <td><strong>description</strong></td>
-  <td>Descrizione completa dell'artticolo.</td>
-</tr>
-<tr>
-  <td><strong>categories</strong></td>
-  <td>Questi sono i tag che potete inserire, se ne possono inserire anche più di uno [events,contents,mnews,packages,php,tips,tutorials].</td>
-</tr>
-<tr>
-  <td><strong>cover_image</strong></td>
-  <td>L'immaginbe di copertina è molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.</td>
-</tr>
-<tr>
-  <td><strong>author</strong></td>
-  <td>Il vosto nome e congome.</td>
-</tr>
-<tr>
-  <td><strong>excerpt</strong></td>
-  <td>è opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</td>
-</tr>
-</tbody>
-</table>
+<h3><a href="https://youtu.be/f4QShF42c6E?t=6014">The future of Livewire</a></h3>
 
-<p>Nell'easempio è utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
+<h5>Speaker: Caleb Porzio - Valutazione: ★★★★★ - Livello: 3/5</h5>
 
-<pre><code class="language-bash">cd source/assets/articles/
-</code></pre>
+<p>Ha parlato dello stato attuale dello sviluppo in internet, di Livewire e del suo futuro...
+Ha mostrato delle anticipazioni di Livewire v3:</p>
 
-<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file è meglio fare una cartella col nome dell'articolo.<br />
-Se vi servono immagini con codice sorgente potete usare questo servizio online <a href="https://10015.io/tools/code-to-image-converter">10015</a>.</p>
+<ul>
+<li>includerà anche alpineJS di default e l'integrazione tra i due framework sarà maggiore</li>
+<li>hot reload</li>
+<li>ottimizzazione e riduzione delle chiamate AJAX</li>
+<li>miglioramento della reattività e dell'utilizzo di componenti annidati</li>
+</ul>
 
-<p>Potete inserire parti di codice con questa sintassi:</p>
+<h3><a href="https://youtu.be/f4QShF42c6E?t=9181">Sustainable Self-Care</a></h3>
 
-<pre><code class="language-markdown"> ```linguaggio
-  codice
- ```
-</code></pre>
+<h5>Speaker: Marje Holmstrom-Sabo - Valutazione: ★★☆☆☆ - Livello: 1/5</h5>
 
-<p>I linguaggi supportati sono: <code>bash</code>, <code>css</code>, <code>html</code>, <code>javascript</code>, <code>json</code>, <code>markdown</code>, <code>php</code>, <code>scss</code>, <code>yaml</code>.<br />
-Potete comunque prendere spunto dagli articoli già scritti.</p>
+<p>Ha parlato di sostenibilità, cura di se stessi sia fisica che spirituale.</p>
 
-<p>Per fare una preview del vostro articolo potete lanciare il sito in modalità di debug in questa maniera.</p>
+<h3><a href="https://youtu.be/f4QShF42c6E?t=10059">Let's Get Physical: Database Internals and You</a></h3>
 
-<pre><code class="language-bash"># Necessario solo se è la prima volta che si avvia
-composer install
-npm install
+<h5>Speaker: Tim Martin - Valutazione: ★★★☆☆ - Livello: 3/5</h5>
 
-# Lancio in modalità debug
-npm run watch
-</code></pre>
+<p>Ha spiegato un po' di concetti di basso livello relativi a MySQL:</p>
 
-<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine.</p>
+<ul>
+<li>uso della memoria</li>
+<li>performance</li>
+<li>indici e alberi</li>
+<li>UUID vs ID.</li>
+</ul>
 
-<p>Potete creare quindi un nuovo branch con<br />
-<code>git checkout -b nuovo-articolo</code><br />
-e poi effettuare la <strong><em>pull-request</em></strong>.</p>
+<h3><a href="https://youtu.be/f4QShF42c6E?t=10712">Deep Dive into Carbon</a></h3>
+
+<h5>Speaker: Ralph J. Smit - Valutazione: ★★★★☆ - Livello: 2/5</h5>
+
+<p>Approfondimenti sulla famosa libreria di gestione delle date <code>Carbon</code>:</p>
+
+<ul>
+<li>gems: closest, farthest</li>
+<li>interval: diffForHumans vs diff/diffAsCarbonInterval, CarbonInterface</li>
+<li>period: le funzionalità di CarbonPeriod</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=11950">UI and Component testing with Cypress</a></h3>
+
+<h5>Speaker: Marcel Pociot - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Esempio di come testare l'UI con Cypress: un componente JS per il test end2end o a componenti, attraverso il pacchetto <a href="https://github.com/laracasts/cypress">laracast/cypress</a> di Jeffrey Way attraverso il fantastico sito demo <a href="https://laragone.net/">laragone.net</a>.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=12936">The Hitchhiker's Guide to the Laravel Community</a></h3>
+
+<h5>Speaker: Caneco - Valutazione: ★★★☆☆ - Livello: 1/5</h5>
+
+<p>Piccolo resoconto storico di Laravel, di Taylor Otwell e dei servizi legati a Laravel. 
+Ricapitolazione dello stato di salute di Laravel e delle community che ci girano attorno.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=13999">Abstracting too early</a></h3>
+
+<h5>Speaker: Matt Stauffer - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Ha raccontato una storia che ha come morale: non usare strumenti grandi e complicati se non servono (YAGNI = "You Aren't Gonna Need It").
+Poi ha spiegato che molte volte non è necessario scrivere il migliore codice possibile, ma deve essere un compromesso in base all'uso e al team (simply design e incremental design, duplicazione &lt; astrazione sbagliata).
+Una volta che il progetto ha raggiunto la forma desiderata, bisogna prepararsi all'estrazione di piccole parti (un po' alla volta), rifattorizzando prima la parte interessata.</p>
+
+<p>Poi ha portato una serie di esempi di classici errori di astrazione prematuri:</p>
+
+<ul>
+<li>Repository pattern</li>
+<li>Microservices</li>
+<li>Kubernetes</li>
+<li>Docker</li>
+<li>Estrazione di classi/componenti in librerie</li>
+<li>Event sourcing</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=17519">Laravel Update</a></h3>
+
+<h5>Speaker: Taylor Otwell - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Resoconto sugli ultimi aggiornamenti di Laravel, ora che il framework ha un rilascio annuale tutte le novità vengono introdotte durante i rilasci periodici, quindi si tratta semplicemente di un resoconto di novità già rilasciate e qualche cosa che verrà rilasciata a breve:</p>
+
+<ul>
+<li>laravel cli restiling</li>
+<li>artisan about</li>
+<li>commando db:monitor</li>
+<li>comandi xxx:show</li>
+<li>pint</li>
+<li>controllore di uscita da un comando con <code>trap</code></li>
+<li>vite preprocessor</li>
+<li>allegati di <code>Mailable</code> con model che implementano l'interfaccia `Attachable</li>
+<li>validazione con classi <code>InvokableRule</code></li>
+<li>errori per mancanza di attributi in $fillable del Model</li>
+<li>UUID, ULID</li>
+<li>seeder di model con chiavi ripetute su più Model collegati con il metodo <code>recycle</code></li>
+<li><code>Process</code> api</li>
+<li><code>precognition</code> nuovo metodo di validazione</li>
+<li><a href="https://bootcamp.laravel.com">Laravel Bootcamp</a></li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=21744">Database Performance for Application Developers</a></h3>
+
+<h5>Speaker: Aaron Francis - Valutazione: ★★★★★ - Livello: 3/5</h5>
+
+<p>Come migliorare le performance del nostro database andando ad agire su più livelli:</p>
+
+<ul>
+<li>schema: grandezza dei tipi, tipi giusti</li>
+<li>indici: b tree, indici multicolonna, ordinamento, colonne virtuali</li>
+<li>query: utilizzo indici, select, subquery</li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=24315">Christoph Dreams of Simple Code</a></h3>
+
+<h5>Speaker: Christoph Rumpel - Valutazione: ★★★★☆ - Livello: 2/5</h5>
+
+<p>Riepiloga un po' la storia della sua vita personale e come sviluppatore, mostrando come è cambiato il suo codice negli anni ed il suo modo di pensare a proposito del codice.
+Ha mostrato alcuni concetti per scrivere codice migliore, più leggibile, più testabile, più manutenibile e di cui andare più orgogliosi.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=27069">Is there any problem Git interactive rebase can't solve?</a></h3>
+
+<h5>Speaker: Rissa Jackson - Valutazione: ★★★☆☆ - Livello: 4/5</h5>
+
+<p>Una panoramica sui comandi git con preferenza per gli interactive rebase:</p>
+
+<ul>
+<li>git merge vs git  rebase</li>
+<li>git drop <commit> => git rebase -i <commit></li>
+<li>reword, amend</li>
+<li>squash, fixup</li>
+<li>rebase abort</li>
+</ul>
+
+<h3>[<a href="https://youtu.be/f4QShF42c6E?t=28126">Meaningful Mentorship</a><small> - </small></h3>
+
+<h5>Speaker: Alex Six - Valutazione: ★★★☆☆ - Livello: 2/5</h5>
+
+<p>Questo talk parla di cosa vuol dire essere Mentor, perchè diventarlo e i vantaggi che porta.
+Come creare una relazione sana tra le parti ed incoraggiare i passi in avanti.
+Utilizzare il pair programming per fare diventare l'allievo indipendente, definire degli obbiettivi ragionevoli e riuscire a farsi guidare da esso.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=29111">I shall say… err define this only once<small></a> - </small></h3>
+
+<h5>Speaker: Freek Van der Herten - Valutazione: ★★★★★ - Livello: 3/5</h5>
+
+<p>Ha spiegato l'utilizzo del pacchetto <a href="https://spatie.be/docs/laravel-data">spatie/laravel-data</a> che permette di definire un oggetto una sola volta per molteplici utilizzi come form request, api resource e  definizioni typescript.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=30223">I can't believe it's not local!</a></h3>
+
+<h5>Speaker: Chris Fidao - Valutazione: ★★★★☆ - Livello: 3/5</h5>
+
+<p>Ha spiegato come lavorare completamente remoto senza aver niente installato in locale sul computer, per non avere dipendenze o dover fare installazioni di versioni di php, mysql ecc...
+In locale si usa l'editor e git e tutto il resto su un server remoto.
+Ha fatto un esempio utilizzando fly.io, vessel cli e mutagen.</p>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=31139">Valid Variants of Validating Validation</a></h3>
+
+<h5>Speaker: Luke Downing - Valutazione: ★★★★☆ - Livello: 2/5</h5>
+
+<p>Ha parlato di come validare le validazioni con diversi approcci incrementali:</p>
+
+<ul>
+<li>snapshot delle regole</li>
+<li>array condiviso tra i test dei casi</li>
+<li>request factorty con il pacchetto <a href="https://github.com/worksome/request-factories">worksome/request-factories</a></li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=32271">A Grab Bag of Useful Tips</a></h3>
+
+<h5>Speaker: Colin DeCarlo - Valutazione: ★★★☆☆ - Livello: 3/5</h5>
+
+<p>Ha spiegato 3 utili tip:</p>
+
+<ul>
+<li>Configurare XDebug con Valet in PHPStorm</li>
+<li>Shimming Data Functions con i test in SQLite (utilizzare funzionalità di Mysql con SQLite)</li>
+<li>Model Factory: come dare valori diversi alle colonne dei pivot con le <code>Sequence</code></li>
+</ul>
+
+<h3><a href="https://youtu.be/f4QShF42c6E?t=33315">Browsers are Magical Creatures</a></h3>
+
+<h5>Speaker: Stephen Rees-Carter - Valutazione: ★★★★☆ - Livello: 4/5</h5>
+
+<p>Ha parlato della sicurezza dei siti web attraverso la compilazione di alcuni Header (<code>X-Frame-Options</code>, <code>X-Content-Type-Options</code>, <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code>, <code>Referrer-Policy</code>, <code>Permissions-Policy</code>, <code>X-XSS-Protection</code>) e alcune modalità di attacco attraverso l'utilizzo di servizi ed esempi.</p>
+
+<ul>
+<li>Servizi per eseguire i controlli: <a href="https://securityheaders.com/">securityheaders.com</a>, <a href="https://hstspreload.org">hstspreload.org</a>.</li>
+<li>Esempio di clickjacking <a href="https://portswigger.net/web-security/clickjacking/lab-basic-csrf-protected">portswigger.net</a></li>
+<li>Servizio di report realtime di sicurezza <a href="https://report-uri.com/">report-uri.com</a></li>
+<li>Servizio per generare l'Header <code>Permissions-Policy</code>: <a href="https://permissionspolicy.com/">permissionspolicy.com</a></li>
+</ul>
+
+<p>Poi ha spiegato il Subresource Integrity (SRI) con un esempio attraverso il codice di esempio di alpineJS ed il servizio (srihash.org)[https://www.srihash.org/].
+Infine ha parlato di Cross-Origin Resource Sharing (CORS) e SameSite Cookies</p>
     </div>
 
     <nav class="flex justify-between text-sm md:text-base">
         <div>
-                            <a href="https://laravel-news.it/news/laravel-day-2021" title="Older Post: Laravel Day 2021">
-                    &LeftArrow; Laravel Day 2021
+                            <a href="https://laravel-news.it/news/22-09-code-usando-cron-in-hosting" title="Older Post: Usare le code con cron in Hosting">
+                    &LeftArrow; Usare le code con cron in Hosting
                 </a>
                     </div>
 
         <div>
-                            <a href="https://laravel-news.it/news/22-07-inizializzazione-proibita" title="Newer Post: L&#039;inizializzazione proibita">
-                    L&#039;inizializzazione proibita &RightArrow;
-                </a>
                     </div>
     </nav>
 
