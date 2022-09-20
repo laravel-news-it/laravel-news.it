@@ -241,7 +241,7 @@ try {
 
                                     <media:content
                             medium="image"
-                            url="https://laravel-news.it/assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.jpg"
+                            url="https://laravel-news.it/assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.png"
                             type="image/jpeg"
                             width="150"
                             height="150" />
