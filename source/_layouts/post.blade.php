@@ -51,4 +51,9 @@
         </div>
     </nav>
 
+    <hr class="border-b my-4"/>
+
+    <h4 class="text-center">Commenti e valutazioni</h4>
+
+    <div id="disqus_thread"></div>
 @endsection

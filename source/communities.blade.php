@@ -15,7 +15,7 @@ description: Le community in italia
 
 <p class="mb-6">Ci impegnamo quotidianamente per tenerlo aggiornato, ci trovate nei canali che trovate qui sotto dove aggreghiamo le principali community e i solcial dove sono attive.</p>
 
-<p class="mb-6">Se voleste partecipare con un articolo a tema PHP o Laravel potete mandarci una PR seguendo <a href="http://localhost:3000/news/creare-un-nuovo-articolo/">questo post</a>.</p>
+<p class="mb-6">Se voleste partecipare con un articolo a tema PHP o Laravel potete mandarci una PR seguendo <a href="/news/creare-un-nuovo-articolo/">questo post</a>.</p>
 
 <a href="http://www.laravel-italia.it" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/avatar@1x.jpg" alt="">
