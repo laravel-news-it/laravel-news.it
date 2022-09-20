@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Creare un nuovo articolo per il blog di laravel news italia">
+    <meta name="description" content="Uno sguardo dall&#039;interno ai meccanismi di cifratura/decifatura di Laravel">
 
     <meta property="og:site_name" content="Italian Laravel News" />
-    <meta property="og:title" content="Creare un nuovo articolo | Italian Laravel News" />
+    <meta property="og:title" content="Cosa c&#039;è dietro la Cifratura/Decifratura di Laravel | Italian Laravel News" />
     <meta property="og:locale" content="it_IT" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://laravel-news.it/news/creare-un-nuovo-articolo" />
-    <meta property="og:description" content="Creare un nuovo articolo per il blog di laravel news italia" />
+    <meta property="og:url" content="https://laravel-news.it/news/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel" />
+    <meta property="og:description" content="Uno sguardo dall&#039;interno ai meccanismi di cifratura/decifatura di Laravel" />
 
-        <meta property="og:image" content="/assets/articles/creare-un-nuovo-articolo.png" />
-    <meta name="twitter:image" content="/assets/articles/creare-un-nuovo-articolo.png" />
+        <meta property="og:image" content="/assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.jpg" />
+    <meta name="twitter:image" content="/assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.jpg" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Creare un nuovo articolo | Italian Laravel News" />
-    <meta name="twitter:description" content="Creare un nuovo articolo per il blog di laravel news italia" />
+    <meta name="twitter:title" content="Cosa c&#039;è dietro la Cifratura/Decifratura di Laravel | Italian Laravel News" />
+    <meta name="twitter:description" content="Uno sguardo dall&#039;interno ai meccanismi di cifratura/decifatura di Laravel" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
@@ -39,7 +39,7 @@
     <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#F48220" />
 
-    <title>Creare un nuovo articolo | Italian Laravel News</title>
+    <title>Cosa c&#039;è dietro la Cifratura/Decifratura di Laravel | Italian Laravel News</title>
 
     <link rel="home" href="https://laravel-news.it">
     <link rel="icon" href="/favicon.ico">
@@ -206,138 +206,255 @@
     <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-8 px-6">
         
 <div>
-            <img src="/assets/articles/creare-un-nuovo-articolo.png" alt="Creare un nuovo articolo cover image" class="mb-2 rounded-lg shadow-lg overflow-hidden">
+            <img src="/assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.jpg" alt="Cosa c&#039;è dietro la Cifratura/Decifratura di Laravel cover image" class="mb-2 rounded-lg shadow-lg overflow-hidden">
     
-    <h1 class="leading-none mb-2">Creare un nuovo articolo</h1>
+    <h1 class="leading-none mb-2">Cosa c&#039;è dietro la Cifratura/Decifratura di Laravel</h1>
 
-    <p class="text-gray-700 md:mt-0">Alessandro Cappellozza  •  03 giugno 2022</p>
+    <p class="text-gray-700 md:mt-0">Roberto Gallea  •  20 settembre 2022</p>
 
     <hr class="border-b my-4">
 
     <div class="mb-4 text-right">
                         <a
-                href="/news/categories/configuration"
-                title="View posts in configuration"
+                href="/news/categories/tutorials"
+                title="View posts in tutorials"
                 class="inline-block bg-Teal hover:bg-DarkBlue hover:text-white leading-loose tracking-wide text-white uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
-            >configuration</a>
+            >tutorials</a>
                 </div>
 
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
-        <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
-Ricordate che il nome del file rappreseterà anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
+        <p><strong><em>NOTA:</em></strong>  Traduzione da <a href="https://robertogallea.com/posts/development/whats-behind-laravel-encryptiondecryption">robertogallea.com</a></p>
 
-<pre><code class="language-bash">git clone https://github.com/laravel-news-it/
+<blockquote>
+  <p><code>Il mio sistema è sicuro, usa la cifratura.</code></p>
+</blockquote>
 
-cd laravel-news.it/source/_posts
+<p>Lo avrai sicuramente sentito/detto di tanto in tanto. Sicuro che lo è, ma <em>perchè</em> e <em>come</em> è sicuro? Lo sai <em>davvero</em>?</p>
 
-touch nuovo-articolo.md
+<h2>Fondamentali della cifratura/decifratura di Laravel</h2>
 
-vi nuovo-articolo.md
+<p>La cifratura/decifratura di Laravel è basata sulla classe <code>Illuminate\Encryption\Encrypter</code> , che è costruita passando una chiave di cifratura ed un cifrario (cioè l'algoritmo di cifratura):</p>
+
+<ul>
+<li><code>__construct($key, $cipher = 'AES-128-CBC')</code></li>
+</ul>
+
+<p>Supporta (fra gli altri) i seguenti metodi principali:</p>
+
+<ul>
+<li><code>encrypt($value, $serialize = true)</code></li>
+<li><code>decrypt($payload, $unserialize = true)</code></li>
+</ul>
+
+<p>i quali, nemmeno a dirlo, sono usati per cifrare e decifrare dati.</p>
+
+<pre><code>$encrypter = new Illuminate\Encryption\Encrypter('1234567812345678', 'AES-128-CBC');
+
+$encrypted = $encrypter-&gt;encrypt('Hello world');
+dump($encrypted);
+// stampa qualcosa di simile a "eyJpdiI6ImdMd2dWcW5jMXBrUDBranRJZXQ5MEE9PSIsInZhbHVlIjoiNnhTODBSclB3ZVp3SFRRUWFWTHpReFQwYWQ1aXVmTmhXOXV5WHM2TzR1WT0iLCJtYWMiOiIwODQyZDhiMzZlNDQwZTZjYTRiYmI2MGE0MTgzNzk5NGNkZTU1Yzc5NDIyYzdjYmYwNzk2ZTA5MGNjYjc4MGYzIn0="
+
+$decrypted = $encrypter-&gt;decrypt($encrypted);
+dump($decrypted);
+// stampa di nuovo "Hello world" 
 </code></pre>
 
-<p>Il nome del file deve essere composto da [ANNO]-[MESE]-titolo in formato slug es: <code>22-12-titolo.md</code></p>
+<p>Magnifico! Già solo questo è sufficiente per usarlo nel migliore dei modi.</p>
 
-<p>Nella parte iniziale del file vanno messi i metadati dell'articolo in questa maniera:</p>
+<p>Tuttavia, sei vuoi sapere cosa succede internamente, continua a leggere.</p>
 
-<pre><code>---
-extends: _layouts.post
-section: content
-title: Creare un nuovo articolo
-date: 2022-06-03
-description: Creare un nuovo artcolo per il blog di laravel news italia
-categories: [news]
-cover_image: /assets/articles/22-07-nome-del-file.png
-author: Alessandro Cappellozza
----
+<p><strong>ATTENZIONE! Considera che i risultati non saranno esattamente gli stessi, dato che alcuni valori sono generati casualmente, e dunque cambiano ad ogni esecuzione.</strong></p>
+
+<h2>Come funziona la cifratura</h2>
+
+<p>Il cifratore di Laravel attualmente usa OpenSSL per effettuare la cifratura AES-256 e AES-128. Inoltre usa la protezione Message Authentication Code (MAC), un meccanismo per assicurare che i dati non vengano manomessi dopo la cifratura.</p>
+
+<h3>Cosa c'è nel risultato?</h3>
+
+<p>Riprendendo l'esempio precedente, potresti pensare che la stringa cifrata</p>
+
+<pre><code class="language-php">"eyJpdiI6ImdMd2dWcW5jMXBrUDBranRJZXQ5MEE9PSIsInZhbHVlIjoiNnhTODBSclB3ZVp3SFRRUWFWTHpReFQwYWQ1aXVmTmhXOXV5WHM2TzR1WT0iLCJtYWMiOiIwODQyZDhiMzZlNDQwZTZjYTRiYmI2MGE0MTgzNzk5NGNkZTU1Yzc5NDIyYzdjYmYwNzk2ZTA5MGNjYjc4MGYzIn0="
 </code></pre>
 
-<p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:</p>
+<p>sia essa stessa la versione cifrata dell'input. Questo è senz'altro vero, ma c'è di più da sapere.</p>
 
-<table>
-<thead>
-<tr>
-  <th>Header</th>
-  <th>Desacrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><strong>title</strong></td>
-  <td>Titolo dell'articolo.</td>
-</tr>
-<tr>
-  <td><strong>date</strong></td>
-  <td>Data in formato ISO</td>
-</tr>
-<tr>
-  <td><strong>description</strong></td>
-  <td>Descrizione completa dell'artticolo.</td>
-</tr>
-<tr>
-  <td><strong>categories</strong></td>
-  <td>Questi sono i tag che potete inserire, se ne possono inserire anche più di uno [events, contents, news, packages, php, tips, tutorials].</td>
-</tr>
-<tr>
-  <td><strong>cover_image</strong></td>
-  <td>L'immaginbe di copertina è molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.</td>
-</tr>
-<tr>
-  <td><strong>author</strong></td>
-  <td>Il vosto nome e congome.</td>
-</tr>
-<tr>
-  <td><strong>excerpt</strong></td>
-  <td>è opzionale, serve per descrivere meglio il riassunto dell'articolo nel caso non vogliate che lo faccia il sistema automaticamente.</td>
-</tr>
-</tbody>
-</table>
+<p>Essa è infatti la conversione base64 di una stringa. <em>"Che stringa?"</em> potresti chiederti... E puoi ottenere una risposta semplicemente eseguendo il seguente codice:</p>
 
-<p>Nell'easempio è utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
-
-<pre><code class="language-bash">cd source/assets/articles/
+<pre><code class="language-php">$encrypted = $encrypter-&gt;encrypt('Hello world');
+$decodedEncrypted = base64_decode($encrypted);
 </code></pre>
 
-<p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file è meglio fare una cartella col nome dell'articolo.<br />
-Se vi servono immagini con codice sorgente potete usare questo servizio online <a href="https://10015.io/tools/code-to-image-converter">10015</a>.</p>
+<p>il quale produce una stringa json simile alla seguente:</p>
 
-<p>Potete inserire parti di codice con questa sintassi:</p>
-
-<pre><code class="language-markdown"> ```linguaggio
-  codice
- ```
+<pre><code class="language-json">{
+  "iv":"gLwgVqnc1pkP0kjtIet90A==",
+  "value":"6xS80RrPweZwHTQQaVLzQxT0ad5iufNhW9uyXs6O4uY=",
+  "mac":"0842d8b36e440e6ca4bbb60a41837994cde55c79422c7cbf0796e090ccb780f3"
+}
 </code></pre>
 
-<p>I linguaggi supportati sono: <code>bash</code>, <code>css</code>, <code>html</code>, <code>javascript</code>, <code>json</code>, <code>markdown</code>, <code>php</code>, <code>scss</code>, <code>yaml</code>.<br />
-Potete comunque prendere spunto dagli articoli già scritti.</p>
+<p>Già... Adesso è ancora meno chiaro... Di che si tratta?</p>
 
-<p>Per fare una preview del vostro articolo potete lanciare il sito in modalità di debug in questa maniera.</p>
+<p>Questo documento json è composto dalle tre parti principali della cifratura:</p>
 
-<pre><code class="language-bash"># Necessario solo se è la prima volta che si avvia
-composer install
-npm install
+<ul>
+<li><code>value</code>: i dati cifrati veri e propri, codificati in base64</li>
+<li><code>iv</code>: l'<em>Initialization Vector</em>, una sequenza di dati di lunghezza fissa generati casualmente, iniettati ad ogni esecuzione, per prevenire attacchi basati sulla semantica, vedi (<a href="https://it.wikipedia.org/wiki/Initialization_vector">Initialization vector - Wikipedia</a> per maggiori dettagli). Anche questo è codificato in base64</li>
+<li><code>mac</code>: il <em>Message Authentication Code</em>, una firma usata per identificare eventuali manomissioni del <code>value</code>, generato effettuando l'hash di <code>value</code> e <code>iv</code>. Esso è rappresentato mediante una stringa in formato esadecimale.</li>
+</ul>
 
-# Lancio in modalità debug
-npm run watch
+<p>Fai caso che sia  <code>iv</code> che <code>value</code> vanno codificati in base64 poichè sono composti da byte generici e potrebbero contenere caratteri non stampabili.</p>
+
+<h3>Come funziona la cifratura - uno sguardo al codice</h3>
+
+<p>Per capire come venga generato il payload json, diamo un'occhiata più da vicino al metodo <code>encrypt()</code>:</p>
+
+<pre><code class="language-php">    public function encrypt($value, $serialize = true)
+    {
+        $iv = random_bytes(openssl_cipher_iv_length($this-&gt;cipher));
+
+        $value = \openssl_encrypt(
+            $serialize ? serialize($value) : $value,
+            $this-&gt;cipher, $this-&gt;key, 0, $iv
+        );
+
+        if ($value === false) {
+            throw new EncryptException('Could not encrypt the data.');
+        }
+
+        $mac = $this-&gt;hash($iv = base64_encode($iv), $value);
+
+        $json = json_encode(compact('iv', 'value', 'mac'), JSON_UNESCAPED_SLASHES);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw new EncryptException('Could not encrypt the data.');
+        }
+
+        return base64_encode($json);
+    }
 </code></pre>
 
-<p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine.</p>
+<p>Guardando il codice, vengono realizzati 5 passi:</p>
 
-<p>Potete creare quindi un nuovo branch con<br />
-<code>git checkout -b nuovo-articolo</code><br />
-e poi effettuare la <strong><em>pull-request</em></strong>.</p>
+<ol>
+<li>L'Initialization Vector viene generato alla riga <code>3</code> generando 128 o 256 bit (in base al cifrario usato) di dati <em>casuali</em></li>
+<li>Il valore cifrato viene generato nelle righe <code>5-8</code> eseguendo OpenSSL sulla versione (eventualmente) serializzata dei dati in chiaro, usando il cifrario, la chiave di cifratura e l'IV scelti. Nota che il risultato viene codificato in base64</li>
+<li>Il MAC viene generato tramite il metodo <code>hash()</code>, a cui vanno dati in pasto l'IV base64 ed il valore cifrato. L'hashing è definito come:</li>
+</ol>
+
+<pre><code class="language-php">    protected function hash($iv, $value)
+    {
+        return hash_hmac('sha256', $iv.$value, $this-&gt;key);
+    }    
+</code></pre>
+
+<p>cioè come l'hashing SHA256 della concatenazione dell'IV e del valore cifrato, usando la chiave di cifratura fornita.<br />
+4. Un array contenente  <code>iv</code>, <code>value</code> e <code>mac</code> viene generato e convertito in formato json (riga <code>16</code>)
+5. Il json viene codificato in base64 ed infine restituito (riga <code>22</code>)</p>
+
+<h3>Come funziona la decifratura - in dettaglio</h3>
+
+<p>Per capire come i dati originali vengano decifati, diamo un'occhiata da vicino al metodo  <code>decrypt()</code>:</p>
+
+<pre><code class="language-php">    public function decrypt($payload, $unserialize = true)
+    {
+        $payload = $this-&gt;getJsonPayload($payload);
+
+        $iv = base64_decode($payload['iv']);
+
+        // Here we will decrypt the value. If we are able to successfully decrypt it
+        // we will then unserialize it and return it out to the caller. If we are
+        // unable to decrypt this value we will throw out an exception message.
+        $decrypted = \openssl_decrypt(
+            $payload['value'], $this-&gt;cipher, $this-&gt;key, 0, $iv
+        );
+
+        if ($decrypted === false) {
+            throw new DecryptException('Could not decrypt the data.');
+        }
+
+        return $unserialize ? unserialize($decrypted) : $decrypted;
+    }
+</code></pre>
+
+<p>Guardando il codice, 5 passi vengono eseguiti:</p>
+
+<ol>
+<li><p>Il payload json viene estratto alla riga <code>3</code>. Durante l'estrazione, esso viene validato verificando che:</p>
+
+<p>1.1. Sia in forma di array<br />
+1.2. Contenga i campi<code>iv</code>, <code>value</code> e <code>mac</code>.<br />
+1.3. La lunghezza di <code>iv</code> sia compatibile con i requisiti del cifrario scelto<br />
+1.4. Il <code>mac</code> sia valido</p></li>
+<li>I dati vengono decifrati usando OpenSSL (righe <code>5-12</code>)</li>
+<li>Il risultato viene (eventualmente) deserializzato e ritornato.</li>
+</ol>
+
+<h3>Perchè è sicuro?</h3>
+
+<p>Questo schema fornisce sicurezza fin tanto che la chiave di cifratura viene mantenuta segreta. Vediamo perchè:</p>
+
+<ul>
+<li>fiducia: il messaggio in chiaro può essere decifrato solo da chi conosce la chiave segreta</li>
+<li>integrità: se il valore viene modificato, la decifratura fallisce. Se iv ed il valore vengono entrambi modificati, il messaggio potrebbe essere potenzialmente decifrabile, ma la protezione MAC identificherà la monomissione e la decifratura fallirà. In ogni caso, cambiare una combinazione di iv e/o del valore e/o del MAC, farà sì che la decifratura fallisca a causa della corruzione del payload json.</li>
+<li>L'unico modo per ingannare la protezione MAC è conoscendo la chiave di cifratura, che permetterebbe la forgiatura di nuovi payload cifrati validi.</li>
+</ul>
+
+<p>Se non siete ancora convinti, proviamo: crea un diverso messaggio cifrato:</p>
+
+<pre><code class="language-php">$encrypted2 = $encrypter-&gt;encrypt('Hello hacker');
+$decodedEncrypted2 = json_decode(base64_decode($encrypted2), true);
+dump('DECODED ENCRYPTED 2: ');
+var_dump($decodedEncrypted2);
+</code></pre>
+
+<p>Adesso, prova a manomettere uno o più dei tre valori e prova a decifrare il risultato ottenuto.</p>
+
+<pre><code class="language-php">// scambio dei dati cifrati e tentativo di decifratura
+try {
+    $tampered = $decodedEncrypted;
+    $tampered['value'] = $decodedEncrypted2['value'];
+    $encrypter-&gt;decrypt(base64_encode(json_encode($tampered)));
+} catch (\Illuminate\Contracts\Encryption\DecryptException $exception) {
+    dump($exception-&gt;getMessage());
+}
+</code></pre>
+
+<pre><code class="language-php">// scambio degli iv e tentativo di decifratura
+try {
+    $tampered = $decodedEncrypted;
+    $tampered['iv'] = $decodedEncrypted2['iv'];
+    $encrypter-&gt;decrypt(base64_encode(json_encode($tampered)));
+} catch (\Illuminate\Contracts\Encryption\DecryptException $exception) {
+    dump($exception-&gt;getMessage());
+}
+</code></pre>
+
+<pre><code class="language-php">// scambio dei MAC e tentativo di decifratura
+try {
+    $tampered = $decodedEncrypted;
+    $tampered['mac'] = $decodedEncrypted2['mac'];
+    $encrypter-&gt;decrypt(base64_encode(json_encode($tampered)));
+} catch (\Illuminate\Contracts\Encryption\DecryptException $exception) {
+    dump($exception-&gt;getMessage());
+}
+</code></pre>
+
+<p>In tutti e tre i casi, il control MAC fallisce, così come la decifratura ed una  <code>DecryptException</code> viene lanciata.</p>
+
+<h2>Conclusione</h2>
+
+<p>Adesso sai più in dettaglio come la cifratura di Laravel funzioni all'interno. Niente è cambiato del modo di usarla, ma hai acquisito più fiducia negli strumenti che usi. Inoltre, adesso sei in grado di giustificare con i tuoi clienti "<em>come</em>" il tuo sistema è sicuro.</p>
     </div>
 
     <nav class="flex justify-between text-sm md:text-base">
         <div>
-                            <a href="https://laravel-news.it/news/laravel-day-2021" title="Older Post: Laravel Day 2021">
-                    &LeftArrow; Laravel Day 2021
+                            <a href="https://laravel-news.it/news/22-09-laracon-review-2022" title="Older Post: Laracon review &amp; recap 2022">
+                    &LeftArrow; Laracon review &amp; recap 2022
                 </a>
                     </div>
 
         <div>
-                            <a href="https://laravel-news.it/news/22-07-inizializzazione-proibita" title="Newer Post: L&#039;inizializzazione proibita">
-                    L&#039;inizializzazione proibita &RightArrow;
-                </a>
                     </div>
     </nav>
 

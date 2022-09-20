@@ -6,8 +6,246 @@
         <description><![CDATA[Generate an elegant blog with Jigsaw]]></description>
         <atom:link href="https://laravel-news.it/news/feed.atom" rel="self" type="application/rss+xml" />
         <language></language>
-        <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 20 Sep 2022 00:00:00 +0000</lastBuildDate>
 
+                    <item>
+                <title><![CDATA[Cosa c'è dietro la Cifratura/Decifratura di Laravel]]></title>
+                <link>https://laravel-news.it/news/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel</link>
+                <guid isPermaLink="true">https://laravel-news.it/news/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel</guid>
+                <description><![CDATA[Uno sguardo dall'interno ai meccanismi di cifratura/decifatura di Laravel]]></description>
+                <content:encoded><![CDATA[<p><strong><em>NOTA:</em></strong>  Traduzione da <a href="https://robertogallea.com/posts/development/whats-behind-laravel-encryptiondecryption">robertogallea.com</a></p>
+
+<blockquote>
+  <p><code>Il mio sistema è sicuro, usa la cifratura.</code></p>
+</blockquote>
+
+<p>Lo avrai sicuramente sentito/detto di tanto in tanto. Sicuro che lo è, ma <em>perchè</em> e <em>come</em> è sicuro? Lo sai <em>davvero</em>?</p>
+
+<h2>Fondamentali della cifratura/decifratura di Laravel</h2>
+
+<p>La cifratura/decifratura di Laravel è basata sulla classe <code>Illuminate\Encryption\Encrypter</code> , che è costruita passando una chiave di cifratura ed un cifrario (cioè l'algoritmo di cifratura):</p>
+
+<ul>
+<li><code>__construct($key, $cipher = 'AES-128-CBC')</code></li>
+</ul>
+
+<p>Supporta (fra gli altri) i seguenti metodi principali:</p>
+
+<ul>
+<li><code>encrypt($value, $serialize = true)</code></li>
+<li><code>decrypt($payload, $unserialize = true)</code></li>
+</ul>
+
+<p>i quali, nemmeno a dirlo, sono usati per cifrare e decifrare dati.</p>
+
+<pre><code>$encrypter = new Illuminate\Encryption\Encrypter('1234567812345678', 'AES-128-CBC');
+
+$encrypted = $encrypter-&gt;encrypt('Hello world');
+dump($encrypted);
+// stampa qualcosa di simile a "eyJpdiI6ImdMd2dWcW5jMXBrUDBranRJZXQ5MEE9PSIsInZhbHVlIjoiNnhTODBSclB3ZVp3SFRRUWFWTHpReFQwYWQ1aXVmTmhXOXV5WHM2TzR1WT0iLCJtYWMiOiIwODQyZDhiMzZlNDQwZTZjYTRiYmI2MGE0MTgzNzk5NGNkZTU1Yzc5NDIyYzdjYmYwNzk2ZTA5MGNjYjc4MGYzIn0="
+
+$decrypted = $encrypter-&gt;decrypt($encrypted);
+dump($decrypted);
+// stampa di nuovo "Hello world" 
+</code></pre>
+
+<p>Magnifico! Già solo questo è sufficiente per usarlo nel migliore dei modi.</p>
+
+<p>Tuttavia, sei vuoi sapere cosa succede internamente, continua a leggere.</p>
+
+<p><strong>ATTENZIONE! Considera che i risultati non saranno esattamente gli stessi, dato che alcuni valori sono generati casualmente, e dunque cambiano ad ogni esecuzione.</strong></p>
+
+<h2>Come funziona la cifratura</h2>
+
+<p>Il cifratore di Laravel attualmente usa OpenSSL per effettuare la cifratura AES-256 e AES-128. Inoltre usa la protezione Message Authentication Code (MAC), un meccanismo per assicurare che i dati non vengano manomessi dopo la cifratura.</p>
+
+<h3>Cosa c'è nel risultato?</h3>
+
+<p>Riprendendo l'esempio precedente, potresti pensare che la stringa cifrata</p>
+
+<pre><code class="language-php">"eyJpdiI6ImdMd2dWcW5jMXBrUDBranRJZXQ5MEE9PSIsInZhbHVlIjoiNnhTODBSclB3ZVp3SFRRUWFWTHpReFQwYWQ1aXVmTmhXOXV5WHM2TzR1WT0iLCJtYWMiOiIwODQyZDhiMzZlNDQwZTZjYTRiYmI2MGE0MTgzNzk5NGNkZTU1Yzc5NDIyYzdjYmYwNzk2ZTA5MGNjYjc4MGYzIn0="
+</code></pre>
+
+<p>sia essa stessa la versione cifrata dell'input. Questo è senz'altro vero, ma c'è di più da sapere.</p>
+
+<p>Essa è infatti la conversione base64 di una stringa. <em>"Che stringa?"</em> potresti chiederti... E puoi ottenere una risposta semplicemente eseguendo il seguente codice:</p>
+
+<pre><code class="language-php">$encrypted = $encrypter-&gt;encrypt('Hello world');
+$decodedEncrypted = base64_decode($encrypted);
+</code></pre>
+
+<p>il quale produce una stringa json simile alla seguente:</p>
+
+<pre><code class="language-json">{
+  "iv":"gLwgVqnc1pkP0kjtIet90A==",
+  "value":"6xS80RrPweZwHTQQaVLzQxT0ad5iufNhW9uyXs6O4uY=",
+  "mac":"0842d8b36e440e6ca4bbb60a41837994cde55c79422c7cbf0796e090ccb780f3"
+}
+</code></pre>
+
+<p>Già... Adesso è ancora meno chiaro... Di che si tratta?</p>
+
+<p>Questo documento json è composto dalle tre parti principali della cifratura:</p>
+
+<ul>
+<li><code>value</code>: i dati cifrati veri e propri, codificati in base64</li>
+<li><code>iv</code>: l'<em>Initialization Vector</em>, una sequenza di dati di lunghezza fissa generati casualmente, iniettati ad ogni esecuzione, per prevenire attacchi basati sulla semantica, vedi (<a href="https://it.wikipedia.org/wiki/Initialization_vector">Initialization vector - Wikipedia</a> per maggiori dettagli). Anche questo è codificato in base64</li>
+<li><code>mac</code>: il <em>Message Authentication Code</em>, una firma usata per identificare eventuali manomissioni del <code>value</code>, generato effettuando l'hash di <code>value</code> e <code>iv</code>. Esso è rappresentato mediante una stringa in formato esadecimale.</li>
+</ul>
+
+<p>Fai caso che sia  <code>iv</code> che <code>value</code> vanno codificati in base64 poichè sono composti da byte generici e potrebbero contenere caratteri non stampabili.</p>
+
+<h3>Come funziona la cifratura - uno sguardo al codice</h3>
+
+<p>Per capire come venga generato il payload json, diamo un'occhiata più da vicino al metodo <code>encrypt()</code>:</p>
+
+<pre><code class="language-php">    public function encrypt($value, $serialize = true)
+    {
+        $iv = random_bytes(openssl_cipher_iv_length($this-&gt;cipher));
+
+        $value = \openssl_encrypt(
+            $serialize ? serialize($value) : $value,
+            $this-&gt;cipher, $this-&gt;key, 0, $iv
+        );
+
+        if ($value === false) {
+            throw new EncryptException('Could not encrypt the data.');
+        }
+
+        $mac = $this-&gt;hash($iv = base64_encode($iv), $value);
+
+        $json = json_encode(compact('iv', 'value', 'mac'), JSON_UNESCAPED_SLASHES);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw new EncryptException('Could not encrypt the data.');
+        }
+
+        return base64_encode($json);
+    }
+</code></pre>
+
+<p>Guardando il codice, vengono realizzati 5 passi:</p>
+
+<ol>
+<li>L'Initialization Vector viene generato alla riga <code>3</code> generando 128 o 256 bit (in base al cifrario usato) di dati <em>casuali</em></li>
+<li>Il valore cifrato viene generato nelle righe <code>5-8</code> eseguendo OpenSSL sulla versione (eventualmente) serializzata dei dati in chiaro, usando il cifrario, la chiave di cifratura e l'IV scelti. Nota che il risultato viene codificato in base64</li>
+<li>Il MAC viene generato tramite il metodo <code>hash()</code>, a cui vanno dati in pasto l'IV base64 ed il valore cifrato. L'hashing è definito come:</li>
+</ol>
+
+<pre><code class="language-php">    protected function hash($iv, $value)
+    {
+        return hash_hmac('sha256', $iv.$value, $this-&gt;key);
+    }    
+</code></pre>
+
+<p>cioè come l'hashing SHA256 della concatenazione dell'IV e del valore cifrato, usando la chiave di cifratura fornita.<br />
+4. Un array contenente  <code>iv</code>, <code>value</code> e <code>mac</code> viene generato e convertito in formato json (riga <code>16</code>)
+5. Il json viene codificato in base64 ed infine restituito (riga <code>22</code>)</p>
+
+<h3>Come funziona la decifratura - in dettaglio</h3>
+
+<p>Per capire come i dati originali vengano decifati, diamo un'occhiata da vicino al metodo  <code>decrypt()</code>:</p>
+
+<pre><code class="language-php">    public function decrypt($payload, $unserialize = true)
+    {
+        $payload = $this-&gt;getJsonPayload($payload);
+
+        $iv = base64_decode($payload['iv']);
+
+        // Here we will decrypt the value. If we are able to successfully decrypt it
+        // we will then unserialize it and return it out to the caller. If we are
+        // unable to decrypt this value we will throw out an exception message.
+        $decrypted = \openssl_decrypt(
+            $payload['value'], $this-&gt;cipher, $this-&gt;key, 0, $iv
+        );
+
+        if ($decrypted === false) {
+            throw new DecryptException('Could not decrypt the data.');
+        }
+
+        return $unserialize ? unserialize($decrypted) : $decrypted;
+    }
+</code></pre>
+
+<p>Guardando il codice, 5 passi vengono eseguiti:</p>
+
+<ol>
+<li><p>Il payload json viene estratto alla riga <code>3</code>. Durante l'estrazione, esso viene validato verificando che:</p>
+
+<p>1.1. Sia in forma di array<br />
+1.2. Contenga i campi<code>iv</code>, <code>value</code> e <code>mac</code>.<br />
+1.3. La lunghezza di <code>iv</code> sia compatibile con i requisiti del cifrario scelto<br />
+1.4. Il <code>mac</code> sia valido</p></li>
+<li>I dati vengono decifrati usando OpenSSL (righe <code>5-12</code>)</li>
+<li>Il risultato viene (eventualmente) deserializzato e ritornato.</li>
+</ol>
+
+<h3>Perchè è sicuro?</h3>
+
+<p>Questo schema fornisce sicurezza fin tanto che la chiave di cifratura viene mantenuta segreta. Vediamo perchè:</p>
+
+<ul>
+<li>fiducia: il messaggio in chiaro può essere decifrato solo da chi conosce la chiave segreta</li>
+<li>integrità: se il valore viene modificato, la decifratura fallisce. Se iv ed il valore vengono entrambi modificati, il messaggio potrebbe essere potenzialmente decifrabile, ma la protezione MAC identificherà la monomissione e la decifratura fallirà. In ogni caso, cambiare una combinazione di iv e/o del valore e/o del MAC, farà sì che la decifratura fallisca a causa della corruzione del payload json.</li>
+<li>L'unico modo per ingannare la protezione MAC è conoscendo la chiave di cifratura, che permetterebbe la forgiatura di nuovi payload cifrati validi.</li>
+</ul>
+
+<p>Se non siete ancora convinti, proviamo: crea un diverso messaggio cifrato:</p>
+
+<pre><code class="language-php">$encrypted2 = $encrypter-&gt;encrypt('Hello hacker');
+$decodedEncrypted2 = json_decode(base64_decode($encrypted2), true);
+dump('DECODED ENCRYPTED 2: ');
+var_dump($decodedEncrypted2);
+</code></pre>
+
+<p>Adesso, prova a manomettere uno o più dei tre valori e prova a decifrare il risultato ottenuto.</p>
+
+<pre><code class="language-php">// scambio dei dati cifrati e tentativo di decifratura
+try {
+    $tampered = $decodedEncrypted;
+    $tampered['value'] = $decodedEncrypted2['value'];
+    $encrypter-&gt;decrypt(base64_encode(json_encode($tampered)));
+} catch (\Illuminate\Contracts\Encryption\DecryptException $exception) {
+    dump($exception-&gt;getMessage());
+}
+</code></pre>
+
+<pre><code class="language-php">// scambio degli iv e tentativo di decifratura
+try {
+    $tampered = $decodedEncrypted;
+    $tampered['iv'] = $decodedEncrypted2['iv'];
+    $encrypter-&gt;decrypt(base64_encode(json_encode($tampered)));
+} catch (\Illuminate\Contracts\Encryption\DecryptException $exception) {
+    dump($exception-&gt;getMessage());
+}
+</code></pre>
+
+<pre><code class="language-php">// scambio dei MAC e tentativo di decifratura
+try {
+    $tampered = $decodedEncrypted;
+    $tampered['mac'] = $decodedEncrypted2['mac'];
+    $encrypter-&gt;decrypt(base64_encode(json_encode($tampered)));
+} catch (\Illuminate\Contracts\Encryption\DecryptException $exception) {
+    dump($exception-&gt;getMessage());
+}
+</code></pre>
+
+<p>In tutti e tre i casi, il control MAC fallisce, così come la decifratura ed una  <code>DecryptException</code> viene lanciata.</p>
+
+<h2>Conclusione</h2>
+
+<p>Adesso sai più in dettaglio come la cifratura di Laravel funzioni all'interno. Niente è cambiato del modo di usarla, ma hai acquisito più fiducia negli strumenti che usi. Inoltre, adesso sei in grado di giustificare con i tuoi clienti "<em>come</em>" il tuo sistema è sicuro.</p>
+]]></content:encoded>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roberto Gallea</dc:creator>
+                <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
+
+                                    <media:content
+                            medium="image"
+                            url="https://laravel-news.it/assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.jpg"
+                            type="image/jpeg"
+                            width="150"
+                            height="150" />
+                            </item>
                     <item>
                 <title><![CDATA[Laracon review & recap 2022]]></title>
                 <link>https://laravel-news.it/news/22-09-laracon-review-2022</link>
@@ -997,7 +1235,7 @@ author: Alessandro Cappellozza
 </tr>
 <tr>
   <td><strong>categories</strong></td>
-  <td>Questi sono i tag che potete inserire, se ne possono inserire anche più di uno [events,contents,mnews,packages,php,tips,tutorials].</td>
+  <td>Questi sono i tag che potete inserire, se ne possono inserire anche più di uno [events, contents, news, packages, php, tips, tutorials].</td>
 </tr>
 <tr>
   <td><strong>cover_image</strong></td>
