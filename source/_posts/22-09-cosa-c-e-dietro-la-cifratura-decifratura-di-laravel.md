@@ -5,7 +5,7 @@ title: Cosa c'è dietro la Cifratura/Decifratura di Laravel
 date: 2022-09-20
 description: Uno sguardo dall'interno ai meccanismi di cifratura/decifatura di Laravel
 categories: [tutorials]
-cover_image: /assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.jpg
+cover_image: /assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.png
 author: Roberto Gallea
 featured: true
 ---
