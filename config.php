@@ -5,15 +5,15 @@ use Carbon\Carbon;
 
 return [
     'baseUrl' => '',
-    'production' => false,
+    'production' => true,
     'siteName' => 'Italian Laravel News',
-    'siteDescription' => 'Generate an elegant blog with Jigsaw',
-    'siteAuthor' => 'Author Name',
+    'siteDescription' => 'Il Crowd Blog della community italiana di Laravel',
+    'siteAuthor' => 'Laravel italian community',
 
     // collections
     'collections' => [
         'posts' => [
-            'author' => 'Author Name', // Default author, if not provided in a post
+            'author' => 'Alberto Peripolli', // Default author, if not provided in a post
             'sort' => '-date',
             'path' => 'news/{filename}',
         ],
