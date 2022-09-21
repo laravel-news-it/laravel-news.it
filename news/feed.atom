@@ -3,7 +3,7 @@
     <channel>
         <title>Italian Laravel News</title>
         <link>https://laravel-news.it</link>
-        <description><![CDATA[Generate an elegant blog with Jigsaw]]></description>
+        <description><![CDATA[Il Crowd Blog della community italiana di Laravel]]></description>
         <atom:link href="https://laravel-news.it/news/feed.atom" rel="self" type="application/rss+xml" />
         <language></language>
         <lastBuildDate>Tue, 20 Sep 2022 00:00:00 +0000</lastBuildDate>
