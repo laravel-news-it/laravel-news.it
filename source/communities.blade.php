@@ -41,6 +41,14 @@ description: Le community in italia
   </div>
 </a>
 
+<a href="https://t.me/laravel_ita" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
+  <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/telegram_logo.jpg" alt="">
+  <div class="flex flex-col justify-between p-2 leading-normal">
+    <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia su Telegram</h5>
+    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Community di quasi 200 persone</p>
+  </div>
+</a>
+
 <a href="https://www.linkedin.com/groups/4844390/" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/linkedIn_logo.png" alt="">
   <div class="flex flex-col justify-between p-2 leading-normal">
@@ -49,13 +57,6 @@ description: Le community in italia
   </div>
 </a>
 
-<a href="https://t.me/laravel_ita" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
-  <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/telegram_logo.jpg" alt="">
-  <div class="flex flex-col justify-between p-2 leading-normal">
-    <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia su Telegram</h5>
-    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Communbity di quesi 200 persone</p>
-  </div>
-</a>
 
 <a href="https://grusp.org" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/grusp-logo.png" alt="">
