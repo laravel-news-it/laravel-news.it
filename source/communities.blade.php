@@ -21,7 +21,7 @@ description: Le community in italia
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/avatar@1x.jpg" alt="">
   <div class="flex flex-col justify-between p-2 leading-normal">
     <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia sito ufficiale</h5>
-    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Fondata da Francesco Malatesta e' formata da quasi 1400 membri in vari canali che trovate su questa pagina</p>
+    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Fondata da Francesco Malatesta e' formata da quasi 1400 membri in vari canali che trovate su questa pagina.</p>
   </div>
 </a>
 
@@ -29,7 +29,7 @@ description: Le community in italia
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/slack_logo.jpg" alt="">
   <div class="flex flex-col justify-between p-2 leading-normal">
     <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia su Slack</h5>
-    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Canale di scambio in tempo reale multi argomento, dove ci si trova per scambi di opinioni, news e discussioni. Per l'iscrizione usare cliccare su questo banner.</p>
+    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Canale di scambio in tempo reale multi argomento, dove ci si trova per scambi di opinioni, news e discussioni. Per l'iscrizione cliccare su questo banner.</p>
   </div>
 </a>
 
@@ -37,7 +37,7 @@ description: Le community in italia
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/fb_logo.jpg" alt="">
   <div class="flex flex-col justify-between p-2 leading-normal">
     <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia su Facebook</h5>
-    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Composta da quesi 3000 membri e' rivolta alle discussioni e alle domande</p>
+    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Composta da quesi 3000 membri e' rivolta alle discussioni e alle domande.</p>
   </div>
 </a>
 
@@ -45,7 +45,7 @@ description: Le community in italia
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/telegram_logo.jpg" alt="">
   <div class="flex flex-col justify-between p-2 leading-normal">
     <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia su Telegram</h5>
-    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Community di quasi 200 persone</p>
+    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Community di quasi 200 persone.</p>
   </div>
 </a>
 
@@ -53,7 +53,7 @@ description: Le community in italia
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/linkedIn_logo.png" alt="">
   <div class="flex flex-col justify-between p-2 leading-normal">
     <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia su LinkedIn</h5>
-    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Formata da 500 membri nel network rivolto ai professionisti</p>
+    <p class="font-normal  p-0 m-0 text-gray-700 dark:text-gray-400">Formata da 500 membri nel network rivolto ai professionisti.</p>
   </div>
 </a>
 
