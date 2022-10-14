@@ -7,7 +7,7 @@ description: Informazioni sul copyright
 @section('body')
     <h2>Contenuti</h2>
     <p>
-        Per tutti i contenuti, ove non esplicitamente indicato, si applica la licenza creative common riportata qui: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale</a>.
+        Per tutti i contenuti, ove non esplicitamente indicato, si applica la licenza Creative Commons riportata qui: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale</a>.
     </p>
 
     <p style="text-align: center;">
@@ -20,7 +20,7 @@ description: Informazioni sul copyright
     </p>
 
     <p>
-        I loghi sono stati diusegnati da <strong>Caneco</strong>, trovate il materiale nel repository <a href="https://github.com/caneco/laravel-country-logomarks">Laravel Country Logomarks</a>
+        I loghi sono stati disegnati da <strong>Caneco</strong>, trovate il materiale nel repository <a href="https://github.com/caneco/laravel-country-logomarks">Laravel Country Logomarks</a>
     </p>
 
 @endsection
