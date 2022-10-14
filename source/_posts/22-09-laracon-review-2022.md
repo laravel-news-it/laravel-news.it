@@ -88,9 +88,9 @@ Ha spiegato un po' di concetti di basso livello relativi a MySQL:
 ***
 ## [Deep Dive into Carbon](https://youtu.be/f4QShF42c6E?t=10712)
 
-|Speaker | Valutazione | Livello    |
-|-------------------|-------------|------------|
-| **Ralph J. Smit**| ★★★★☆       | intermedio |
+| Speaker            | Valutazione | Livello    |
+|--------------------|-------------|------------|
+| **Ralph J. Smith** | ★★★★☆       | intermedio |
 
 Approfondimenti sulla famosa libreria di gestione delle date `Carbon`:
 
