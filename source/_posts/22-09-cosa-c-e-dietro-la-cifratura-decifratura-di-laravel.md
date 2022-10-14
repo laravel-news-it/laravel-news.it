@@ -174,7 +174,7 @@ Guardando il codice, 5 passi vengono eseguiti:
 Questo schema fornisce sicurezza fin tanto che la chiave di cifratura viene mantenuta segreta. Vediamo perchè:
 
 - fiducia: il messaggio in chiaro può essere decifrato solo da chi conosce la chiave segreta
-- integrità: se il valore viene modificato, la decifratura fallisce. Se iv ed il valore vengono entrambi modificati, il messaggio potrebbe essere potenzialmente decifrabile, ma la protezione MAC identificherà la monomissione e la decifratura fallirà. In ogni caso, cambiare una combinazione di iv e/o del valore e/o del MAC, farà sì che la decifratura fallisca a causa della corruzione del payload json.
+- integrità: se il valore viene modificato, la decifratura fallisce. Se iv ed il valore vengono entrambi modificati, il messaggio potrebbe essere potenzialmente decifrabile, ma la protezione MAC identificherà la manomissione e la decifratura fallirà. In ogni caso, cambiare una combinazione di iv e/o del valore e/o del MAC, farà sì che la decifratura fallisca a causa della corruzione del payload json.
 - L'unico modo per ingannare la protezione MAC è conoscendo la chiave di cifratura, che permetterebbe la forgiatura di nuovi payload cifrati validi.
 
 Se non siete ancora convinti, proviamo: crea un diverso messaggio cifrato:
