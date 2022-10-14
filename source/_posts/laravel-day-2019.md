@@ -26,7 +26,7 @@ Affiancare a Laravel uno strumento RAD come un admin package è una tentazione f
 
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/I2-1Ef1moPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Ad oggi il mondo e-commerce si sta muovendo verso le tecnologie cloud, mentre il mondo dei gestionali ancora non si evolve o a volte non è in grado di supportare in modo completo i clienti nell'approcio a queste piattaforme. In questo talk andremo a vedere come realizzare e configurare a grandi linee un'app middleware realizzata in Laravel (Migrations, Commands, Services, Controllers, ....) che attraverso l'utilizzo delle api fornite dalla piattaforma Cloud possa comunicare con un gestionale attraverso l'interscambio di file. 
+Ad oggi il mondo e-commerce si sta muovendo verso le tecnologie cloud, mentre il mondo dei gestionali ancora non si evolve o a volte non è in grado di supportare in modo completo i clienti nell'approccio a queste piattaforme. In questo talk andremo a vedere come realizzare e configurare a grandi linee un'app middleware realizzata in Laravel (Migrations, Commands, Services, Controllers, ....) che attraverso l'utilizzo delle api fornite dalla piattaforma Cloud possa comunicare con un gestionale attraverso l'interscambio di file. 
 
 [slide](https://drive.google.com/file/d/1T3iB7W99RIQiEGqtAvCJSS0oNp68hbts/view)
 
@@ -46,7 +46,7 @@ Le policy di Laravel sono il miglior strumento a disposizione di uno sviluppator
 
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/J4GDCAo4muU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In questi ultimi anni i database di tipo non relazionale, pur non essendo una novità assoluta, hanno registrato una crescita esponenziale nel loro sviluppo ed utilizzo grazie al sempre più crescente bisogno di scalare in orizzontale superando i limiti ai classici RDBMS (database relazionali). In questo talk mettereremo a confronto i maggiori database relazionali e non, analizzandone i pro ed i contro. Inoltre vedremo come implentare da zero una applicazione CRUD in Laravel con MongoDB e MySQL, come viene influenzato il design dell’applicazione e come varia il carico di lavoro con un database rispetto all’altro. 
+In questi ultimi anni i database di tipo non relazionale, pur non essendo una novità assoluta, hanno registrato una crescita esponenziale nel loro sviluppo ed utilizzo grazie al sempre più crescente bisogno di scalare in orizzontale superando i limiti ai classici RDBMS (database relazionali). In questo talk metteremo a confronto i maggiori database relazionali e non, analizzandone i pro ed i contro. Inoltre vedremo come implementare da zero una applicazione CRUD in Laravel con MongoDB e MySQL, come viene influenzato il design dell’applicazione e come varia il carico di lavoro con un database rispetto all’altro. 
 
 [slide](https://drive.google.com/file/d/1ZZ1tqOTWjdT5MZwbfP5o2_gBIP3n1ynG) [sorgenti](https://github.com/offline-agency/laravel-mongodb-blog)
 
