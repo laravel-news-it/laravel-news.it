@@ -8,10 +8,10 @@ categories: [events]
 cover_image: /assets/articles/22-09-laracon-review.jpg
 author: Alberto Peripolli
 featured: true
+excerpt: Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per mettere in risalto tutti i punti salienti.
 ---
 
 Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per mettere in risalto tutti i punti salienti.
-<!-- more -->
 
 Ogni talk ha il link al punto esatto della conferenza e ho dato anche una mia personale valutazione ed una stima del livello di difficoltà.
 

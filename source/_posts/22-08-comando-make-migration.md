@@ -8,6 +8,7 @@ categories: [tips]
 cover_image: /assets/articles/22-08-comando-make-migration.png
 author: Alberto Peripolli
 featured: true
+excerpt: Una delle operazioni più comuni in Laravel è la creazione delle migrazioni. Il metodo più consono è attraverso il relativo comando artisan make, pochi però sanno che nascosti nel comando base ci sono molti trucchetti che possono semplificare e velocizzare queste operazioni.
 ---
 
 Una delle operazioni più comuni in Laravel è la creazione delle migrazioni, esse ci consentono semplicemente di cambiare 
@@ -16,7 +17,6 @@ Il metodo più consono per creare una nuova migrazione è attraverso relativo co
 [documentazione ufficiale](https://laravel.com/docs/9.x/migrations#generating-migrations) limita un solo paragrafo, 
 pochi però sanno che nascosti nel comando base ci sono molti trucchetti che possono semplificare e velocizzare queste operazioni.
 
-<!-- more -->
 
 Il comando artisan esposto nella documentazione è il seguente:
 

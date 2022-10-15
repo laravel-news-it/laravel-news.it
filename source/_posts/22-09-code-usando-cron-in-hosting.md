@@ -8,12 +8,13 @@ categories: [tips, devops]
 cover_image: /assets/articles/22-09-queue.png
 author: Alessandro Cappellozza
 featured: true
+excerpt: uando installiamo in hosting può capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita più spesso è non poter installare **SUPERVISOR** e quindi dover rinunciare alle code; quasi sempre però possiamo definire dei **CRON**.
 ---
 
 
 ## Il contesto dell'hosting
 Quando installiamo in hosting può capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita più spesso è non poter installare **SUPERVISOR** e quindi dover rinunciare alle code; quasi sempre però possiamo definire dei **CRON**. 
-<!-- more -->
+
 Il primo pensiero è quello di ***rifarsele*** in casa usando un comando, cioè di annotare le cose da fare in una tabella per poi elaborarle. Va da sè che stiamo riscrivendo delle funzionalità e questo non è un buon punto di partenza.
 
 La comodità dalle code di Laravel è proprio quello di poter aggiungere un elemento a questa pila e farlo girare con comodo successivamente senza peraltro **timeout** che avremmo usandolo in una pagina. La soluzione in questo caso è piuttosto semplice: nei meandri della documentazione è possibile vedere che ci sono più opzioni per il demone delle code e uno di questi ci viene incontro. In pratica si tratta di far partire il demone in un **CRON** e farlo uscire dopo aver processato un certo numero di job.
