@@ -279,7 +279,7 @@ php artisan migrate
 
 <h2>Alternative?</h2>
 
-<p>Esiste un'alternativa a questo tipo di approccio ed è quello di lanciarlo dal kernel del command con l'opzione <strong><em>withoutOverlapping</em></strong>, questo lancerà il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa <strong>non è però una buona soluzione</strong> in hosting perchè lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del procersso che diviene difficile da monitorare per memory leak e altre situazioni per cui non è studiato.</p>
+<p>Esiste un'alternativa a questo tipo di approccio ed è quello di lanciarlo dal kernel del command con l'opzione <strong><em>withoutOverlapping</em></strong>, questo lancerà il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa <strong>non è però una buona soluzione</strong> in hosting perchè lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del processo che diviene difficile da monitorare per memory leak e altre situazioni per cui non è studiato.</p>
 
 <pre><code class="language-php">class Kernel extends ConsoleKernel
 {

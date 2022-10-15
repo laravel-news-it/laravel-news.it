@@ -224,9 +224,9 @@
 
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
         <p>Il sistema crea articoli usando file in formato MD quindi per elaborarlo si procede molto semplicemente come segue usando git, quindi molto dev friendly.
-Ricordate che il nome del file rappreseterà anche l'url dell'articolo quindi scrivetelo in modo chiaro e completo.</p>
+Ricordate che il nome del file rappresenterà anche l'url dell'articolo, quindi scrivetelo in modo chiaro e completo.</p>
 
-<pre><code class="language-bash">git clone https://github.com/laravel-news-it/
+<pre><code class="language-bash">git clone https://github.com/laravel-news-it/laravel-news.it.git
 
 cd laravel-news.it/source/_posts
 
@@ -244,20 +244,20 @@ extends: _layouts.post
 section: content
 title: Creare un nuovo articolo
 date: 2022-06-03
-description: Creare un nuovo artcolo per il blog di laravel news italia
+description: Creare un nuovo articolo per il blog di Laravel News Italia
 categories: [news]
 cover_image: /assets/articles/22-07-nome-del-file.png
 author: Alessandro Cappellozza
 ---
 </code></pre>
 
-<p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e secton. Le rimanamenti hanno questi significati:</p>
+<p>Le prime parti sono i layout e quelle non vanno toccate, parlo di extends e section. Le rimanenti hanno questi significati:</p>
 
 <table>
 <thead>
 <tr>
   <th>Header</th>
-  <th>Desacrizione</th>
+  <th>Descrizione</th>
 </tr>
 </thead>
 <tbody>
@@ -271,7 +271,7 @@ author: Alessandro Cappellozza
 </tr>
 <tr>
   <td><strong>description</strong></td>
-  <td>Descrizione completa dell'artticolo.</td>
+  <td>Descrizione completa dell'articolo.</td>
 </tr>
 <tr>
   <td><strong>categories</strong></td>
@@ -279,11 +279,11 @@ author: Alessandro Cappellozza
 </tr>
 <tr>
   <td><strong>cover_image</strong></td>
-  <td>L'immaginbe di copertina è molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.</td>
+  <td>L'immagine di copertina è molto importante per dare un contesto visivo all'articolo. Il rapporto deve essere 3:1 es 1200x400px.</td>
 </tr>
 <tr>
   <td><strong>author</strong></td>
-  <td>Il vosto nome e congome.</td>
+  <td>Il vostro nome e cognome.</td>
 </tr>
 <tr>
   <td><strong>excerpt</strong></td>
@@ -292,13 +292,13 @@ author: Alessandro Cappellozza
 </tbody>
 </table>
 
-<p>Nell'easempio è utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potere aggiungerle fisicamente a in questa cartella:</p>
+<p>Nell'esempio è utilizzato vim ma potete utilizzare qualsiasi altro editor, le immagini invece potete aggiungerle fisicamente a in questa cartella:</p>
 
 <pre><code class="language-bash">cd source/assets/articles/
 </code></pre>
 
 <p>Preferibilmente mettete file ben compressi o vettoriali; in caso abbiate piu' di un file è meglio fare una cartella col nome dell'articolo.<br />
-Se vi servono immagini con codice sorgente potete usare questo servizio online <a href="https://10015.io/tools/code-to-image-converter">10015</a>.</p>
+Se vi servono immagini con codice sorgente potete usare questo servizio online: <a href="https://10015.io/tools/code-to-image-converter">10015</a>.</p>
 
 <p>Potete inserire parti di codice con questa sintassi:</p>
 
@@ -322,7 +322,7 @@ npm run watch
 
 <p>Per la richiesta di pubblicazione potete procedere con una pull request verso il repository origine.</p>
 
-<p>Potete creare quindi un nuovo branch con<br />
+<p>Potete creare quindi un nuovo branch con
 <code>git checkout -b nuovo-articolo</code><br />
 e poi effettuare la <strong><em>pull-request</em></strong>.</p>
     </div>
