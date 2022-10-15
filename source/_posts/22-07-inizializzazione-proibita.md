@@ -13,7 +13,7 @@ excerpt: In PHP è possibile dare un valore di default ai parametri di una funzi
 
 In PHP è possibile dare un valore di default ai parametri di una funzione.  
 Questo serve a evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare a ogni invocazione.
-<!-- more -->
+
 ```php
 function makecoffee($type = "cappuccino")
 {
