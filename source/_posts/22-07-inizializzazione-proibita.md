@@ -7,11 +7,12 @@ description: Come inizializzare gli argomenti di una funzione.
 categories: [tips,php]
 cover_image: /assets/articles/22-07-inizializzazione-proibita.png
 author: Alberto Peripolli
-featured: true
+featured: false
+excerpt: In PHP è possibile dare un valore di default ai parametri di una funzione. Questo serve a evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare a ogni invocazione. 
 ---
 
 In PHP è possibile dare un valore di default ai parametri di una funzione.  
-Questo serve ad evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare ad ogni invocazione.
+Questo serve a evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare a ogni invocazione.
 <!-- more -->
 ```php
 function makecoffee($type = "cappuccino")
@@ -72,4 +73,4 @@ $data['username'] = $data['username'] ?? 'guest';
 $data['username'] ??= 'guest';
 ```
 
-Quindi la prossima volta che vi servirà di inizializzare un parametro di una funzione ricordatevi questo piccolo amico `??=`.
+Quindi la prossima volta che vi servirà d'inizializzare un parametro di una funzione ricordatevi questo piccolo amico `??=`.
