@@ -1108,8 +1108,7 @@ In questo caso ad esempio hanno completamente rimosso le funzioni di rollback de
                 <guid isPermaLink="true">https://laravel-news.it/news/22-07-inizializzazione-proibita</guid>
                 <description><![CDATA[Come inizializzare gli argomenti di una funzione.]]></description>
                 <content:encoded><![CDATA[<p>In PHP è possibile dare un valore di default ai parametri di una funzione.<br />
-Questo serve a evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare a ogni invocazione.
-<!-- more --></p>
+Questo serve a evitare di passare parametri che restano molto spesso invariati e che quindi non si vuole esplicitare a ogni invocazione.</p>
 
 <pre><code class="language-php">function makecoffee($type = "cappuccino")
 {
