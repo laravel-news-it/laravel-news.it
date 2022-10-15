@@ -251,8 +251,7 @@ try {
                 <link>https://laravel-news.it/news/22-09-laracon-review-2022</link>
                 <guid isPermaLink="true">https://laravel-news.it/news/22-09-laracon-review-2022</guid>
                 <description><![CDATA[Valutazione e riassunto dell'evento di riferimento della community di Laravel]]></description>
-                <content:encoded><![CDATA[<p>Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per mettere in risalto tutti i punti salienti.
-<!-- more --></p>
+                <content:encoded><![CDATA[<p>Dopo aver visto tutto il Laracon 2022, ho scritto un piccolo riassunto di ciascun talk per mettere in risalto tutti i punti salienti.</p>
 
 <p>Ogni talk ha il link al punto esatto della conferenza e ho dato anche una mia personale valutazione ed una stima del livello di difficoltà.</p>
 
@@ -819,9 +818,9 @@ Infine ha parlato di Cross-Origin Resource Sharing (CORS) e SameSite Cookies</p>
                 <description><![CDATA[come usare le code (queue) in hosting senza supervisor]]></description>
                 <content:encoded><![CDATA[<h2>Il contesto dell'hosting</h2>
 
-<p>Quando installiamo in hosting può capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita più spesso è non poter installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre però possiamo definire dei <strong>CRON</strong>. 
-<!-- more -->
-Il primo pensiero è quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioè di annotare le cose da fare in una tabella per poi elaborarle. Va da sè che stiamo riscrivendo delle funzionalità e questo non è un buon punto di partenza.</p>
+<p>Quando installiamo in hosting può capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita più spesso è non poter installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre però possiamo definire dei <strong>CRON</strong>.</p>
+
+<p>Il primo pensiero è quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioè di annotare le cose da fare in una tabella per poi elaborarle. Va da sè che stiamo riscrivendo delle funzionalità e questo non è un buon punto di partenza.</p>
 
 <p>La comodità dalle code di Laravel è proprio quello di poter aggiungere un elemento a questa pila e farlo girare con comodo successivamente senza peraltro <strong>timeout</strong> che avremmo usandolo in una pagina. La soluzione in questo caso è piuttosto semplice: nei meandri della documentazione è possibile vedere che ci sono più opzioni per il demone delle code e uno di questi ci viene incontro. In pratica si tratta di far partire il demone in un <strong>CRON</strong> e farlo uscire dopo aver processato un certo numero di job.</p>
 
@@ -901,8 +900,7 @@ php artisan migrate
                 <guid isPermaLink="true">https://laravel-news.it/news/22-09-laracon-2022</guid>
                 <description><![CDATA[L'evento di riferimento della community di Laravel]]></description>
                 <content:encoded><![CDATA[<p><a href="https://laracon.net">Laracon</a> è il più grande evento dell'anno relativo a Laravel.<br />
-Si terrà il 14 Settembre in live gratuitamente su Youtube.
-<!-- more --></p>
+Si terrà il 14 Settembre in live gratuitamente su Youtube.</p>
 
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/f4QShF42c6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -953,8 +951,6 @@ stato al nostro database.<br />
 Il metodo più consono per creare una nuova migrazione è attraverso relativo comando artisan make, al quale la 
 <a href="https://laravel.com/docs/9.x/migrations#generating-migrations">documentazione ufficiale</a> limita un solo paragrafo, 
 pochi però sanno che nascosti nel comando base ci sono molti trucchetti che possono semplificare e velocizzare queste operazioni.</p>
-
-<!-- more -->
 
 <p>Il comando artisan esposto nella documentazione è il seguente:</p>
 

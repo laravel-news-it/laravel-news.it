@@ -230,9 +230,9 @@
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
         <h2>Il contesto dell'hosting</h2>
 
-<p>Quando installiamo in hosting può capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita più spesso è non poter installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre però possiamo definire dei <strong>CRON</strong>. 
-<!-- more -->
-Il primo pensiero è quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioè di annotare le cose da fare in una tabella per poi elaborarle. Va da sè che stiamo riscrivendo delle funzionalità e questo non è un buon punto di partenza.</p>
+<p>Quando installiamo in hosting può capitare, soprattutto con quelli a basso costo, che ci siano delle limitazioni anche importanti. Una di quelle che capita più spesso è non poter installare <strong>SUPERVISOR</strong> e quindi dover rinunciare alle code; quasi sempre però possiamo definire dei <strong>CRON</strong>.</p>
+
+<p>Il primo pensiero è quello di <strong><em>rifarsele</em></strong> in casa usando un comando, cioè di annotare le cose da fare in una tabella per poi elaborarle. Va da sè che stiamo riscrivendo delle funzionalità e questo non è un buon punto di partenza.</p>
 
 <p>La comodità dalle code di Laravel è proprio quello di poter aggiungere un elemento a questa pila e farlo girare con comodo successivamente senza peraltro <strong>timeout</strong> che avremmo usandolo in una pagina. La soluzione in questo caso è piuttosto semplice: nei meandri della documentazione è possibile vedere che ci sono più opzioni per il demone delle code e uno di questi ci viene incontro. In pratica si tratta di far partire il demone in un <strong>CRON</strong> e farlo uscire dopo aver processato un certo numero di job.</p>
 
