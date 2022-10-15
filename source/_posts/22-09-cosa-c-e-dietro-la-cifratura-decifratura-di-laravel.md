@@ -8,6 +8,7 @@ categories: [tutorials]
 cover_image: /assets/articles/22-09-cosa-c-e-dietro-la-cifratura-decifratura-di-laravel.png
 author: Roberto Gallea
 featured: false
+excerpt: Uno sguardo dall'interno ai meccanismi di cifratura/decifatura di Laravel
 ---
 
 **_NOTA:_**  Traduzione da [robertogallea.com](https://robertogallea.com/posts/development/whats-behind-laravel-encryptiondecryption)
