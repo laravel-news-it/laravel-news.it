@@ -59,7 +59,7 @@ class Kernel extends ConsoleKernel
 Il caso che mi ha fatto arrivare a questa soluzione deriva da un amico che in hosting non aveva supervisor e non poteva inviare più di 600 email l'ora; lui voleva usare le code, che oggettivamente sono molto comode, inviandone 10 per minuto auto limitava il tutto a 600.
 
 ## Alternative?
-Esiste un'alternativa a questo tipo di approccio ed è quello di lanciarlo dal kernel del command con l'opzione ***withoutOverlapping***, questo lancerà il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa **non è però una buona soluzione** in hosting perchè lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del procersso che diviene difficile da monitorare per memory leak e altre situazioni per cui non è studiato.
+Esiste un'alternativa a questo tipo di approccio ed è quello di lanciarlo dal kernel del command con l'opzione ***withoutOverlapping***, questo lancerà il worker lasciandolo appeso e riavviandolo se dovesse chiudersi. Questa **non è però una buona soluzione** in hosting perchè lasciate un processo in memoria e se l'admin se ne accorge potrebbe intervenire sia fermando l'applicativo sia magari il dominio con un down magari in orari in cui non siete li' a monitorare (del resto avete preso un hosting proprio per non fare il sistemista no?). Poi perdete anche il controllo del processo che diviene difficile da monitorare per memory leak e altre situazioni per cui non è studiato.
 
 
 ```php
