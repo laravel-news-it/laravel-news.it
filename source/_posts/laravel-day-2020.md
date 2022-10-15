@@ -24,7 +24,7 @@ In questo talk mostrerò tutte le strategie di sviluppo che ho utilizzato per im
 
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/Q-pmLL_zkuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Sappiamo tutti che per avere un frontend al passo coi tempi è necessario fare spesso due progetti uno di frontend e uno backend distinti e specializzati,complicando sia lo sviluppo che il deploy delle applicazioni. Questo nuovo strumento si prefigge di colmare questo gap consentendo di creare componenti "ajax" con il solo PHP; una strada già battuta da altri linguaggi ma con un approccio nuovo già usato da grossi portali, qui lo vedremo pacchettizzato e standardizzato per Laravel. Analizzeremo il principio di funzionamento, cosa mette a disposizione di base, un esempio pratico e dei contesti dove può effettivamente essere utile. 
+Sappiamo tutti che per avere un frontend al passo coi tempi è necessario fare spesso due progetti uno di frontend e uno backend distinti e specializzati, complicando sia lo sviluppo che il deploy delle applicazioni. Questo nuovo strumento si prefigge di colmare questo gap consentendo di creare componenti "ajax" con il solo PHP; una strada già battuta da altri linguaggi ma con un approccio nuovo già usato da grossi portali, qui lo vedremo pacchettizzato e standardizzato per Laravel. Analizzeremo il principio di funzionamento, cosa mette a disposizione di base, un esempio pratico e dei contesti dove può effettivamente essere utile. 
 
 [slide](https://slides.com/eppak/livewire-hands-on-frontend-moderno-senza-toccare-una-riga-di-javascript)
 
