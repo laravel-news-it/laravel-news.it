@@ -16,7 +16,7 @@ Sulle ultime versioni di Laravel puoi usare un paio di stratagemmi per ovviare a
 
 ## Resetta il database solo quando ne hai bisogno
 
-Da Laravel 8 in avanti puoi sostituire il trait [`RefreshDatabase`](https://laravel.com/docs/master/database-testing#resetting-the-database-after-each-test) con `LazilyRefreshDatabase`.
+Da Laravel 8 in avanti puoi sostituire il trait [`RefreshDatabase`](https://laravel.com/docs/master/database-testing#resetting-the-database-after-each-test) con `Illuminate\Foundation\Testing\LazilyRefreshDatabase`.
 
 In questo modo il database verrà resettato e migrato solamente se il test precedente lo ha modificato.
 
