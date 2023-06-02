@@ -32,7 +32,7 @@ Buone pratiche, package, idee e suggerimenti per mettere in sicurezza il proprio
 
 <iframe width="100%" height="480" class="rounded border border-gray-400 shadow" src="https://www.youtube.com/embed/1l_0n34OEG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Il mio case study prende spunto dalla vita di tutti i giorni di noi backend developer in Jobtech. A paritre dall'ambiente di sviluppo locale fino al deploy in produzione del codice delle nostre 4 applicazioni core.
+Il mio case study prende spunto dalla vita di tutti i giorni di noi backend developer in Jobtech. A partire dall'ambiente di sviluppo locale fino al deploy in produzione del codice delle nostre 4 applicazioni core.
 Filippo Galante
 
 ----

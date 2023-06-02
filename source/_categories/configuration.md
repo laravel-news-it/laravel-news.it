@@ -1,7 +1,7 @@
 ---
 extends: _layouts.category
 title: Configuration
-description: Posts related to configuring the Jigsaw blog starter template
+description: Articoli relativi alla configurazione e utilizzo del blog
 ---
 
-These posts are all related to configuring your Jigsaw blog starter template.
+Questi articoli sono relativi alla configurazione e utilizzo del blog.
