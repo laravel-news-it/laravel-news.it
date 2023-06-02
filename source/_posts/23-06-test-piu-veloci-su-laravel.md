@@ -4,7 +4,7 @@ section: content
 title: Test più veloci su Laravel
 date: 2023-06-02
 description: Come ridurre i tempi di esecuzione dei test su database
-categories: [tips, testing]
+categories: [tips]
 cover_image: /assets/articles/23-06-test-piu-veloci-su-laravel.png
 author: Mirko Lorusso
 featured: true
