@@ -24,7 +24,7 @@ In questo modo il database verrà resettato e migrato solamente se il test prece
 
 Per default Laravel lancia i test sequenzialmente, ma se esistesse un modo per eseguirli in parallelo?
 
-Puoi farlo utilizzando il package [`paratest`](https://github.com/paratestphp/paratest): una volta installato dovrai selezionare uno dei driver disponibili per la code coverage (PCOV, xDebug o PHPDBG) e lanciare paratest come descritto nel README del package (se scegli xDebug, dovrai chiaramente attivarlo prima di avviare i test).
+Puoi farlo utilizzando il package [`paratest`](https://github.com/paratestphp/paratest): dopo averlo installato dovrai solamente selezionare uno dei driver disponibili per la code coverage (PCOV, xDebug o PHPDBG) e lanciarlo come descritto nel README (se scegli xDebug, ricorda di attivarlo prima di avviare i test).
 
 ***
 
