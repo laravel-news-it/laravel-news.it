@@ -16,11 +16,12 @@ Sulle ultime versioni di Laravel puoi usare un paio di stratagemmi per ovviare a
 
 ## Resetta il database solo quando ne hai bisogno
 
-Da Laravel 8 in avanti puoi sostituire il trait `LazilyRefreshDatabase` [al posto di `RefreshDatabase`](https://laravel.com/docs/master/database-testing#resetting-the-database-after-each-test). In questo modo il database verrà resettato e migrato solamente se il test precedente lo ha modificato.
+Da Laravel 8 in avanti puoi sostituire il trait `LazilyRefreshDatabase` al posto di [`RefreshDatabase`](https://laravel.com/docs/master/database-testing#resetting-the-database-after-each-test). In questo modo il database verrà resettato e migrato solamente se il test precedente lo ha modificato.
 
 ## Esegui i test in parallelo
 
 Per default Laravel lancia i test sequenzialmente, ma se esistesse un modo per eseguirli in parallelo?
+
 Puoi farlo utilizzando il package [`paratest`](https://github.com/paratestphp/paratest): una volta installato dovrai selezionare uno dei driver disponibili per la code coverage (PCOV, xDebug o PHPDBG) e lanciare paratest come descritto nel README del package (se scegli xDebug, dovrai chiaramente attivarlo prima di avviare i test).
 
 ***
