@@ -25,7 +25,7 @@ description: Le community in italia
   </div>
 </a>-->
 
-<a href="https://join.slack.com/t/laravel-italia/shared_invite/zt-26vqkwz5v-vlSCUSymEdAs7GnPLZ4qXA" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
+<a href="https://join.slack.com/t/laravel-italia/shared_invite/zt-2rth65675-2cVSFUCOamIHyOThEqQy4A" target="_blank" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8">
   <img class="object-cover h-24 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/assets/images/slack_logo.jpg" alt="">
   <div class="flex flex-col justify-between p-2 leading-normal">
     <h5 class="text-xl p-0 m-0 mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Laravel Italia su Slack</h5>
